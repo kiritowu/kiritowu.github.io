@@ -10,6 +10,7 @@
 </svelte:head>
 
 <section>
+	<h1 class="text-lg font-bold">Hello World</h1>
 	<h1>
 		<span class="welcome">
 			<picture>
