@@ -5,10 +5,10 @@
 	import '../app.css';
 </script>
 
-<div class="flex flex-col min-h-max">
+<div class="flex flex-col min-h-max font-main">
 	<Header />
 
-	<main class="container-sm md:container-lg md:mx-auto">
+	<main class="container-sm md:container-lg md:mx-auto px-5 max-w-6xl">
 		<slot />
 	</main>
 
