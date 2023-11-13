@@ -1,22 +1,47 @@
 <script>
+	import { marked } from 'marked';
 	import Typewriter from 'svelte-typewriter';
 	import profile from '$lib/profile.json';
 </script>
 
 <svelte:head>
-	<meta name="author" content="{profile.contact.firstName} {profile.contact.lastName}" />
-	<meta name="description" content="{profile.contact.firstName}'s personal website" />
-	<title>{profile.contact.firstName} {profile.contact.lastName}</title>
+	<meta name="author" content="{profile.profile.firstName} {profile.profile.lastName}" />
+	<meta name="description" content="{profile.profile.firstName}'s personal website" />
+	<title>{profile.profile.firstName} {profile.profile.lastName}</title>
 </svelte:head>
 
-<section class="px-6 md:px-0 flex items-center min-h-screen max-w-6xl text-xl font-main">
+<section id="hero" class="flex items-center min-h-screen max-w-6xl text-xl font-primary">
 	<header>
-		<h3 class="my-3 font-mono text-secondary text-3xl">Hi, my name is</h3>
+		<h3 class="my-3 font-mono text-secondary text-xl">Hi, my name is</h3>
 		<Typewriter mode="loopOnce" keepCursorOnFinish={true} wordInterval={700}>
-			{#each [`${profile.contact.firstName}`, `${profile.contact.ign}`, `${profile.contact.nickName} ${profile.contact.lastName}`, `${profile.contact.nickName} ${profile.contact.lastName} ${profile.contact.firstName}`] as text}
-				<h1 class="my-5 text-7xl text-left font-semibold">{text}</h1>
+			{#each [`${profile.profile.firstName}`, `${profile.profile.ign}`, `${profile.profile.nickName} ${profile.profile.lastName}`, `${profile.profile.nickName} ${profile.profile.lastName} ${profile.profile.firstName}`] as text}
+				<h1 class="my-3 text-6xl text-left">{text}</h1>
 			{/each}
 		</Typewriter>
-		<h2>Placeholder for 3 description that best descibe me</h2>
+		<h1 class="my-5 text-4xl text-left font-extrabold font-heading text-secondary">
+			NUSC w/ CS @ 2029
+		</h1>
+		<h2 class="my-2">
+			💡 Conscientiously Driven | 💻 Aspiring ML Engineer | 🏞️ Outdoor Adventurer
+		</h2>
 	</header>
+</section>
+
+<section id="about" class="my-10">
+	<h1 class="text-left text-5xl font-extrabold mb-4 text-primary">About Me</h1>
+	{#each profile.profile.descriptions as description}
+		<p class="mb-2 text-lg">{@html marked(description)}</p>
+	{/each}
+</section>
+
+<section id="skills">
+	<h1 class="text-left text-5xl font-extrabold mb-4 text-primary">Skills</h1>
+</section>
+
+<section id="experience">
+	<h1 class="text-left text-5xl font-extrabold mb-4 text-primary">Experience</h1>
+</section>
+
+<section id="projects">
+	<h1 class="text-left text-5xl font-extrabold mb-4 text-primary">Projects</h1>
 </section>
