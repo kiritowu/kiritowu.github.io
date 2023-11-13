@@ -8,7 +8,7 @@
 <div class="flex flex-col min-h-max">
 	<Header />
 
-	<main class="md:container md:mx-auto">
+	<main class="container-sm md:container-lg md:mx-auto">
 		<slot />
 	</main>
 
