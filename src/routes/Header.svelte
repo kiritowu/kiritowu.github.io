@@ -1,12 +1,33 @@
 <script>
+	import { onMount, onDestroy } from 'svelte';
 	import svgMenu from '$lib/images/menu-alt-1-svgrepo-com.svg';
 	import svgClose from '$lib/images/cross-svgrepo-com.svg';
 	export let navs = ['about', 'personality', 'skills', 'experience', 'projects'];
 
-	let menu_visible = false;
+	let menu_visible = false; // menu navigation on mobile
+	let nav_visible = true;
+	let prevScollPos = window.scrollY;
+
+	onMount(() => {
+		window.onscroll = () => {
+			var currentScrollPos = window.scrollY;
+			if (prevScollPos > currentScrollPos) {
+				nav_visible = true;
+			} else {
+				nav_visible = false;
+			}
+			prevScollPos = currentScrollPos;
+		};
+	});
+
+	onDestroy(() => {
+		window.onscroll = null;
+	});
 </script>
 
-<header class="font-mono text-primary">
+<header
+	class="fixed transition-all {nav_visible ? 'top-0' : ' -top-16'} right-0 font-mono text-primary"
+>
 	<nav class="px-4 py-6 flex justify-between items-center w-full">
 		<ul class="hidden md:flex ml-auto justify-start">
 			{#each navs as nav}
