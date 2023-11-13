@@ -10,13 +10,13 @@
 </svelte:head>
 
 <section class="px-6 md:px-0 flex items-center min-h-screen max-w-6xl text-xl font-main">
-	<main class="">
-		<h3 class="my-3 font-mono text-secondary">Hi, my name is</h3>
-		<Typewriter mode="loopOnce" keepCursorOnFinish={true}>
-			{#each [`${profile.contact.firstName}`, `${profile.contact.ign}`, `${profile.contact.nickName} ${profile.contact.lastName}`, `${profile.contact.firstName} (${profile.contact.nickName}) ${profile.contact.lastName}`] as text}
+	<header>
+		<h3 class="my-3 font-mono text-secondary text-3xl">Hi, my name is</h3>
+		<Typewriter mode="loopOnce" keepCursorOnFinish={true} wordInterval={700}>
+			{#each [`${profile.contact.firstName}`, `${profile.contact.ign}`, `${profile.contact.nickName} ${profile.contact.lastName}`, `${profile.contact.nickName} ${profile.contact.lastName} ${profile.contact.firstName}`] as text}
 				<h1 class="my-5 text-7xl text-left font-semibold">{text}</h1>
 			{/each}
 		</Typewriter>
-		<h2>Aspiring AI Engineer</h2>
-	</main>
+		<h2>Placeholder for 3 description that best descibe me</h2>
+	</header>
 </section>
