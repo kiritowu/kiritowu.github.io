@@ -1,12 +1,12 @@
 <script>
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount } from 'svelte';
 	import svgMenu from '$lib/images/menu-alt-1-svgrepo-com.svg';
 	import svgClose from '$lib/images/cross-svgrepo-com.svg';
 	export let navs = ['about', 'personality', 'skills', 'experience', 'projects'];
 
 	let menu_visible = false; // menu navigation on mobile
 	let nav_visible = true;
-	let prevScollPos = window.scrollY;
+	let prevScollPos = 0;
 
 	onMount(() => {
 		window.onscroll = () => {
@@ -18,10 +18,6 @@
 			}
 			prevScollPos = currentScrollPos;
 		};
-	});
-
-	onDestroy(() => {
-		window.onscroll = null;
 	});
 </script>
 
