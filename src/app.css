@@ -5,3 +5,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Page wide styles */
+strong {
+	@apply text-primary font-bold;
+}
+
+a {
+	@apply text-primary font-bold;
+}
+
+a:hover,
+a:focus {
+	@apply text-secondary underline;
+}

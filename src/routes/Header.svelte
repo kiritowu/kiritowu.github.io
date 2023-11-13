@@ -28,7 +28,7 @@
 		<ul class="hidden md:flex ml-auto justify-start">
 			{#each navs as nav}
 				<li class="px-3">
-					<a class="hover:text-secondary focus:text-secondary focus:outline-none" href="#{nav}"
+					<a class="font-normal hover:no-underline focus:outline-none" href="#{nav}"
 						>{nav.charAt(0).toUpperCase() + nav.slice(1)}</a
 					>
 				</li>
