@@ -6,7 +6,7 @@
 	let menu_visible = false;
 </script>
 
-<header class="font-heading text-primary">
+<header class="font-mono text-primary">
 	<nav class="px-4 py-6 flex justify-between items-center w-full">
 		<ul class="hidden md:flex ml-auto justify-start">
 			{#each navs as nav}
