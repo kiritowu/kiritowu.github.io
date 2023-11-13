@@ -1,61 +1,20 @@
 <script>
 	import profile from '$lib/profile.json';
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
 </script>
 
 <svelte:head>
+	<meta name="author" content="{profile.contact.firstName} {profile.contact.lastName}" />
+	<meta name="description" content="{profile.contact.firstName}'s personal website" />
 	<title>{profile.contact.firstName} {profile.contact.lastName}</title>
-	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<section>
-	<h1 class="text-lg font-bold">Hello World</h1>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
+<section class="px-6 md:px-0 flex items-center min-h-screen text-xl">
+	<main>
+		<h3 class="my-3 font-mono text-secondary">Hi, my name is</h3>
+		<h1 class="my-5 text-primary text-7xl text-left">
+			{profile.contact.firstName}
+			{profile.contact.lastName}
+		</h1>
+		<h2>Aspiring AI Engineer</h2>
+	</main>
 </section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
-</style>
