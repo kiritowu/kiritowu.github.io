@@ -62,9 +62,9 @@
 		<div class="basis-3/4">
 			{#each profile.experience as experience}
 				<article>
-					<div class="flex mb-2">
+					<div class="flex md:flex-row flex-col justify-between mb-2">
 						<h3 class="text-primary font-semibold text-xl">{experience.title}</h3>
-						<p class="ml-auto text-lg">
+						<p class="text-lg">
 							{experience.startDate
 								? moment(experience.startDate).format('MMM YYYY') + ' - '
 								: ''}{experience.endDate
