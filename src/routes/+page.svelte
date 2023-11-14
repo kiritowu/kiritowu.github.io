@@ -61,7 +61,7 @@
 		</div>
 		<div class="basis-3/4">
 			{#each profile.experience as experience}
-				<article>
+				<article class="mb-5">
 					<div class="flex md:flex-row flex-col justify-between mb-2">
 						<h3 class="text-primary font-semibold text-xl">{experience.title}</h3>
 						<p class="text-lg">
@@ -78,11 +78,11 @@
 						{/each}
 					</ul>
 					<div class="flex justify-end">
-						{#if experience.externalLink}
-							<a class="text-secondary mx-1" href={experience.externalLink} target="_blank">
-								<img class="object-content w-8 h-8" src={icon_link} alt={experience.externalLink} />
+						{#each experience.externalLinks as link}
+							<a class="text-secondary mx-1" href={link} target="_blank">
+								<img class="object-content w-8 h-8" src={icon_link} alt={link} />
 							</a>
-						{/if}
+						{/each}
 						{#if experience.linkedInLink}
 							<a class="text-secondary mx-1" href={experience.linkedInLink} target="_blank">
 								<img
