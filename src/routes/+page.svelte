@@ -7,7 +7,14 @@
 <svelte:head>
 	<meta name="author" content="{profile.profile.firstName} {profile.profile.lastName}" />
 	<meta name="description" content="{profile.profile.firstName}'s personal website" />
-	<title>{profile.profile.firstName} {profile.profile.lastName}</title>
+	<title
+		>{profile.profile.nickName}
+		{profile.profile.firstName
+			.split(' ')
+			.map((name) => name.charAt(0))
+			.join('')}
+		{profile.profile.lastName}</title
+	>
 </svelte:head>
 
 <section id="hero" class="flex items-center min-h-screen max-w-6xl text-xl font-primary">
@@ -28,20 +35,20 @@
 </section>
 
 <section id="about" class="my-10">
-	<h1 class="text-left text-5xl font-extrabold mb-4 text-primary">About Me</h1>
+	<h1 class="mb-3">About Me</h1>
 	{#each profile.profile.descriptions as description}
 		<p class="mb-2 text-lg">{@html marked(description)}</p>
 	{/each}
 </section>
 
-<section id="skills">
-	<h1 class="text-left text-5xl font-extrabold mb-4 text-primary">Skills</h1>
+<section id="skills" class="my-10">
+	<h1 class="mb-3">Skills</h1>
 </section>
 
-<section id="experience">
-	<h1 class="text-left text-5xl font-extrabold mb-4 text-primary">Experience</h1>
+<section id="experience" class="my-10">
+	<h1 class="mb-3">Experience</h1>
 </section>
 
-<section id="projects">
-	<h1 class="text-left text-5xl font-extrabold mb-4 text-primary">Projects</h1>
+<section id="projects" class="my-10">
+	<h1 class="mb-3">Projects</h1>
 </section>
