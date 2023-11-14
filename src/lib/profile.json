@@ -16,5 +16,54 @@
 		"github": "github.com/kiritowu",
 		"linkedin": "linkedin.com/in/zhao-wu-wong",
 		"twitter": "twitter.com/kiritowu_"
-	}
+	},
+	"experience": [
+		{
+			"title": "Chairperson, AI Student Developer Conference 2023",
+			"org": "AI Singapore",
+			"startDate": "02/01/2023",
+			"endDate": "05/01/2023",
+			"descriptions": [
+				"Leading a team of student organizers with diverse educational backgrounds and skillset.",
+				"Liaising with event management vendors and industry partners like NVIDIA, Govtech, SAP, SCS and Pand.ai to ensure smooth execution of the conference.",
+				"Moderating a fireside chat on what it takes to bring machine learning to life into a real-world AI project and how Machine Learning Operations (ML-Ops) is implemented in real-world AI project with industry professional.",
+				"Spearheading the development of a Firebase native companion application for gamification elements during Track 3: AI Playground."
+			],
+			"githubLink": "https://github.com/AISDC-2023/aisdc",
+			"linkedInLink": null,
+			"externalLinks": [
+				"https://www.mindef.gov.sg/web/portal/mindef/news-and-events/latest-releases/article-detail/2023/May/13may23_nr2"
+			]
+		},
+		{
+			"title": "AI Engineer Intern",
+			"org": "ANOR Technologies Pte Ltd",
+			"startDate": "09/01/2022",
+			"endDate": "02/01/2023",
+			"descriptions": [
+				"Modularize and optimize signal processing functions into Python API across multiple research-oriented programme (e.g. Matlab, Origin)",
+				"Attached to an active research project as data analyst to clean, process, visualize and presenting the insights and recommendations gathered to relevant stakeholders.",
+				"Ongoing trial for the use of supervised contrastive learning for material classification."
+			],
+			"externalLinks": ["https://anor-tech.com/aboutus"],
+			"linkedInLink": null
+		},
+		{
+			"title": "President & Founder, SPAI Student Chapter",
+			"org": "SP Aritificial Intelligence Student Chapter",
+			"startDate": "04/01/2021",
+			"endDate": "04/01/2022",
+			"descriptions": [
+				"Founded and led the student committee to build a community of AI Enthusiast in SP through numerous student initiated workshops, competition and student-led projects.",
+				"Awarded the Outstanding Contributions (Group) Excellence Award with over 200 members across different schools all within the first year of existence."
+			],
+			"externalLinks": [
+				"https://www.sp.edu.sg/soc/news/soc/spai-s-inaugural-machine-learning-bootcamp",
+				"https://www.sp.edu.sg/soc/sp-engineering-show/engineering-show-2022/project-human-entrance-counter",
+				"https://connect.aisingapore.org/2021/07/bridging-the-gap-spais-inaugural-machine-learning-bootcamp/"
+			],
+			"githubLink": "https://github.com/SPAI-Team",
+			"linkedInLink": null
+		}
+	]
 }
