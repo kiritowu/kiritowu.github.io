@@ -8,7 +8,7 @@
 
 /* Page wide styles */
 body {
-	@apply min-h-screen bg-slate-100 bg-cover;
+	@apply min-h-screen bg-neutral-100 bg-cover;
 }
 
 h1 {
