@@ -1,7 +1,13 @@
 <script>
 	import { marked } from 'marked';
+	import moment from 'moment';
 	import Typewriter from 'svelte-typewriter';
 	import profile from '$lib/profile.json';
+
+	// Icons
+	import icon_link from '$lib/images/link-linear.svg';
+	import icon_github from '$lib/images/github.svg';
+	import icon_linkedin from '$lib/images/linkedin.svg';
 </script>
 
 <svelte:head>
@@ -47,6 +53,55 @@
 
 <section id="experience" class="my-10">
 	<h1 class="mb-3">Experience</h1>
+	<section class="flex">
+		<div class="basis-1/4">
+			{#each profile.experience as experience}
+				<button class="text-left text-xl">{experience.org}</button>
+			{/each}
+		</div>
+		<div class="basis-3/4">
+			{#each profile.experience as experience}
+				<article>
+					<div class="flex mb-2">
+						<h3 class="text-primary font-semibold text-xl">{experience.title}</h3>
+						<p class="ml-auto text-lg">
+							{experience.startDate
+								? moment(experience.startDate).format('MMM YYYY') + ' - '
+								: ''}{experience.endDate
+								? moment(experience.endDate).format('MMM YYYY')
+								: 'Present'}
+						</p>
+					</div>
+					<ul class="list-disc text-lg pl-5">
+						{#each experience.descriptions as description}
+							<li>{@html marked(description)}</li>
+						{/each}
+					</ul>
+					<div class="flex justify-end">
+						{#if experience.externalLink}
+							<a class="text-secondary mx-1" href={experience.externalLink} target="_blank">
+								<img class="object-content w-8 h-8" src={icon_link} alt={experience.externalLink} />
+							</a>
+						{/if}
+						{#if experience.linkedInLink}
+							<a class="text-secondary mx-1" href={experience.linkedInLink} target="_blank">
+								<img
+									class="object-content w-8 h-8"
+									src={icon_linkedin}
+									alt={experience.linkedInLink}
+								/>
+							</a>
+						{/if}
+						{#if experience.githubLink}
+							<a class="text-secondary mx-1" href={experience.githubLink} target="_blank">
+								<img class="object-content w-8 h-8" src={icon_github} alt={experience.githubLink} />
+							</a>
+						{/if}
+					</div>
+				</article>
+			{/each}
+		</div>
+	</section>
 </section>
 
 <section id="projects" class="my-10">
