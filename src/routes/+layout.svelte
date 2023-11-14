@@ -1,7 +1,6 @@
 <script>
 	import Header from './Header.svelte';
 	import Contact from './Contact.svelte';
-	import './styles.css';
 	import '../app.css';
 </script>
 

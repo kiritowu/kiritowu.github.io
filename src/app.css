@@ -7,6 +7,18 @@
 @tailwind utilities;
 
 /* Page wide styles */
+body {
+	@apply min-h-screen bg-slate-100 bg-cover;
+}
+
+h1 {
+	@apply text-6xl text-center;
+}
+
+h2 {
+	@apply text-4xl;
+}
+
 strong {
 	@apply text-primary font-bold;
 }
