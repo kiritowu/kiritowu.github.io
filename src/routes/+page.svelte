@@ -8,6 +8,17 @@
 	import icon_link from '$lib/images/link-linear.svg';
 	import icon_github from '$lib/images/github.svg';
 	import icon_linkedin from '$lib/images/linkedin.svg';
+
+	// Change visble section
+	let visibleSectionIdx = 0;
+	// const changeVisibleSection = (e) => {
+	// 	if (e.deltaY > 0) {
+	// 		sectionIdx++;
+	// 	} else {
+	// 		sectionIdx--;
+	// 	}
+	// 	console.log(sectionIdx);
+	// }
 </script>
 
 <svelte:head>
@@ -55,13 +66,21 @@
 	<h1 class="mb-3">Experience</h1>
 	<section class="flex">
 		<div class="basis-1/4">
-			{#each profile.experience as experience}
-				<button class="text-left text-xl">{experience.org}</button>
+			{#each profile.experience as experience, idx}
+				<button
+					class="text-left text-xl mb-3 border-solid hover:text-secondary {visibleSectionIdx === idx
+						? 'text-secondary font-semibold'
+						: ''}"
+					aria-expanded={visibleSectionIdx === idx ? 'true' : 'false'}
+					on:click={() => {
+						visibleSectionIdx = idx;
+					}}>{experience.org}</button
+				>
 			{/each}
 		</div>
 		<div class="basis-3/4">
-			{#each profile.experience as experience}
-				<article class="mb-5">
+			{#each profile.experience as experience, idx}
+				<article class="mb-5 {visibleSectionIdx === idx ? '' : 'hidden'}">
 					<div class="flex md:flex-row flex-col justify-between mb-2">
 						<h3 class="text-primary font-semibold text-xl">{experience.title}</h3>
 						<p class="text-lg">
