@@ -65,12 +65,13 @@
 <section id="experience" class="my-10">
 	<h1 class="mb-3">Experience</h1>
 	<section class="flex">
-		<div class="basis-1/4">
+		<div class="basis-1/4 pr-5">
 			{#each profile.experience as experience, idx}
 				<button
-					class="text-left text-xl mb-3 border-solid hover:text-secondary {visibleSectionIdx === idx
+					class="w-full text-left text-xl mb-3 border-solid hover:text-secondary {visibleSectionIdx ===
+					idx
 						? 'text-secondary font-semibold'
-						: ''}"
+						: 'opacity-60'}"
 					aria-expanded={visibleSectionIdx === idx ? 'true' : 'false'}
 					on:click={() => {
 						visibleSectionIdx = idx;
