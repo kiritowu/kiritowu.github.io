@@ -72,7 +72,7 @@
 					idx
 						? 'text-secondary font-semibold'
 						: 'opacity-60'}"
-					aria-expanded={visibleSectionIdx === idx ? 'true' : 'false'}
+					aria-expanded={visibleSectionIdx === idx}
 					on:click={() => {
 						visibleSectionIdx = idx;
 					}}>{experience.org}</button
