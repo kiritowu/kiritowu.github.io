@@ -13,12 +13,12 @@ export default {
 			},
 			colors: {
 				primary: {
-					light: '#07004D',
-					DEFAULT: '#07004D'
+					light: '#162E5C',
+					DEFAULT: '#162E5C'
 				},
 				secondary: {
-					light: '#2D82B7',
-					DEFAULT: '#2D82B7'
+					light: '#4682CD',
+					DEFAULT: '#4682CD'
 				},
 				accent: {
 					light: '#42E2B8',
