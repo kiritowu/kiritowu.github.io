@@ -97,9 +97,9 @@
 						<h3 class="text-primary font-semibold text-xl">{experience.title}</h3>
 						<p class="text-base mt-auto">
 							{experience.startDate
-								? moment(experience.startDate).format('MMM YYYY') + ' - '
+								? moment(experience.startDate, 'MM/YYYY').format('MMM YYYY') + ' - '
 								: ''}{experience.endDate
-								? moment(experience.endDate).format('MMM YYYY')
+								? moment(experience.endDate, 'MM/YYYY').format('MMM YYYY')
 								: 'Present'}
 						</p>
 					</div>
