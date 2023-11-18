@@ -44,18 +44,18 @@
 </section>
 
 <section id="about" class="my-10">
-	<h1 class="mb-3">About Me</h1>
+	<h1 class="my-5">About Me</h1>
 	{#each profile.profile.descriptions as description}
 		<p class="mb-2 text-lg">{@html marked(description)}</p>
 	{/each}
 </section>
 
 <section id="skills" class="my-10">
-	<h1 class="mb-3">Skills</h1>
+	<h1 class="my-5">Skills</h1>
 </section>
 
 <section id="experience" class="my-10">
-	<h1 class="mb-3">Experience</h1>
+	<h1 class="my-5">Experience</h1>
 	<section
 		class="flex flex-col md:flex-row"
 		on:wheel|preventDefault={(e) => {
@@ -128,5 +128,5 @@
 </section>
 
 <section id="projects" class="my-10">
-	<h1 class="mb-3">Projects</h1>
+	<h1 class="my-5">Projects</h1>
 </section>
