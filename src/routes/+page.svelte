@@ -3,6 +3,7 @@
 	import moment from 'moment';
 	import Typewriter from 'svelte-typewriter';
 	import profile from '$lib/profile.json';
+	import profilePic from '$lib/images/profile-pic-cropped.jpg';
 
 	// Icons
 	import icon_link from '$lib/images/link-linear.svg';
@@ -45,9 +46,16 @@
 
 <section id="about" class="my-10">
 	<h1 class="my-5">About Me</h1>
-	{#each profile.profile.descriptions as description}
-		<p class="mb-2 text-lg">{@html marked(description)}</p>
-	{/each}
+	<div class="flex md:flex-row flex-col justify-between">
+		<div class="md:basis-1/3 px-10 mb-7">
+			<img class="rounded-full shadow-lg shadow-slate-800" src={profilePic} alt="profile" />
+		</div>
+		<div class="md:basis-3/5">
+			{#each profile.profile.descriptions as description}
+				<p class="mb-2 text-lg">{@html marked(description)}</p>
+			{/each}
+		</div>
+	</div>
 </section>
 
 <section id="skills" class="my-10">
