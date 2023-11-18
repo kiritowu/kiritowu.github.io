@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { marked } from 'marked';
 	import moment from 'moment';
 	import Typewriter from 'svelte-typewriter';
@@ -11,14 +11,6 @@
 
 	// Change visble section
 	let visibleSectionIdx = 0;
-	// const changeVisibleSection = (e) => {
-	// 	if (e.deltaY > 0) {
-	// 		sectionIdx++;
-	// 	} else {
-	// 		sectionIdx--;
-	// 	}
-	// 	console.log(sectionIdx);
-	// }
 </script>
 
 <svelte:head>
@@ -64,14 +56,25 @@
 
 <section id="experience" class="my-10">
 	<h1 class="mb-3">Experience</h1>
-	<section class="flex flex-col md:flex-row">
+	<section
+		class="flex flex-col md:flex-row"
+		on:wheel|preventDefault={(e) => {
+			let bb = document
+				.getElementById(profile.experience[visibleSectionIdx].org)
+				?.getBoundingClientRect();
+			if (bb && e.deltaY > 0) {
+				visibleSectionIdx = Math.min(profile.experience.length - 1, visibleSectionIdx + 1);
+			} else if (bb && e.deltaY < 0) {
+				visibleSectionIdx = Math.max(0, visibleSectionIdx - 1);
+			}
+		}}
+	>
 		<div class="md:basis-1/4 pr-5">
 			{#each profile.experience as experience, idx}
 				<button
-					class="w-full text-left text-xl mb-3 border-solid hover:text-secondary {visibleSectionIdx ===
-					idx
-						? 'text-secondary font-semibold'
-						: 'opacity-60'}"
+					class="w-full text-left text-lg mb-3 hover:text-secondary {visibleSectionIdx === idx
+						? 'text-secondary'
+						: 'opacity-80'}"
 					aria-expanded={visibleSectionIdx === idx}
 					on:click={() => {
 						visibleSectionIdx = idx;
@@ -84,7 +87,7 @@
 				<article class="mb-5 {visibleSectionIdx === idx ? '' : 'hidden'}">
 					<div class="flex md:flex-row flex-col justify-between mb-2">
 						<h3 class="text-primary font-semibold text-xl">{experience.title}</h3>
-						<p class="text-lg">
+						<p class="text-base mt-auto">
 							{experience.startDate
 								? moment(experience.startDate).format('MMM YYYY') + ' - '
 								: ''}{experience.endDate
