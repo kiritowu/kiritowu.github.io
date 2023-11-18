@@ -8,7 +8,7 @@ export default {
 		extend: {
 			fontFamily: {
 				heading: ['"Skavi 27px"', '"Roboto Slab"', 'serif'],
-				main: ['Inter', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+				main: ['Roboto', 'Helvetica', 'Open Sans', 'Arial', 'sans-serif'],
 				mono: ['"Source Code Pro"', 'monospace']
 			},
 			colors: {
