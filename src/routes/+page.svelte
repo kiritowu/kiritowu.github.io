@@ -2,6 +2,7 @@
 	import { marked } from 'marked';
 	import moment from 'moment';
 	import Typewriter from 'svelte-typewriter';
+	import { onMount } from 'svelte';
 	import profile from '$lib/profile.json';
 	import profilePic from '$lib/images/profile-pic-cropped.jpg';
 
@@ -12,6 +13,15 @@
 
 	// Change visble section
 	let visibleSectionIdx = 0;
+	onMount(async () => {
+		const forceGraph = await import('force-graph');
+		const skillMapGraph = forceGraph
+			.default()(document.getElementById('graph')!)
+			.graphData({
+				nodes: [{ id: 'me', x: 0, y: 0 }],
+				links: []
+			});
+	});
 </script>
 
 <svelte:head>
@@ -27,21 +37,24 @@
 	>
 </svelte:head>
 
-<section id="hero" class="flex items-center min-h-screen max-w-6xl text-xl font-primary">
-	<header>
-		<h3 class="my-3 font-mono text-secondary text-lg md:text-xl">Hi, my name is</h3>
-		<Typewriter mode="loopOnce" keepCursorOnFinish={true} wordInterval={700}>
-			{#each [`${profile.profile.firstName}`, `${profile.profile.ign}`, `${profile.profile.nickName} ${profile.profile.lastName}`, `${profile.profile.nickName} ${profile.profile.lastName} ${profile.profile.firstName}`] as text}
-				<h1 class="my-3 text-5xl md:text-6xl text-left">{text}</h1>
-			{/each}
-		</Typewriter>
-		<h1 class="my-5 text-xl md:text-4xl text-left font-extrabold font-heading text-secondary">
-			NUSC w/ CS @ 2029
-		</h1>
-		<h3 class="my-2 text-lg md:text-xl">
-			💡 Conscientiously Driven | 💻 Aspiring ML Engineer | 🏞️ Outdoor Adventurer
-		</h3>
+<section id="hero" class="text-xl font-primary">
+	<header class="flex items-center min-h-screen max-w-6xl">
+		<div class="">
+			<h3 class="my-3 font-mono text-secondary text-lg md:text-xl">Hi, my name is</h3>
+			<Typewriter mode="loopOnce" keepCursorOnFinish={true} wordInterval={700}>
+				{#each [`${profile.profile.firstName}`, `${profile.profile.ign}`, `${profile.profile.nickName} ${profile.profile.lastName}`, `${profile.profile.nickName} ${profile.profile.lastName} ${profile.profile.firstName}`] as text}
+					<h1 class="my-3 text-5xl md:text-6xl text-left">{text}</h1>
+				{/each}
+			</Typewriter>
+			<h1 class="my-5 text-xl md:text-4xl text-left font-extrabold font-heading text-secondary">
+				NUSC w/ CS @ 2029
+			</h1>
+			<h3 class="my-2 text-lg md:text-xl">
+				💡 Conscientiously Driven | 💻 Aspiring ML Engineer | 🏞️ Outdoor Adventurer
+			</h3>
+		</div>
 	</header>
+	<div id="graph" class="absolute my-auto top-[10%] right-0 w-4/5 h-4/5 -z-10"></div>
 </section>
 
 <section id="about" class="my-10">

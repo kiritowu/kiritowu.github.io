@@ -32,6 +32,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"force-graph": "^1.43.4",
 		"marked": "^10.0.0",
 		"moment": "^2.29.4",
 		"prettier": "^3.0.3",
