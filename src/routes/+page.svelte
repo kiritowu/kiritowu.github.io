@@ -134,7 +134,7 @@
 				NUSC w/ CS @ 2029
 			</h1>
 			<h3 class="my-2 text-lg md:text-xl">
-				💡 Conscientiously Driven | 💻 Aspiring ML Engineer | 🏞️ Outdoor Adventurer
+				💡 Conscientiously Driven | 💻 Aspiring ML Engineer | 🏞️ Outdoor Enthusiasts
 			</h3>
 		</div>
 	</header>
