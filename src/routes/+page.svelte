@@ -3,10 +3,6 @@
 	import moment from 'moment';
 	import Typewriter from 'svelte-typewriter';
 	import { onMount } from 'svelte';
-	import { scaleOrdinal } from 'd3-scale';
-	import { schemeCategory10 } from 'd3-scale-chromatic';
-	import { forceManyBody, forceLink, forceCenter } from 'd3-force-3d';
-	import type { NodeObject, LinkObject } from 'force-graph';
 	import profile from '$lib/profile.json';
 	import profilePic from '$lib/images/profile-pic-cropped.jpg';
 
@@ -17,95 +13,6 @@
 
 	// Change visble section
 	let visibleSectionIdx = 0;
-
-	// Load graph data
-	interface NodeObjectWithSkills extends NodeObject {
-		group?: string;
-		color?: string;
-		visible?: boolean;
-	}
-	const colorPicker = scaleOrdinal(schemeCategory10);
-	const data: { nodes: NodeObjectWithSkills[]; links: LinkObject[] } = {
-		nodes: [{ id: 'me', x: 0, y: 0, group: 'me', color: colorPicker('me') }],
-		links: []
-	};
-	Object.entries(profile.skills).forEach(([topLevelSkills, skills]) => {
-		data.nodes.push({
-			id: topLevelSkills,
-			group: 'tls',
-			color: colorPicker('tls')
-		});
-		data.links.push({
-			source: 'me',
-			target: topLevelSkills
-		});
-		skills.forEach((skill) => {
-			if (typeof skill === 'string') {
-				data.nodes.push({
-					id: skill,
-					group: 'skill',
-					color: colorPicker('skill')
-				});
-				data.links.push({
-					source: topLevelSkills,
-					target: skill
-				});
-			} else if (typeof skill === 'object') {
-				Object.entries(skill).forEach(([subSkill, subSkillSkills]) => {
-					data.nodes.push({
-						id: subSkill,
-						group: 'skill',
-						color: colorPicker('skill')
-					});
-					data.links.push({
-						source: topLevelSkills,
-						target: subSkill
-					});
-					subSkillSkills.forEach((subSkillSkill) => {
-						data.nodes.push({
-							id: subSkillSkill,
-							group: 'skill',
-							color: colorPicker('skill')
-						});
-						data.links.push({
-							source: subSkill,
-							target: subSkillSkill
-						});
-					});
-				});
-			}
-		});
-	});
-	onMount(async () => {
-		const forceGraph = await import('force-graph');
-		const skillMapGraph = forceGraph
-			.default()(document.getElementById('graph')!)
-			.graphData(data)
-			.centerAt(-50, -50)
-			.nodeId('id')
-			.nodeLabel('id')
-			.nodeColor('color')
-			// Add text label
-			.nodeCanvasObjectMode(() => 'after')
-			.nodeCanvasObject((node, ctx, globalScale) => {
-				const label = node.id as string;
-				const fontSize = 8;
-				ctx.font = `${fontSize}px Sans-Serif`;
-				const textWidth = ctx.measureText(label).width;
-				ctx.textAlign = 'center';
-				ctx.textBaseline = 'bottom';
-				ctx.fillText(label, node.x!, node.y! + 25 / globalScale);
-			})
-			.linkSource('source')
-			.linkTarget('target')
-			.maxZoom(5)
-			// .autoPauseRedraw(false)
-			// D3 Forces
-			.d3VelocityDecay(0.01)
-			.d3Force('center', forceCenter().strength(1))
-			.d3Force('link', forceLink().distance(30).strength(1))
-			.d3Force('charge', forceManyBody().strength(-100));
-	});
 </script>
 
 <svelte:head>

@@ -16,9 +16,6 @@
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.20.4",
 		"@types/cookie": "^0.5.1",
-		"@types/d3-force": "^3.0.9",
-		"@types/d3-scale": "^4.0.8",
-		"@types/d3-scale-chromatic": "^3.0.2",
 		"@typescript-eslint/eslint-plugin": "^6.0.0",
 		"@typescript-eslint/parser": "^6.0.0",
 		"autoprefixer": "^10.4.16",
@@ -35,8 +32,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"d3-force-3d": "^3.0.5",
-		"force-graph": "^1.43.4",
 		"marked": "^10.0.0",
 		"moment": "^2.29.4",
 		"prettier": "^3.0.3",
