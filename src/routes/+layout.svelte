@@ -13,7 +13,7 @@
 
 	<Contact />
 
-	<footer class="flex flex-row justify-center items-center">
+	<footer class="flex flex-row flex-wrap justify-center items-center">
 		<span class="pr-5">Built with <a href="https://kit.svelte.dev">SvelteKit</a></span>
 		<span class="pr-5">© Copyright {new Date().getFullYear()} Wong Zhao Wu</span>
 	</footer>
