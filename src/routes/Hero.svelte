@@ -1,10 +1,22 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import * as d3 from 'd3';
 	import Typewriter from 'svelte-typewriter';
 
+	// Props for Name Typewriter
 	export let firstName = '';
 	export let lastName = '';
 	export let nickName = '';
 	export let ign = '';
+
+	// Skill Globe with D3
+	let el: SVGElement;
+
+	onMount(async () => {
+		// @ts-ignore
+		const _3d = await import('d3-3d');
+		d3.select(el).append('g');
+	});
 </script>
 
 <section id="hero" class="text-xl font-primary">
@@ -24,5 +36,5 @@
 			</h3>
 		</div>
 	</header>
-	<div id="graph" class="absolute my-auto top-0 right-0 w-4/5 h-4/5 -z-10"></div>
+	<svg bind:this={el} id="graph" class="absolute my-auto top-0 right-0 w-4/5 h-4/5 -z-10"></svg>
 </section>
