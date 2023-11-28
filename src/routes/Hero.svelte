@@ -12,10 +12,108 @@
 	// Skill Globe with D3
 	let el: SVGElement;
 
+	const data: { x: number; y: number; z: number; id: string }[] = [];
+
 	onMount(async () => {
 		// @ts-ignore
-		const _3d = await import('d3-3d');
-		d3.select(el).append('g');
+		const _3d = (await import('d3-3d'))._3d;
+
+		const origin = [780, 400],
+			scale = 20,
+			startAngle = Math.PI / 2;
+
+		const point3d = _3d()
+			.shape('POINT')
+			.x((d: any) => d.x)
+			.y((d: any) => d.y)
+			.z((d: any) => d.z)
+			.origin(origin)
+			.rotateY(startAngle)
+			.rotateX(-startAngle)
+			.scale(scale);
+
+		const svg = d3
+			.select(el)
+			// @ts-ignore
+			.call(d3.drag().on('drag', dragged).on('start', dragStart).on('end', dragEnd))
+			.append('g');
+		const color = d3.scaleOrdinal(d3.schemeCategory10);
+		const scatterData: typeof data = [];
+		let alpha = 0,
+			beta = 0,
+			mx: number,
+			my: number,
+			mouseX: number,
+			mouseY: number;
+
+		let j = 10,
+			cnt = 0;
+		for (var z = -j; z < j; z++) {
+			for (var x = -j; x < j; x++) {
+				scatterData.push({ x: x, y: d3.randomUniform(0, -10)(), z: z, id: 'point_' + cnt++ });
+			}
+		}
+
+		/* Functions to modify all element on changes */
+		const key = (d: any) => d.id;
+		// Helper function to retrieve x and y value after projection to 2D space
+		const posPointX = (d: any) => d.projected.x;
+		const posPointY = (d: any) => d.projected.y;
+
+		function processData(data: typeof point3d, tt: number) {
+			/* ----------- POINTS ----------- */
+			let points = svg.selectAll('circle').data(data, key);
+
+			points
+				.enter()
+				.append('circle')
+				.attr('class', '_3d')
+				.attr('opacity', 0)
+				.attr('cx', posPointX)
+				.attr('cy', posPointY)
+				// @ts-ignore
+				.merge(points)
+				.transition()
+				.duration(tt)
+				.attr('r', 3)
+				.attr('stroke', (d: any) => color(d.id))
+				.attr('fill', (d: any) => color(d.id))
+				.attr('opacity', 1)
+				.attr('cx', posPointX)
+				.attr('cy', posPointY);
+
+			points.exit().remove();
+
+			// Sorts the elements accordingly to the z coordinate of the calculated centroid
+			d3.selectAll('._3d').sort(_3d().sort);
+		}
+
+		function init() {
+			let data = point3d(scatterData);
+			processData(data, 1000);
+		}
+
+		/* Functions to modify Drag behavior */
+		function dragStart(e: any) {
+			mx = e.x;
+			my = e.y;
+		}
+
+		function dragged(e: any) {
+			mouseX = mouseX || 0;
+			mouseY = mouseY || 0;
+			beta = ((e.x - mx + mouseX) * Math.PI) / 230;
+			alpha = (((e.y - my + mouseY) * Math.PI) / 230) * -1;
+			let data = point3d.rotateY(beta + startAngle).rotateX(alpha - startAngle)(scatterData);
+			processData(data, 0);
+		}
+
+		function dragEnd(e: any) {
+			mouseX = e.x - mx + mouseX;
+			mouseY = e.y - my + mouseY;
+		}
+
+		init();
 	});
 </script>
 
@@ -36,5 +134,5 @@
 			</h3>
 		</div>
 	</header>
-	<svg bind:this={el} id="graph" class="absolute my-auto top-0 right-0 w-4/5 h-4/5 -z-10"></svg>
+	<svg bind:this={el} id="graph" class="absolute my-auto top-0 right-0 w-4/5 h-4/5 z-10"></svg>
 </section>
