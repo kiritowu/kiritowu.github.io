@@ -114,6 +114,13 @@
 		}
 
 		init();
+
+		// TODO: Display color based on group
+		// TODO: Allow constant rotation
+		// TODO: Change scale based on zoom
+		// TODO: Display text based on id
+		// TODO: Change origin and initial based on screensize?
+		// TODO: Data Science Portion
 	});
 </script>
 
