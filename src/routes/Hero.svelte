@@ -18,9 +18,9 @@
 		// @ts-ignore
 		const _3d = (await import('d3-3d'))._3d;
 
-		const origin = [780, 400],
+		const origin = [780, 500],
 			scale = 20,
-			startAngle = Math.PI / 2;
+			startAngle = Math.PI;
 
 		const point3d = _3d()
 			.shape('POINT')
@@ -50,7 +50,7 @@
 			cnt = 0;
 		for (var z = -j; z < j; z++) {
 			for (var x = -j; x < j; x++) {
-				scatterData.push({ x: x, y: d3.randomUniform(0, -10)(), z: z, id: 'point_' + cnt++ });
+				scatterData.push({ x: x, y: d3.randomNormal(5, 2)(), z: z, id: 'point_' + cnt++ });
 			}
 		}
 
@@ -113,10 +113,21 @@
 			mouseY = e.y - my + mouseY;
 		}
 
+		function rotateInterval(angleX: number, angleY: number, tt: number) {
+			return setInterval(() => {
+				beta += (angleY / 180) * Math.PI;
+				alpha += (angleX / 180) * Math.PI;
+				let data = point3d.rotateY(beta + startAngle).rotateX(alpha - startAngle)(scatterData);
+				processData(data, 0);
+			}, tt);
+		}
+
 		init();
 
+		// Allow rotation animation
+		let rotate = rotateInterval(0, 3, 50);
+
 		// TODO: Display color based on group
-		// TODO: Allow constant rotation
 		// TODO: Change scale based on zoom
 		// TODO: Display text based on id
 		// TODO: Change origin and initial based on screensize?
