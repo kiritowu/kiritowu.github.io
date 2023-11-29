@@ -46,7 +46,7 @@
 			mouseX: number,
 			mouseY: number;
 
-		let j = 10,
+		let j = 5,
 			cnt = 0;
 		for (var z = -j; z < j; z++) {
 			for (var x = -j; x < j; x++) {
