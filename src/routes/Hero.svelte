@@ -84,6 +84,27 @@
 
 			points.exit().remove();
 
+			/* ----------- TEXT ----------- */
+			let texts = svg.selectAll('text').data(data, key);
+
+			texts
+				.enter()
+				.append('text')
+				.text((d: any) => d.id)
+				.attr('class', '_3d')
+				.attr('opacity', 0)
+				.attr('x', posPointX)
+				.attr('y', posPointY)
+				// @ts-ignore
+				.merge(texts)
+				.transition()
+				.duration(tt)
+				.attr('opacity', 1)
+				.attr('x', posPointX)
+				.attr('y', posPointY);
+
+			texts.exit().remove();
+
 			// Sorts the elements accordingly to the z coordinate of the calculated centroid
 			d3.selectAll('._3d').sort(_3d().sort);
 		}
@@ -129,7 +150,6 @@
 
 		// TODO: Display color based on group
 		// TODO: Change scale based on zoom
-		// TODO: Display text based on id
 		// TODO: Change origin and initial based on screensize?
 		// TODO: Data Science Portion
 	});
