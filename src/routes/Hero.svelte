@@ -166,7 +166,6 @@
 		// Allow rotation animation
 		let rotate = rotateInterval(0, 3, 50);
 
-		// TODO: Display color based on group
 		// TODO: Change origin and initial based on screensize?
 		// TODO: Data Science Portion
 	});
