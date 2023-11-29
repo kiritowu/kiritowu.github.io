@@ -167,6 +167,7 @@
 		let rotate = rotateInterval(0, 3, 50);
 
 		// TODO: Change origin and initial based on screensize?
+		// TODO: Stop setInterval on visibility change
 		// TODO: Data Science Portion
 	});
 </script>
