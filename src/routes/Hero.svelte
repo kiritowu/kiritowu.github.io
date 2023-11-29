@@ -12,7 +12,7 @@
 	// Skill Globe with D3
 	let el: SVGElement;
 
-	const data: { x: number; y: number; z: number; id: string }[] = [];
+	const data: { x: number; y: number; z: number; id: string; group: string }[] = [];
 
 	onMount(async () => {
 		// @ts-ignore
@@ -53,7 +53,13 @@
 			cnt = 0;
 		for (var z = -j; z < j; z++) {
 			for (var x = -j; x < j; x++) {
-				scatterData.push({ x: x, y: d3.randomNormal(5, 2)(), z: z, id: 'point_' + cnt++ });
+				scatterData.push({
+					x: x,
+					y: d3.randomNormal(5, 2)(),
+					z: z,
+					id: 'point_' + cnt++,
+					group: '1'
+				});
 			}
 		}
 
@@ -79,8 +85,8 @@
 				.transition()
 				.duration(tt)
 				.attr('r', 3)
-				.attr('stroke', (d: any) => color(d.id))
-				.attr('fill', (d: any) => color(d.id))
+				.attr('stroke', (d: any) => color(d.group))
+				.attr('fill', (d: any) => color(d.group))
 				.attr('opacity', 1)
 				.attr('cx', posPointX)
 				.attr('cy', posPointY);
