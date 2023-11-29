@@ -19,8 +19,15 @@
 		const _3d = (await import('d3-3d'))._3d;
 
 		const origin = [780, 500],
-			scale = 20,
 			startAngle = Math.PI;
+
+		let alpha = 0,
+			beta = 0,
+			scale = 20,
+			mx: number,
+			my: number,
+			mouseX: number,
+			mouseY: number;
 
 		const point3d = _3d()
 			.shape('POINT')
@@ -36,15 +43,11 @@
 			.select(el)
 			// @ts-ignore
 			.call(d3.drag().on('drag', dragged).on('start', dragStart).on('end', dragEnd))
+			// @ts-ignore
+			.call(d3.zoom().on('zoom', zoomed))
 			.append('g');
 		const color = d3.scaleOrdinal(d3.schemeCategory10);
 		const scatterData: typeof data = [];
-		let alpha = 0,
-			beta = 0,
-			mx: number,
-			my: number,
-			mouseX: number,
-			mouseY: number;
 
 		let j = 5,
 			cnt = 0;
@@ -134,6 +137,15 @@
 			mouseY = e.y - my + mouseY;
 		}
 
+		/* Functions to modify Zoom behavior */
+		function zoomed(e: any) {
+			let wheel: WheelEvent = e.sourceEvent;
+			scale = Math.min(Math.max(10, scale - wheel.deltaY), 50);
+
+			let data = point3d.scale(scale)(scatterData);
+			processData(data, 0);
+		}
+
 		function rotateInterval(angleX: number, angleY: number, tt: number) {
 			return setInterval(() => {
 				beta += (angleY / 180) * Math.PI;
@@ -149,7 +161,6 @@
 		let rotate = rotateInterval(0, 3, 50);
 
 		// TODO: Display color based on group
-		// TODO: Change scale based on zoom
 		// TODO: Change origin and initial based on screensize?
 		// TODO: Data Science Portion
 	});
