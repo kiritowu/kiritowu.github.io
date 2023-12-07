@@ -23,15 +23,16 @@
 			"Machine Learning",
 			"MLOps",
 			"ML Pipeline",
-			{
-				"Data Science": ["Data Analysis", "Data Engineering", "Data Visualisation"]
-			}
+			"Data Analysis",
+			"Data Engineering",
+			"Data Visualisation"
 		],
 		"Software Engineering": [
-			{
-				"Cloud": ["Google Cloud Platform (GCP)", "Firebase"],
-				"Programming": ["Python", "Typescript", "Javascript"]
-			}
+			"Google Cloud Platform (GCP)",
+			"Firebase",
+			"Python",
+			"Typescript",
+			"Javascript"
 		],
 		"Leadership": ["Project Management", "Event Planning"]
 	},
