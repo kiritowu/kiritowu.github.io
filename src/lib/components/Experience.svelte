@@ -25,17 +25,7 @@
 
 <section id="experience" class="my-10">
 	<h1 class="my-5">Experience</h1>
-	<section
-		class="flex flex-col md:flex-row"
-		on:wheel|preventDefault={(e) => {
-			let bb = document.getElementById(experiences[visibleSectionIdx].org)?.getBoundingClientRect();
-			if (bb && e.deltaY > 0) {
-				visibleSectionIdx = Math.min(experiences.length - 1, visibleSectionIdx + 1);
-			} else if (bb && e.deltaY < 0) {
-				visibleSectionIdx = Math.max(0, visibleSectionIdx - 1);
-			}
-		}}
-	>
+	<section class="flex flex-col md:flex-row">
 		<div class="md:basis-1/4 pr-5">
 			{#each experiences as experience, idx}
 				<button
