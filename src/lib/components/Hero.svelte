@@ -10,7 +10,7 @@
 
 <section id="hero" class="text-xl font-primary">
 	<header class="flex items-center min-h-screen max-w-6xl">
-		<div class="">
+		<div class="mx-auto">
 			<h3 class="my-3 font-mono text-secondary text-lg md:text-xl">Hi, my name is</h3>
 			<Typewriter mode="loopOnce" keepCursorOnFinish={true} wordInterval={700}>
 				{#each [`${firstName}`, `${ign}`, `${nickName} ${lastName}`, `${nickName} ${lastName} ${firstName}`] as text}
