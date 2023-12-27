@@ -25,7 +25,8 @@
 </script>
 
 <section id="experience" class="my-10">
-	<h1 class="my-5">Experience</h1>
+	<h1 class="my-2">Experience</h1>
+	<hr class="my-3 text-primary border-primary" />
 	<section class="flex flex-col md:flex-row">
 		<div class="md:basis-1/4 pr-5">
 			{#each experiences as experience, idx}
