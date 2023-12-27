@@ -1,6 +1,6 @@
 <script>
-	import Header from './Header.svelte';
-	import Contact from './Contact.svelte';
+	import Header from '$lib/components/Header.svelte';
+	import Contact from '$lib/components/Contact.svelte';
 	import '../app.css';
 </script>
 
