@@ -6,9 +6,10 @@
 	import icon_link from '$lib/images/link-linear.svg';
 	import icon_github from '$lib/images/github.svg';
 	import icon_linkedin from '$lib/images/linkedin.svg';
+	import icon_selected from '$lib/images/chevron-right-svgrepo-com.svg';
 
 	// Change visble section
-	let visibleSectionIdx = 0;
+	let visibleIdx = 0;
 
 	export let experiences: {
 		title: string;
@@ -29,19 +30,25 @@
 		<div class="md:basis-1/4 pr-5">
 			{#each experiences as experience, idx}
 				<button
-					class="w-full text-left text-lg mb-3 hover:text-secondary {visibleSectionIdx === idx
+					class="w-full text-left text-lg mb-3 hover:text-secondary align-middle {visibleIdx === idx
 						? 'text-secondary'
 						: 'opacity-80'}"
-					aria-expanded={visibleSectionIdx === idx}
+					aria-expanded={visibleIdx === idx}
 					on:click={() => {
-						visibleSectionIdx = idx;
-					}}>{experience.org}</button
+						visibleIdx = idx;
+					}}
+					>{experience.org}
+					<img
+						src={icon_selected}
+						alt={experience.org}
+						class="inline-block my-auto w-5 h-auto {visibleIdx === idx ? '' : 'hidden'}"
+					/></button
 				>
 			{/each}
 		</div>
 		<div class="md:basis-3/4">
 			{#each experiences as experience, idx}
-				<article class="mb-5 {visibleSectionIdx === idx ? '' : 'hidden'}">
+				<article class="mb-5 {visibleIdx === idx ? '' : 'hidden'}">
 					<div class="flex md:flex-row flex-col justify-between mb-2">
 						<h3 class="text-primary font-semibold text-xl">{experience.title}</h3>
 						<p class="text-base mt-auto">
