@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import skills from '$lib/skill_coords.json';
 	import * as d3 from 'd3';
 	import Typewriter from 'svelte-typewriter';
 
@@ -18,12 +19,12 @@
 		// @ts-ignore
 		const _3d = (await import('d3-3d'))._3d;
 
-		const origin = [780, 500],
-			startAngle = Math.PI;
+		const origin = [1000, 100],
+			startAngle = Math.PI / 8;
 
 		let alpha = 0,
 			beta = 0,
-			scale = 20,
+			scale = 80,
 			mx: number,
 			my: number,
 			mouseX: number,
@@ -49,19 +50,29 @@
 		const color = d3.scaleOrdinal(d3.schemeCategory10);
 		const scatterData: typeof data = [];
 
-		let j = 5,
-			cnt = 0;
-		for (var z = -j; z < j; z++) {
-			for (var x = -j; x < j; x++) {
-				scatterData.push({
-					x: x,
-					y: d3.randomNormal(5, 2)(),
-					z: z,
-					id: 'point_' + cnt++,
-					group: '1'
-				});
-			}
-		}
+		Object.entries(skills).forEach(([key, value]) => {
+			scatterData.push({
+				x: value[0],
+				y: value[1],
+				z: value[2],
+				id: key,
+				group: '1'
+			});
+		});
+
+		// let j = 5,
+		// 	cnt = 0;
+		// for (var z = -j; z < j; z++) {
+		// 	for (var x = -j; x < j; x++) {
+		// 		scatterData.push({
+		// 			x: x,
+		// 			y: d3.randomNormal(5, 2)(),
+		// 			z: z,
+		// 			id: 'point_' + cnt++,
+		// 			group: '1'
+		// 		});
+		// 	}
+		// }
 
 		/* Functions to modify all element on changes */
 		const key = (d: any) => d.id;
@@ -146,7 +157,7 @@
 		/* Functions to modify Zoom behavior */
 		function zoomed(e: any) {
 			let wheel: WheelEvent = e.sourceEvent;
-			scale = Math.min(Math.max(10, scale - wheel.deltaY), 50);
+			scale = Math.min(Math.max(10, scale - wheel.deltaY), 100);
 
 			let data = point3d.scale(scale)(scatterData);
 			processData(data, 0);
@@ -164,7 +175,7 @@
 		init();
 
 		// Allow rotation animation
-		let rotate = rotateInterval(0, 3, 50);
+		// let rotate = rotateInterval(0, 3, 100);
 
 		// TODO: Change origin and initial based on screensize?
 		// TODO: Stop setInterval on visibility change
@@ -178,7 +189,7 @@
 			<h3 class="my-3 font-mono text-secondary text-lg md:text-xl">Hi, my name is</h3>
 			<Typewriter mode="loopOnce" keepCursorOnFinish={true} wordInterval={700}>
 				{#each [`${firstName}`, `${ign}`, `${nickName} ${lastName}`, `${nickName} ${lastName} ${firstName}`] as text}
-					<h1 class="my-3 text-5xl md:text-6xl text-left">{text}</h1>
+					<h1 class="my-3 text-6xl md:text-6xl text-left">{text}</h1>
 				{/each}
 			</Typewriter>
 			<h1 class="my-5 text-xl md:text-4xl text-left font-extrabold font-heading text-secondary">
@@ -189,5 +200,5 @@
 			</h3>
 		</div>
 	</header>
-	<svg bind:this={el} id="graph" class="absolute my-auto top-0 right-0 w-4/5 h-4/5 z-10"></svg>
+	<!-- <svg bind:this={el} id="graph" class="absolute my-auto top-0 right-0 w-4/5 h-4/5 z-10"></svg> -->
 </section>

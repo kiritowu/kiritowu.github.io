@@ -29,23 +29,22 @@ def arg_parser():
 def main():
     args = arg_parser()
     queries = args.skills
-    print(queries)
 
     print("Initialize Model")
-    model = SentenceTransformer("BAAI/bge-base-en-v2.5")
+    model = SentenceTransformer("BAAI/bge-base-en-v1.5")
     instruction = "Represent this sentence for searching relevant skillsets: "
 
-    print("Generating embeddins")
+    print("Generating embeddings")
     q_embeddings = model.encode(
         [" ".join([instruction, q]) for q in queries],
         normalize_embeddings=True,
     )
 
     print("Running Dimension Reduction")
-    reducer = umap.UMAP(n_neighbors=10, n_components=3)
+    reducer = umap.UMAP(n_neighbors=5, n_components=3)
     coordinates = reducer.fit_transform(q_embeddings)
 
-    output = {q: coord for q, coord in zip(queries, coordinates)}
+    output = {q: coord.tolist() for q, coord in zip(queries, coordinates)}
 
     print(f"Store coordinates to {args.output}")
     with open(args.output, "w", encoding="utf-8") as f:
