@@ -67,22 +67,38 @@
 					</ul>
 					<div class="flex justify-end">
 						{#each experience.externalLinks as link}
-							<a class="text-secondary mx-1" href={link} target="_blank">
-								<img class="object-content w-8 h-8" src={icon_link} alt={link} />
+							<a
+								class="text-secondary mx-1 hover:bg-gray-200 rounded-full"
+								href={link}
+								target="_blank"
+							>
+								<img class="object-content w-8 h-8 m-1" src={icon_link} alt={link} />
 							</a>
 						{/each}
 						{#if experience.linkedInLink}
-							<a class="text-secondary mx-1" href={experience.linkedInLink} target="_blank">
+							<a
+								class="text-secondary mx-1 hover:bg-gray-200 rounded-full"
+								href={experience.linkedInLink}
+								target="_blank"
+							>
 								<img
-									class="object-content w-8 h-8"
+									class="object-content w-8 h-8 m-1"
 									src={icon_linkedin}
 									alt={experience.linkedInLink}
 								/>
 							</a>
 						{/if}
 						{#if experience.githubLink}
-							<a class="text-secondary mx-1" href={experience.githubLink} target="_blank">
-								<img class="object-content w-8 h-8" src={icon_github} alt={experience.githubLink} />
+							<a
+								class="text-secondary mx-1 hover:bg-gray-200 rounded-full"
+								href={experience.githubLink}
+								target="_blank"
+							>
+								<img
+									class="object-content w-8 h-8 m-1"
+									src={icon_github}
+									alt={experience.githubLink}
+								/>
 							</a>
 						{/if}
 					</div>
