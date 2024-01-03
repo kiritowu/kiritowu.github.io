@@ -1,28 +1,51 @@
+<script>
+	export let projects = {};
+</script>
+
 <section id="projects" class="my-10">
 	<h1 class="my-2">Project Gallery</h1>
 	<hr class="my-3 text-primary border-primary" />
-	<div class="flex flex-row">
-		<div class="basis-1/5 p-4 rounded bg-gray-500 bg-origin-content">
-			<h2 class="my-auto">Computer Vision</h2>
+
+	{#each Object.entries(projects) as [cat, items], cat_idx}
+		<div class="flex mb-2 {cat_idx % 2 ? 'flex-row-reverse' : 'flex-row'}">
+			<div class="basis-1/5 p-4 rounded border border-primary text-primary">
+				<h2 class="my-auto">{cat}</h2>
+			</div>
+			<article class="basis-4/5 flex justify-center">
+				<div
+					class="basis-[99%] flex flex-row flex-wrap gap-2 mx-auto {cat_idx % 2
+						? 'justify-end'
+						: 'justify-start'}"
+				>
+					{#each items as item}
+						<article class="basis-[32%] h-min rounded border border-primary text-primary shadow">
+							<a
+								class="text-primary hover:text-secondary hover:no-underline"
+								href={item.link}
+								target="_blank"
+							>
+								<img class="w-full" src={item.img} alt={item.title} />
+								<div class="m-3">
+									<div class="mb-4">
+										<h3 class="py-auto text-lg">{item.title}</h3>
+										<p class="text-xs text-primary">
+											{item.shortDescription}
+										</p>
+									</div>
+								</div>
+							</a>
+							<div class="flex flex-row flex-wrap gap-1 text-sm m-3">
+								{#each item.tags as tag}
+									<button
+										class="rounded-2xl border-primary border hover:bg-gray-200 p-2 text-secondary text-xs"
+										>{tag}</button
+									>
+								{/each}
+							</div>
+						</article>
+					{/each}
+				</div>
+			</article>
 		</div>
-		<div class="basis-4/5 flex flex-row flex-wrap self-stretch">
-			{#each [1, 2, 3, 4] as temp}
-				<a class="basis-1/3 rounded p-1 bg-slate-500" href="https://www.google.com" target="_blank">
-					<img class="h-1/2 block" />
-					<div class="m-3">
-						<h3 class="py-auto text-lg">Lorem Ipsum</h3>
-						<p class="text-sm">
-							Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-							velit
-						</p>
-						<hr />
-						<div class="flex flex-row p-2">
-							<button class="rounded-full bg-fuchsia-300 p-1">Firebase</button>
-							<button class="rounded-full bg-fuchsia-300 p-1">TypeScript</button>
-						</div>
-					</div>
-				</a>
-			{/each}
-		</div>
-	</div>
+	{/each}
 </section>

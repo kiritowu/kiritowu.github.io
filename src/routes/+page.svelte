@@ -31,4 +31,4 @@
 
 <Experience experiences={profile.experience} />
 
-<Projects />
+<Projects projects={profile.projects} />
