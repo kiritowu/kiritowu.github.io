@@ -3,10 +3,10 @@
 	import moment from 'moment';
 
 	// Icons
-	import icon_link from '$lib/images/link-linear.svg';
-	import icon_github from '$lib/images/github.svg';
-	import icon_linkedin from '$lib/images/linkedin.svg';
-	import icon_selected from '$lib/images/chevron-right-svgrepo-com.svg';
+	import icon_link from '$lib/images/icons/link-linear.svg';
+	import icon_github from '$lib/images/icons/github.svg';
+	import icon_linkedin from '$lib/images/icons/linkedin.svg';
+	import icon_selected from '$lib/images/icons/chevron-right-svgrepo-com.svg';
 
 	// Change visble section
 	let visibleIdx = 0;

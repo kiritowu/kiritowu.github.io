@@ -1,8 +1,8 @@
 <script>
 	import profile from '$lib/profile.json';
-	import icon_github from '$lib/images/github.svg';
-	import icon_linkedin from '$lib/images/linkedin.svg';
-	import icon_twitter from '$lib/images/twitter.svg';
+	import icon_github from '$lib/images/icons/github.svg';
+	import icon_linkedin from '$lib/images/icons/linkedin.svg';
+	import icon_twitter from '$lib/images/icons/twitter.svg';
 
 	let contacts = [
 		{

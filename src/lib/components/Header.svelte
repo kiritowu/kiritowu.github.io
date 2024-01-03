@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
-	import svgMenu from '$lib/images/menu-alt-1-svgrepo-com.svg';
-	import svgClose from '$lib/images/cross-svgrepo-com.svg';
+	import svgMenu from '$lib/images/icons/menu-alt-1-svgrepo-com.svg';
+	import svgClose from '$lib/images/icons/cross-svgrepo-com.svg';
 	export let navs = ['about', 'skills', 'experience', 'projects'];
 
 	let menu_visible = false; // menu navigation on mobile
