@@ -90,5 +90,97 @@
 				"Deep Learning"
 			]
 		}
-	]
+	],
+	"projects": {
+		"Natural Language Processing": [
+			{
+				"title": "Neural Search Engine",
+				"shortDescription": "Informational retrieval engine for unstructured text documents.",
+				"longDescription": ["lorem ipsum"],
+				"img": "https://via.placeholder.com/250",
+				"link": "",
+				"tags": ["Information Retrieval", "Google Cloud", "Firebase", "Sentence Transformers"]
+			},
+			{
+				"title": "Project Cactus",
+				"shortDescription": "A cross-platform AI Fake News Classifier.",
+				"longDescription": ["lorem ipsum"],
+				"img": "https://raw.githubusercontent.com/Ducksss/Project-Cactus/main/assets/demo_web.gif",
+				"link": "https://github.com/Ducksss/Project-Cactus",
+				"tags": ["RNN", "Google Cloud"]
+			}
+		],
+		"Computer Vision": [
+			{
+				"title": "SPAI Human Entrance Counter",
+				"shortDescription": "Detect and track the human footfall.",
+				"longDescription": ["lorem ipsum"],
+				"img": "/src/lib/images/projects/human-counter.png",
+				"link": "https://github.com/SPAI-Team/Human-Entrance-Counter",
+				"tags": ["Object Detection", "Object Tracking"]
+			},
+			{
+				"title": "EfficientNetV2 Benchmarks",
+				"shortDescription": "Train an image classifier for CIFAR-10 and Fashion-MNIST.",
+				"longDescription": ["lorem ipsum"],
+				"img": "/src/lib/images/projects/efficientnet.png",
+				"link": "https://github.com/kiritowu/Deep-Learning/tree/main/CV/EfficientNetV2_with_Image_Classification_Benchmarks",
+				"tags": ["Image Classification", "CNN", "PyTorch"]
+			},
+			{
+				"title": "Vehicle Detection with Faster R-CNN",
+				"shortDescription": "Train an object detection on vehicles in a video.",
+				"longDescription": ["lorem ipsum"],
+				"img": "/src/lib/images/projects/fasterrcnn.png",
+				"link": "https://github.com/kiritowu/Deep-Learning/tree/main/CV/FasterRCNN_VehiclesDetection",
+				"tags": ["Object Detection", "Faster R-CNN", "PyTorch"]
+			},
+			{
+				"title": "AC-BigGAN with CIFAR 10",
+				"shortDescription": "Train a GAN for CIFAR-10",
+				"longDescription": ["lorem ipsum"],
+				"img": "/src/lib/images/projects/acbigan.png",
+				"link": "https://github.com/kiritowu/Deep-Learning/tree/main/GAN/AC-BIGGAN-with-CIFAR10",
+				"tags": ["GAN", "PyTorch"]
+			}
+		],
+		"Full-Stack Development": [
+			{
+				"title": "AISDC 2023",
+				"shortDescription": "Companion web application for AI Student Developer Conference 2023",
+				"longDescription": ["lorem ipsum"],
+				"img": "/src/lib/images/projects/aisdc.jpg",
+				"link": "https://github.com/AISDC-2023/aisdc",
+				"tags": ["Firebase", "React", "Typescript"]
+			}
+		],
+		"Data Science & Analytics": [
+			{
+				"title": "Machine Learning Repo",
+				"shortDescription": "A collection of machine learning projects.",
+				"longDescription": ["lorem ipsum"],
+				"img": "/src/lib/images/projects/machine-learning.jpg",
+				"link": "https://github.com/kiritowu/Machine-Learning",
+				"tags": ["Classfication", "Regression", "Clustering", "Time Series", "Scikit-Learn"]
+			},
+			{
+				"title": "Reimagining Public Transport, Post-Covid",
+				"shortDescription": "Analysis of public transport usage in Singapore during the Covid-19 pandemic.",
+				"longDescription": ["lorem ipsum"],
+				"img": "https://raw.githubusercontent.com/kiritowu/Reimagining-Public-Transport-Post-COVID-19/main/img/deck-header.jpg",
+				"link": "https://github.com/kiritowu/Reimagining-Public-Transport-Post-COVID-19/tree/main",
+				"tags": ["Data Analysis", "Data Visualisation"]
+			}
+		],
+		"IOT": [
+			{
+				"title": "ESP32 First Person View Robot",
+				"shortDescription": "Design and build remote vehicle with a first person view powered by ESP-32 Cam.",
+				"longDescription": ["lorem ipsum"],
+				"img": "https://raw.githubusercontent.com/kiritowu/ESP32-First-Person-View-Robot/master/assets/FPV-Demo.gif",
+				"link": "https://github.com/kiritowu/ESP32-First-Person-View-Robot",
+				"tags": ["ESP32 Cam", "Arduino"]
+			}
+		]
+	}
 }
