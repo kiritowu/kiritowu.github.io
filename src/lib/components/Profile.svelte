@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { marked } from 'marked';
-	import profilePic from '$lib/images/icons/profile-pic-cropped.jpg';
+	import profilePic from '$lib/images/profile-pic-cropped.jpg';
 
 	export let descriptions: string[] = ['Sample description'];
 </script>
