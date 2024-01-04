@@ -7,24 +7,32 @@
 	<hr class="my-3 text-primary border-primary" />
 
 	{#each Object.entries(projects) as [cat, items], cat_idx}
-		<div class="flex mb-2 {cat_idx % 2 ? 'flex-row-reverse' : 'flex-row'}">
-			<div class="basis-1/5 p-4 rounded border border-primary text-primary">
+		<div class="flex mb-1 {cat_idx % 2 ? 'flex-row-reverse' : 'flex-row'}">
+			<div
+				class="flex basis-[24.5%] p-4 text-primary rounded-md border border-gray-300 shadow-xl {cat_idx %
+				2
+					? 'ml-2'
+					: 'mr-2'}"
+			>
 				<h2 class="my-auto">{cat}</h2>
 			</div>
-			<article class="basis-4/5 flex justify-center">
+			<article class="basis-3/4">
 				<div
-					class="basis-[99%] flex flex-row flex-wrap gap-2 mx-auto {cat_idx % 2
-						? 'justify-end'
-						: 'justify-start'}"
+					class="flex flex-row flex-wrap mx-auto {cat_idx % 2 ? 'justify-end' : 'justify-start'}"
 				>
 					{#each items as item}
-						<article class="basis-[32%] h-min rounded border border-primary text-primary shadow">
+						<article
+							class="basis-[32.6%] mb-2 h-min text-primary rounded-md border border-gray-300 shadow-xl {cat_idx %
+							2
+								? 'ml-2'
+								: 'mr-2'}"
+						>
 							<a
 								class="text-primary hover:text-secondary hover:no-underline"
 								href={item.link}
 								target="_blank"
 							>
-								<img class="w-full" src={item.img} alt={item.title} />
+								<img class="w-full rounded-t-md" src={item.img} alt={item.title} />
 								<div class="m-3">
 									<div class="mb-4">
 										<h3 class="py-auto text-lg">{item.title}</h3>
