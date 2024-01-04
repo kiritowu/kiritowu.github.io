@@ -7,25 +7,25 @@
 	<hr class="my-3 text-primary border-primary" />
 
 	{#each Object.entries(projects) as [cat, items], cat_idx}
-		<div class="flex mb-1 {cat_idx % 2 ? 'flex-row-reverse' : 'flex-row'}">
+		<div class="flex flex-col mb-1 {cat_idx % 2 ? 'md:flex-row-reverse' : 'md:flex-row'}">
 			<div
-				class="flex basis-[24.5%] p-4 text-primary rounded-md border border-gray-300 shadow-xl {cat_idx %
+				class="flex mb-2 md:basis-[24.5%] p-4 text-primary rounded-md border border-gray-300 shadow-md md:shadow-xl {cat_idx %
 				2
-					? 'ml-2'
-					: 'mr-2'}"
+					? 'md:ml-2'
+					: 'md:mr-2'}"
 			>
-				<h2 class="my-auto">{cat}</h2>
+				<h2 class="my-auto text-xl md:text-3xl">{cat}</h2>
 			</div>
-			<article class="basis-3/4">
+			<article class="md:basis-3/4">
 				<div
 					class="flex flex-row flex-wrap mx-auto {cat_idx % 2 ? 'justify-end' : 'justify-start'}"
 				>
 					{#each items as item}
 						<article
-							class="basis-[32.6%] mb-2 h-min text-primary rounded-md border border-gray-300 shadow-xl {cat_idx %
+							class="md:basis-[32.6%] mb-2 h-min text-primary rounded-md border border-gray-300 shadow-md md:shadow-xl {cat_idx %
 							2
-								? 'ml-2'
-								: 'mr-2'}"
+								? 'md:ml-2'
+								: 'md:mr-2'}"
 						>
 							<a
 								class="text-primary hover:text-secondary hover:no-underline"
