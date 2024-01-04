@@ -3,6 +3,7 @@
 	import icon_github from '$lib/images/icons/github.svg';
 	import icon_linkedin from '$lib/images/icons/linkedin.svg';
 	import icon_twitter from '$lib/images/icons/twitter.svg';
+	import icon_myanimelist from '$lib/images/icons/myanimelist-svgrepo-com.svg';
 
 	let contacts = [
 		{
@@ -19,6 +20,11 @@
 			name: 'Twitter',
 			url: `https://${profile.contact.twitter}`,
 			icon: icon_twitter
+		},
+		{
+			name: 'Myanimelist',
+			url: `https://${profile.contact.myanimelist}`,
+			icon: icon_myanimelist
 		}
 	];
 </script>
