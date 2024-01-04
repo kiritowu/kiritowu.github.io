@@ -94,10 +94,10 @@
 	"projects": {
 		"Natural Language Processing": [
 			{
-				"title": "Neural Search Engine",
+				"title": "AI-Enabled Query System",
 				"shortDescription": "Informational retrieval engine for unstructured text documents.",
 				"longDescription": ["lorem ipsum"],
-				"img": "https://via.placeholder.com/250",
+				"img": "/src/lib/images/projects/DAAA_3A68_AI-Enabled Query System_Thumbnail.jpg",
 				"link": "",
 				"tags": ["Information Retrieval", "Google Cloud", "Firebase", "Sentence Transformers"]
 			},
