@@ -14,7 +14,7 @@
 		</div>
 		<div class="md:basis-3/5">
 			{#each descriptions as description}
-				<p class="mb-2 text-lg">{@html marked(description)}</p>
+				<p class="mb-2 md:text-lg">{@html marked(description)}</p>
 			{/each}
 		</div>
 	</div>

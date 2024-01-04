@@ -60,7 +60,7 @@
 								: 'Present'}
 						</p>
 					</div>
-					<ul class="list-disc text-lg pl-5">
+					<ul class="list-disc md:text-lg pl-5">
 						{#each experience.descriptions as description}
 							<li>{@html marked(description)}</li>
 						{/each}
