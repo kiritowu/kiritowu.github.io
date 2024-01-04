@@ -115,7 +115,7 @@
 				"title": "SPAI Human Entrance Counter",
 				"shortDescription": "Detect and track the human footfall.",
 				"longDescription": ["lorem ipsum"],
-				"img": "/src/lib/images/projects/human-counter.png",
+				"img": "/src/lib/images/projects/human-counter.gif",
 				"link": "https://github.com/SPAI-Team/Human-Entrance-Counter",
 				"tags": ["Object Detection", "Object Tracking"]
 			},
