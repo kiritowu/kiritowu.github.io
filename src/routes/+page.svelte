@@ -27,7 +27,7 @@
 
 <Profile descriptions={profile.profile.descriptions} />
 
-<Skills />
+<Skills skills={profile.skills} />
 
 <Experience experiences={profile.experience} />
 
