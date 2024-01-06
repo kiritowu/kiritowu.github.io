@@ -34,6 +34,7 @@
 	"dependencies": {
 		"marked": "^10.0.0",
 		"moment": "^2.29.4",
+		"neo4jd3": "^0.0.5",
 		"prettier": "^3.0.3",
 		"prettier-plugin-svelte": "^3.1.0",
 		"svelte-typewriter": "^3.2.1"
