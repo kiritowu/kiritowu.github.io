@@ -19,8 +19,9 @@
 	},
 	"skills": {
 		"Artificial Intelligence": [
-			"Deep Learning",
 			"Machine Learning",
+			"Computer Vision",
+			"Natural Language Processing",
 			"MLOps",
 			"ML Pipeline",
 			"Data Analysis",
@@ -28,7 +29,8 @@
 			"Data Visualisation"
 		],
 		"Software Engineering": [
-			"Google Cloud Platform (GCP)",
+			"Google Cloud",
+			"Docker",
 			"Firebase",
 			"Python",
 			"Typescript",
