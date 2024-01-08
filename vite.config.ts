@@ -5,9 +5,7 @@ export default defineConfig({
 	plugins: [sveltekit()],
 	build: {
 		rollupOptions: {
-			output: {
-				inlineDynamicImports: true
-			}
+			external: ['neo4jd3-ts']
 		}
 	}
 });
