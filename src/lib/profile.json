@@ -99,7 +99,7 @@
 				"title": "AI-Enabled Query System",
 				"shortDescription": "Informational retrieval engine for unstructured text documents.",
 				"longDescription": ["lorem ipsum"],
-				"img": "/src/lib/images/projects/DAAA_3A68_AI-Enabled Query System_Thumbnail.jpg",
+				"img": "/images/projects/DAAA_3A68_AI-Enabled Query System_Thumbnail.jpg",
 				"link": "",
 				"tags": ["Information Retrieval", "Google Cloud", "Firebase", "Sentence Transformers"]
 			},
@@ -117,7 +117,7 @@
 				"title": "SPAI Human Entrance Counter",
 				"shortDescription": "Detect and track the human footfall.",
 				"longDescription": ["lorem ipsum"],
-				"img": "/src/lib/images/projects/human-counter.gif",
+				"img": "/images/projects/human-counter.gif",
 				"link": "https://github.com/SPAI-Team/Human-Entrance-Counter",
 				"tags": ["Object Detection", "Object Tracking"]
 			},
@@ -125,7 +125,7 @@
 				"title": "EfficientNetV2 Benchmarks",
 				"shortDescription": "Train an image classifier for CIFAR-10 and Fashion-MNIST.",
 				"longDescription": ["lorem ipsum"],
-				"img": "/src/lib/images/projects/efficientnet.png",
+				"img": "/images/projects/efficientnet.png",
 				"link": "https://github.com/kiritowu/Deep-Learning/tree/main/CV/EfficientNetV2_with_Image_Classification_Benchmarks",
 				"tags": ["Image Classification", "CNN", "PyTorch"]
 			},
@@ -133,7 +133,7 @@
 				"title": "Vehicle Detection with Faster R-CNN",
 				"shortDescription": "Train an object detection on vehicles in a video.",
 				"longDescription": ["lorem ipsum"],
-				"img": "/src/lib/images/projects/fasterrcnn.png",
+				"img": "/images/projects/fasterrcnn.png",
 				"link": "https://github.com/kiritowu/Deep-Learning/tree/main/CV/FasterRCNN_VehiclesDetection",
 				"tags": ["Object Detection", "Faster R-CNN", "PyTorch"]
 			},
@@ -141,7 +141,7 @@
 				"title": "AC-BigGAN with CIFAR 10",
 				"shortDescription": "Train a GAN for CIFAR-10",
 				"longDescription": ["lorem ipsum"],
-				"img": "/src/lib/images/projects/acbigan.png",
+				"img": "/images/projects/acbigan.png",
 				"link": "https://github.com/kiritowu/Deep-Learning/tree/main/GAN/AC-BIGGAN-with-CIFAR10",
 				"tags": ["GAN", "PyTorch"]
 			}
@@ -151,7 +151,7 @@
 				"title": "AISDC 2023",
 				"shortDescription": "Companion web application for AI Student Developer Conference 2023",
 				"longDescription": ["lorem ipsum"],
-				"img": "/src/lib/images/projects/aisdc.jpg",
+				"img": "/images/projects/aisdc.jpg",
 				"link": "https://github.com/AISDC-2023/aisdc",
 				"tags": ["Firebase", "React", "Typescript"]
 			}
@@ -161,7 +161,7 @@
 				"title": "Machine Learning Repo",
 				"shortDescription": "A collection of machine learning projects.",
 				"longDescription": ["lorem ipsum"],
-				"img": "/src/lib/images/projects/machine-learning.jpg",
+				"img": "/images/projects/machine-learning.jpg",
 				"link": "https://github.com/kiritowu/Machine-Learning",
 				"tags": ["Classfication", "Regression", "Clustering", "Time Series", "Scikit-Learn"]
 			},
