@@ -10,6 +10,3 @@ declare global {
 }
 
 export {};
-
-// Single Page Application (SPA)
-export const ssr = false;
