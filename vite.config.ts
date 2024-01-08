@@ -5,7 +5,9 @@ export default defineConfig({
 	plugins: [sveltekit()],
 	build: {
 		rollupOptions: {
-			external: ['node_modules']
+			output: {
+				inlineDynamicImports: true
+			}
 		}
 	}
 });
