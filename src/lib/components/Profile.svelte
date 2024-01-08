@@ -10,7 +10,7 @@
 	<hr class="my-3 text-primary border-primary" />
 	<div class="flex md:flex-row flex-col justify-between">
 		<div class="md:basis-1/3 px-10 mb-7">
-			<img class="rounded-full shadow-lg shadow-slate-800" src={profilePic} alt="profile" />
+			<img class="rounded-xl shadow-lg shadow-slate-800" src={profilePic} alt="profile" />
 		</div>
 		<div class="md:basis-3/5">
 			{#each descriptions as description}
