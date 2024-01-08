@@ -1,5 +1,17 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	// Import skill icons
+	import docker_icon from '$lib/images/icons/docker-svgrepo-com.svg';
+	import google_cloud_icon from '$lib/images/icons/google-cloud.svg';
+	import firebase_icon from '$lib/images/icons/firebase_icon.svg';
+	import python_icon from '$lib/images/icons/python_icon.svg';
+	import typescript_icon from '$lib/images/icons/typescript_icon.svg';
+	import javascript_icon from '$lib/images/icons/javascript_icon.svg';
+	import machine_learning_icon from '$lib/images/icons/machine-learning.svg';
+	import computer_vision_icon from '$lib/images/icons/image-combiner-svgrepo-com.svg';
+	import natural_language_processing_icon from '$lib/images/icons/language-svgrepo-com.svg';
+	import mlops_icon from '$lib/images/icons/cycle-svgrepo-com.svg';
+	import ml_pipeline_icon from '$lib/images/icons/pipeline-svgrepo-com.svg';
 
 	export let skills: Record<string, string[]> = {};
 
@@ -106,17 +118,17 @@
 				'Google Cloud': ''
 			},
 			images: {
-				Docker: 'src/lib/images/icons/docker-svgrepo-com.svg',
-				'Google Cloud': 'src/lib/images/icons/google-cloud.svg',
-				Firebase: 'src/lib/images/icons/firebase_icon.svg',
-				Python: 'src/lib/images/icons/python_icon.svg',
-				Typescript: 'src/lib/images/icons/typescript_icon.svg',
-				Javascript: 'src/lib/images/icons/javascript_icon.svg',
-				'Machine Learning': 'src/lib/images/icons/machine-learning.svg',
-				'Computer Vision': 'src/lib/images/icons/image-combiner-svgrepo-com.svg',
-				'Natural Language Processing': 'src/lib/images/icons/language-svgrepo-com.svg',
-				MLOps: 'src/lib/images/icons/cycle-svgrepo-com.svg',
-				'ML Pipeline': 'src/lib/images/icons/pipeline-svgrepo-com.svg'
+				Docker: docker_icon,
+				'Google Cloud': google_cloud_icon,
+				Firebase: firebase_icon,
+				Python: python_icon,
+				Typescript: typescript_icon,
+				Javascript: javascript_icon,
+				'Machine Learning': machine_learning_icon,
+				'Computer Vision': computer_vision_icon,
+				'Natural Language Processing': natural_language_processing_icon,
+				MLOps: mlops_icon,
+				'ML Pipeline': ml_pipeline_icon
 			}
 		});
 
