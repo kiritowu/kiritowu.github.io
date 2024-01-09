@@ -12,6 +12,7 @@
 	import natural_language_processing_icon from '$lib/images/icons/language-svgrepo-com.svg';
 	import mlops_icon from '$lib/images/icons/cycle-svgrepo-com.svg';
 	import ml_pipeline_icon from '$lib/images/icons/pipeline-svgrepo-com.svg';
+	import loading_gif from '$lib/images/icons/Ripple-1s-200px.gif';
 
 	export let skills: Record<string, string[]> = {};
 
@@ -181,8 +182,15 @@
 <section id="skills" class="bg-sky">
 	<div class="container-sm md:container-lg md:mx-auto px-5 max-w-6xl py-16">
 		<h1 class="mb-6">Skills</h1>
-		<div bind:this={container} class="w-full h-[80vh] bg-whiteBlue rounded-md shadow-lg">
-			<div id="graph" style="width: 100%; height:100%; overflow: hidden;"></div>
+		<div class="w-full h-[80vh] bg-whiteBlue rounded-md shadow-lg">
+			<div id="graph" style="width: 100%; height:100%; overflow: hidden;">
+				{#if !intersecting}
+					<div class="flex h-full justify-center items-center">
+						<img class="w-25 h-25" alt="Interactive Skill Map" src={loading_gif} />
+					</div>
+				{/if}
+			</div>
+			<div bind:this={container}></div>
 		</div>
 	</div>
 </section>
