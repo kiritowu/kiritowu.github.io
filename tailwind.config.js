@@ -32,7 +32,11 @@ export default {
 					light: '#C5DBF277',
 					DEFAULT: '#C5DBF277'
 				},
-				white: '#F3F9FF',
+				whiteBlue: {
+					light: '#F3F9FF',
+					DEFAULT: '#F3F9FF'
+				},
+				white: '#FFF',
 				gray: colors.neutral
 			}
 		}

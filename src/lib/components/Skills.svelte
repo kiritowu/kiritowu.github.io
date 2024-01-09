@@ -146,7 +146,7 @@
 <section id="skills" class="bg-sky">
 	<div class="container-sm md:container-lg md:mx-auto px-5 max-w-6xl py-16">
 		<h1 class="mb-6">Skills</h1>
-		<div class="w-full h-[80vh] bg-white rounded-md shadow-lg">
+		<div class="w-full h-[80vh] bg-whiteBlue rounded-md shadow-lg">
 			<div id="graph" style="width: 100%; height:100%; overflow: hidden;"></div>
 		</div>
 	</div>
