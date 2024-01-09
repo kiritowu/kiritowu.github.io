@@ -15,12 +15,9 @@
 	<meta name="description" content="{profile.profile.firstName}'s personal website" />
 	<title
 		>{profile.profile.nickName}
-		{profile.profile.firstName
-			.split(' ')
-			.map((name) => name.charAt(0))
-			.join('')}
-		{profile.profile.lastName}</title
-	>
+		{profile.profile.lastName}
+		{profile.profile.firstName}
+	</title>
 </svelte:head>
 
 <Hero {...profile.profile} />
