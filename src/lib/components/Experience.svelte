@@ -49,8 +49,8 @@
 		<div class="md:basis-3/4">
 			{#each experiences as experience, idx}
 				<article class="mb-5 {visibleIdx === idx ? '' : 'hidden'}">
-					<div class="flex md:flex-row flex-col justify-between mb-2">
-						<h3 class="text-primary font-semibold text-xl">{experience.title}</h3>
+					<div class="mb-2">
+						<h3 class="text-primary font-semibold text-xl mb-1">{experience.title}</h3>
 						<p class="text-base mt-auto">
 							{experience.startDate
 								? moment(experience.startDate, 'MM/YYYY').format('MMM YYYY') + ' - '
@@ -61,10 +61,10 @@
 					</div>
 					<ul class="list-disc md:text-lg pl-5">
 						{#each experience.descriptions as description}
-							<li>{@html marked(description)}</li>
+							<li class="mb-2">{@html marked(description)}</li>
 						{/each}
 					</ul>
-					<div class="flex justify-end">
+					<div class="flex justify-start">
 						{#each experience.externalLinks as link}
 							<a
 								class="text-secondary mx-1 hover:bg-gray-200 rounded-full"
