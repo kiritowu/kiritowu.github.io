@@ -2,9 +2,8 @@
 	export let projects = {};
 </script>
 
-<section id="projects" class="my-10">
-	<h1 class="my-2">Projects</h1>
-	<hr class="my-3 text-primary border-primary" />
+<section id="projects" class="my-16">
+	<h1 class="mb-6">Projects</h1>
 
 	{#each Object.entries(projects) as [cat, items], cat_idx}
 		<div class="flex flex-col mb-1 {cat_idx % 2 ? 'md:flex-row-reverse' : 'md:flex-row'}">

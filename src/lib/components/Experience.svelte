@@ -24,9 +24,8 @@
 	}[] = [];
 </script>
 
-<section id="experience" class="my-10">
-	<h1 class="my-2">Experience</h1>
-	<hr class="my-3 text-primary border-primary" />
+<section id="experience" class="my-16">
+	<h1 class="mb-6">Experience</h1>
 	<section class="flex flex-col md:flex-row">
 		<div class="md:basis-1/4 pr-5">
 			{#each experiences as experience, idx}

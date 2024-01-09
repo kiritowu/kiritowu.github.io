@@ -143,9 +143,8 @@
 	/>
 </svelte:head>
 
-<section id="skills" class="my-10">
-	<h1 class="my-2">Skills</h1>
-	<hr class="my-3 text-primary border-primary" />
+<section id="skills" class="my-16">
+	<h1 class="mb-6">Skills</h1>
 	<div class="w-full h-[80vh]">
 		<div id="graph" style="width: 100%; height:100%; overflow: hidden;"></div>
 	</div>
