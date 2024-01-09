@@ -28,7 +28,11 @@ export default {
 					light: '#EB8A90',
 					DEFAULT: '#EB8A90'
 				},
-				white: '#FFFFFF',
+				sky: {
+					light: '#C5DBF277',
+					DEFAULT: '#C5DBF277'
+				},
+				white: '#F3F9FF',
 				gray: colors.neutral
 			}
 		}

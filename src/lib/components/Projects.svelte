@@ -2,7 +2,7 @@
 	export let projects = {};
 </script>
 
-<section id="projects" class="my-16">
+<section id="projects" class="container-sm md:container-lg md:mx-auto px-5 max-w-6xl py-16">
 	<h1 class="mb-6">Projects</h1>
 
 	{#each Object.entries(projects) as [cat, items], cat_idx}

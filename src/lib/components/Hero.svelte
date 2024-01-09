@@ -8,7 +8,10 @@
 	export let ign = '';
 </script>
 
-<section id="hero" class="text-xl font-primary">
+<section
+	id="hero"
+	class="container-sm md:container-lg md:mx-auto px-5 max-w-6xl text-xl font-primary"
+>
 	<header class="flex items-center min-h-screen max-w-6xl">
 		<div class="mx-auto">
 			<h3 class="my-3 font-mono text-secondary text-lg md:text-xl">Hi, my name is</h3>

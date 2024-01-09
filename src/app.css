@@ -35,7 +35,7 @@ a:focus {
 /* Styles for neo4jd3 */
 .neo4jd3-graph {
 	border: 1px solid #ddd;
-	border-radius: 5px;
+	border-radius: 6px;
 	margin: 0;
 	padding: 0;
 }

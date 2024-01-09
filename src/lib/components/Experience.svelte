@@ -24,7 +24,7 @@
 	}[] = [];
 </script>
 
-<section id="experience" class="my-16">
+<section id="experience" class="container-sm md:container-lg md:mx-auto px-5 max-w-6xl py-16">
 	<h1 class="mb-6">Experience</h1>
 	<section class="flex flex-col md:flex-row">
 		<div class="md:basis-1/4 pr-5">
