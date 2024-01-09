@@ -18,6 +18,7 @@
 		{profile.profile.lastName}
 		{profile.profile.firstName}
 	</title>
+	<link rel="icon" href="/favicon.png" />
 </svelte:head>
 
 <Hero {...profile.profile} />
