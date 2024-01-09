@@ -15,6 +15,10 @@
 
 	export let skills: Record<string, string[]> = {};
 
+	// Variables for showing component on Intersected
+	let container: HTMLDivElement;
+	let intersecting = false;
+
 	const convertData = (skills: {}) => {
 		// Convert skills to neo4j data format
 		const nodes: { id: string; labels: string[]; properties?: Record<string, string> }[] = [];
@@ -91,7 +95,7 @@
 
 		const createNeoChart = neo4jd3Ts.default;
 		const data = convertData(skills);
-		createNeoChart('#graph', {
+		const options = {
 			highlight: [
 				{
 					class: 'User',
@@ -130,9 +134,40 @@
 				MLOps: mlops_icon,
 				'ML Pipeline': ml_pipeline_icon
 			}
-		});
+		};
 
-		d3.select('#neo4jd3-graph').selectAll('.relationship .text').attr('font-size', '2rem');
+		// Create chart when container is scrolled/intersected
+		if (typeof IntersectionObserver !== 'undefined') {
+			// Make use of IntersectionObserver when it is available
+			const observer = new IntersectionObserver((entries) => {
+				intersecting = entries[0].isIntersecting;
+				if (intersecting) {
+					createNeoChart('#graph', options);
+					observer.unobserve(container);
+				}
+			});
+
+			observer.observe(container);
+			return () => observer.unobserve(container);
+		}
+
+		function handler() {
+			const bcr = container.getBoundingClientRect();
+			intersecting =
+				bcr.bottom > 0 &&
+				bcr.right > 0 &&
+				bcr.top < window.innerHeight &&
+				bcr.left < window.innerWidth;
+
+			if (intersecting) {
+				console.log('Intersected');
+				createNeoChart('#graph', options);
+				window.removeEventListener('scroll', handler);
+			}
+		}
+
+		window.addEventListener('scroll', handler);
+		return () => window.removeEventListener('scroll', handler);
 	});
 </script>
 
@@ -146,7 +181,7 @@
 <section id="skills" class="bg-sky">
 	<div class="container-sm md:container-lg md:mx-auto px-5 max-w-6xl py-16">
 		<h1 class="mb-6">Skills</h1>
-		<div class="w-full h-[80vh] bg-whiteBlue rounded-md shadow-lg">
+		<div bind:this={container} class="w-full h-[80vh] bg-whiteBlue rounded-md shadow-lg">
 			<div id="graph" style="width: 100%; height:100%; overflow: hidden;"></div>
 		</div>
 	</div>
