@@ -4,7 +4,7 @@
 	import '../app.css';
 </script>
 
-<div class="min-h-max font-main bg-white">
+<div class="min-h-max font-main">
 	<Header />
 
 	<main>
