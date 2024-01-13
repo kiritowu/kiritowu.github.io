@@ -23,7 +23,7 @@
 	let intersecting = false;
 
 	// Variables for textFill
-	let textFill = $theme === 'dark' ? '#fff' : '#000';
+	let textFill = $theme === 'dark' ? '#D4D4D4' : '#171717';
 
 	const convertData = (skills: {}) => {
 		// Convert skills to neo4j data format
@@ -145,9 +145,9 @@
 		// Change text color based on theme
 		theme.subscribe((value) => {
 			if (value === 'dark') {
-				textFill = '#fff';
+				textFill = '#D4D4D4';
 			} else {
-				textFill = '#000';
+				textFill = '#171717';
 			}
 			if (intersecting) {
 				// When graph is created, change text color
