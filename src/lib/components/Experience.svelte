@@ -67,7 +67,7 @@
 					<div class="flex justify-start">
 						{#each experience.externalLinks as link}
 							<a
-								class="mx-1 hover:bg-gray-200 rounded-full w-12 h-12 flex justify-center items-center"
+								class="mx-1 hover:bg-slate-200 dark:hover:bg-slate-600 rounded-full w-12 h-12 flex justify-center items-center"
 								href={link}
 								target="_blank"
 							>
@@ -81,7 +81,7 @@
 						{/each}
 						{#if experience.linkedInLink}
 							<a
-								class="mx-1 hover:bg-gray-200 rounded-full w-12 h-12 flex justify-center items-center"
+								class="mx-1 hover:bg-slate-200 dark:hover:bg-slate-600 rounded-full w-12 h-12 flex justify-center items-center"
 								href={experience.linkedInLink}
 								target="_blank"
 							>
@@ -95,7 +95,7 @@
 						{/if}
 						{#if experience.githubLink}
 							<a
-								class="mx-1 hover:bg-gray-200 rounded-full w-12 h-12 flex justify-center items-center"
+								class="mx-1 hover:bg-slate-200 dark:hover:bg-slate-600 rounded-full w-12 h-12 flex justify-center items-center"
 								href={experience.githubLink}
 								target="_blank"
 							>
