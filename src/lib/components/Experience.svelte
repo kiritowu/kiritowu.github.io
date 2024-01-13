@@ -50,7 +50,9 @@
 			{#each experiences as experience, idx}
 				<article class="mb-5 {visibleIdx === idx ? '' : 'hidden'}">
 					<div class="mb-2">
-						<h3 class="text-primary font-semibold text-xl mb-1">{experience.title}</h3>
+						<h3 class="text-primary dark:text-primary-dark font-semibold text-xl mb-1">
+							{experience.title}
+						</h3>
 						<p class="text-base mt-auto">
 							{experience.startDate
 								? moment(experience.startDate, 'MM/YYYY').format('MMM YYYY') + ' - '

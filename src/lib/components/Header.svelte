@@ -22,7 +22,9 @@
 </script>
 
 <header
-	class="fixed transition-all {nav_visible ? 'top-0' : ' -top-16'} right-0 font-mono text-primary"
+	class="fixed transition-all {nav_visible
+		? 'top-0'
+		: ' -top-16'} right-0 font-mono text-primary dark:text-primary-dark"
 >
 	<nav class="px-4 py-6 flex justify-between items-center w-full">
 		<ul class="hidden md:flex ml-auto justify-start">
@@ -43,10 +45,14 @@
 			}}
 		>
 			{#if !menu_visible}
-				<img class="text-primary object-contain w-10 h-10 -scale-x-100" src={svgMenu} alt="menu" />
+				<img
+					class="text-primary dark:text-primary-dark object-contain w-10 h-10 -scale-x-100"
+					src={svgMenu}
+					alt="menu"
+				/>
 			{:else}
 				<img
-					class="text-primary object-contain w-10 h-10 -scale-x-100"
+					class="text-primary dark:text-primary-dark object-contain w-10 h-10 -scale-x-100"
 					src={svgClose}
 					alt="close"
 				/>
