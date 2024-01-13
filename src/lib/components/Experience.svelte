@@ -3,9 +3,7 @@
 	import moment from 'moment';
 
 	// Icons
-	import icon_link from '$lib/images/icons/link-linear.svg';
-	import icon_github from '$lib/images/icons/github.svg';
-	import icon_linkedin from '$lib/images/icons/linkedin.svg';
+	import Icon from '$lib/components/Icons.svelte';
 	import icon_selected from '$lib/images/icons/chevron-right-svgrepo-com.svg';
 
 	// Change visble section
@@ -69,37 +67,44 @@
 					<div class="flex justify-start">
 						{#each experience.externalLinks as link}
 							<a
-								class="text-secondary mx-1 hover:bg-gray-200 rounded-full"
+								class="mx-1 hover:bg-gray-200 rounded-full w-12 h-12 flex justify-center items-center"
 								href={link}
 								target="_blank"
 							>
-								<img class="object-content w-8 h-8 m-1" src={icon_link} alt={link} />
+								<Icon
+									name="baselineLink"
+									width="2rem"
+									height="2rem"
+									class="fill-primary dark:fill-primary-dark"
+								></Icon>
 							</a>
 						{/each}
 						{#if experience.linkedInLink}
 							<a
-								class="text-secondary mx-1 hover:bg-gray-200 rounded-full"
+								class="mx-1 hover:bg-gray-200 rounded-full w-12 h-12 flex justify-center items-center"
 								href={experience.linkedInLink}
 								target="_blank"
 							>
-								<img
-									class="object-content w-8 h-8 m-1"
-									src={icon_linkedin}
-									alt={experience.linkedInLink}
-								/>
+								<Icon
+									name="linkedIn"
+									width="2rem"
+									height="2rem"
+									class="fill-primary dark:fill-primary-dark"
+								></Icon>
 							</a>
 						{/if}
 						{#if experience.githubLink}
 							<a
-								class="text-secondary mx-1 hover:bg-gray-200 rounded-full"
+								class="mx-1 hover:bg-gray-200 rounded-full w-12 h-12 flex justify-center items-center"
 								href={experience.githubLink}
 								target="_blank"
 							>
-								<img
-									class="object-content w-8 h-8 m-1"
-									src={icon_github}
-									alt={experience.githubLink}
-								/>
+								<Icon
+									name="github"
+									width="2rem"
+									height="2rem"
+									class="fill-primary dark:fill-primary-dark"
+								></Icon>
 							</a>
 						{/if}
 					</div>
