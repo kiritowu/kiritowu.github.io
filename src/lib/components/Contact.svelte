@@ -1,10 +1,6 @@
 <script lang="ts">
 	import profile from '$lib/profile.json';
 	import Icons from '$lib/components/Icons.svelte';
-	import icon_github from '$lib/images/icons/github.svg';
-	import icon_linkedin from '$lib/images/icons/linkedin.svg';
-	import icon_twitter from '$lib/images/icons/twitter.svg';
-	import icon_myanimelist from '$lib/images/icons/myanimelist-svgrepo-com.svg';
 
 	let contacts: {
 		name: string;
