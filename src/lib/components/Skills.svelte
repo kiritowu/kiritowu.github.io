@@ -141,6 +141,8 @@
 				'ML Pipeline': ml_pipeline_icon
 			}
 		};
+		let d3TextSelector = '.neo4jd3-graph .relationships text'; // Select all text in relationships
+		let d3ImgTextSelector = '.neo4jd3-graph .node-image text'; // Select text in node-image
 
 		// Change text color based on theme
 		theme.subscribe((value) => {
@@ -151,7 +153,7 @@
 			}
 			if (intersecting) {
 				// When graph is created, change text color
-				d3.selectAll('text').attr('fill', textFill);
+				d3.selectAll(d3TextSelector).attr('fill', textFill);
 			}
 		});
 
@@ -162,7 +164,8 @@
 				intersecting = entries[0].isIntersecting;
 				if (intersecting) {
 					createNeoChart('#graph', options);
-					d3.selectAll('text').attr('fill', textFill);
+					d3.selectAll(d3TextSelector).attr('fill', textFill); // Change text color
+					d3.selectAll(d3ImgTextSelector).remove(); // Remove text in node-image
 					observer.unobserve(container);
 				}
 			});
@@ -182,7 +185,7 @@
 			if (intersecting) {
 				console.log('Intersected');
 				createNeoChart('#graph', options);
-				d3.selectAll('text').attr('fill', textFill);
+				d3.selectAll(d3TextSelector).attr('fill', textFill);
 				window.removeEventListener('scroll', handler);
 			}
 		}
