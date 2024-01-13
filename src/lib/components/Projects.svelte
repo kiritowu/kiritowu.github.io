@@ -2,7 +2,7 @@
 	// Import project images
 	import acbiggan from '$lib/images/projects/acbigan.png?enhanced';
 	import aisdc from '$lib/images/projects/aisdc.jpg?enhanced';
-	import aiEnabledQuerySystem from '$lib/images/projects/AI-Enabled Query System.jpg?enhanced';
+	import aiEnabledQuerySystem from '$lib/images/projects/ai-enabled-query-system.jpg?enhanced';
 	import efficientNet from '$lib/images/projects/efficientnet.png?enhanced';
 	import fasterrcnn from '$lib/images/projects/fasterrcnn.png?enhanced';
 	import projectCactus from '$lib/images/projects/project-cactus.gif';
