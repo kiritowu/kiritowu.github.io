@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { theme } from '$lib/stores';
+
 	// Import skill icons
 	import docker_icon from '$lib/images/icons/docker-svgrepo-com.svg';
 	import google_cloud_icon from '$lib/images/icons/google-cloud.svg';
@@ -19,6 +21,9 @@
 	// Variables for showing component on Intersected
 	let container: HTMLDivElement;
 	let intersecting = false;
+
+	// Variables for textFill
+	let textFill = $theme === 'dark' ? '#D4D4D4' : '#171717';
 
 	const convertData = (skills: {}) => {
 		// Convert skills to neo4j data format
@@ -137,6 +142,19 @@
 			}
 		};
 
+		// Change text color based on theme
+		theme.subscribe((value) => {
+			if (value === 'dark') {
+				textFill = '#D4D4D4';
+			} else {
+				textFill = '#171717';
+			}
+			if (intersecting) {
+				// When graph is created, change text color
+				d3.selectAll('text').attr('fill', textFill);
+			}
+		});
+
 		// Create chart when container is scrolled/intersected
 		if (typeof IntersectionObserver !== 'undefined') {
 			// Make use of IntersectionObserver when it is available
@@ -144,6 +162,7 @@
 				intersecting = entries[0].isIntersecting;
 				if (intersecting) {
 					createNeoChart('#graph', options);
+					d3.selectAll('text').attr('fill', textFill);
 					observer.unobserve(container);
 				}
 			});
@@ -163,6 +182,7 @@
 			if (intersecting) {
 				console.log('Intersected');
 				createNeoChart('#graph', options);
+				d3.selectAll('text').attr('fill', textFill);
 				window.removeEventListener('scroll', handler);
 			}
 		}
@@ -179,10 +199,12 @@
 	/>
 </svelte:head>
 
-<section id="skills" class="bg-sky">
+<section id="skills" class="bg-sky dark:bg-sky-dark">
 	<div class="container-sm md:container-lg md:mx-auto px-5 max-w-6xl py-16">
 		<h1 class="mb-6">Skills</h1>
-		<div class="w-full h-[80vh] bg-whiteBlue rounded-md shadow-lg">
+		<div
+			class="w-full h-[80vh] bg-whiteBlue dark:bg-whiteBlue-dark rounded-md shadow-lg dark:shadow-gray-600"
+		>
 			<div id="graph" style="width: 100%; height:100%; overflow: hidden;">
 				{#if !intersecting}
 					<div class="flex h-full justify-center items-center">

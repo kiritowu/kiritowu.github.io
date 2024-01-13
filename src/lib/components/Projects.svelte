@@ -44,7 +44,7 @@
 	{#each Object.entries(projects) as [cat, items], cat_idx}
 		<div class="flex flex-col mb-1 {cat_idx % 2 ? 'md:flex-row-reverse' : 'md:flex-row'}">
 			<div
-				class="flex mb-2 md:basis-[24.5%] p-4 text-primary rounded-md border border-gray-300 shadow-md md:shadow-xl {cat_idx %
+				class="flex mb-2 md:basis-[24.5%] p-4 text-primary dark:text-primary-dark rounded-md border border-gray-300 dark:border-neutral-700 shadow-md md:shadow-xl dark:shadow-none {cat_idx %
 				2
 					? 'md:ml-2'
 					: 'md:mr-2'}"
@@ -57,13 +57,13 @@
 				>
 					{#each items as item}
 						<article
-							class="md:basis-[32.6%] mb-2 h-min text-primary rounded-md border border-gray-300 shadow-md md:shadow-xl {cat_idx %
+							class="md:basis-[32.6%] mb-2 h-min text-primary dark:text-primary-dark rounded-md border border-gray-300 dark:border-neutral-700 shadow-md md:shadow-xl dark:shadow-none {cat_idx %
 							2
 								? 'md:ml-2'
 								: 'md:mr-2'}"
 						>
 							<a
-								class="text-primary hover:text-secondary hover:no-underline"
+								class="text-primary dark:text-primary-dark hover:text-secondary hover:no-underline"
 								href={item.link}
 								target="_blank"
 							>
@@ -79,7 +79,7 @@
 								<div class="m-3">
 									<div class="mb-4">
 										<h3 class="py-auto text-lg">{item.title}</h3>
-										<p class="text-xs text-primary">
+										<p class="text-xs text-primary dark:text-primary-dark">
 											{item.shortDescription}
 										</p>
 									</div>

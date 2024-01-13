@@ -7,12 +7,16 @@
 @tailwind utilities;
 
 /* Page wide styles */
+:root {
+	--cursor-color: #4682cd;
+}
+
 body {
-	@apply min-h-screen bg-neutral-100 bg-cover;
+	@apply min-h-screen bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-300 bg-cover;
 }
 
 h1 {
-	@apply text-primary text-4xl text-left font-extrabold;
+	@apply text-primary dark:text-primary-dark text-4xl text-left font-extrabold;
 }
 
 h2 {
@@ -20,21 +24,20 @@ h2 {
 }
 
 strong {
-	@apply text-primary font-bold;
+	@apply text-primary dark:text-primary-dark font-bold;
 }
 
 a {
-	@apply text-primary font-bold;
+	@apply text-primary dark:text-primary-dark font-bold;
 }
 
 a:hover,
 a:focus {
-	@apply text-secondary underline;
+	@apply text-secondary dark:text-secondary;
 }
 
 /* Styles for neo4jd3 */
 .neo4jd3-graph {
-	border: 1px solid #ddd;
 	border-radius: 6px;
 	margin: 0;
 	padding: 0;
@@ -44,6 +47,9 @@ a:focus {
 	font-size: 16px;
 	padding: 10px;
 	position: absolute;
+}
+.neo4jd3-info a strong {
+	@apply text-neutral-900;
 }
 .neo4jd3-info a {
 	border: 1px solid;

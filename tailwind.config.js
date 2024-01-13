@@ -14,6 +14,7 @@ export default {
 			colors: {
 				primary: {
 					light: '#162E5C',
+					dark: '#eff6ff',
 					DEFAULT: '#162E5C'
 				},
 				secondary: {
@@ -30,10 +31,12 @@ export default {
 				},
 				sky: {
 					light: '#C5DBF277',
+					dark: '#C5DBF211',
 					DEFAULT: '#C5DBF277'
 				},
 				whiteBlue: {
 					light: '#F3F9FF',
+					dark: '#F3F9FF33',
 					DEFAULT: '#F3F9FF'
 				},
 				white: '#FFF',

@@ -1,10 +1,32 @@
 <script>
+	import { onMount } from 'svelte';
+	import { theme } from '$lib/stores';
+
 	import Header from '$lib/components/Header.svelte';
 	import Contact from '$lib/components/Contact.svelte';
 	import '../app.css';
+
+	onMount(() => {
+		const localTheme = localStorage.getItem('theme');
+		// Set theme to localStorage if available, else use system default
+		if (localTheme) {
+			theme.set(localTheme);
+		} else {
+			theme.set(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+		}
+
+		theme.subscribe((value) => {
+			if (value === 'dark') {
+				document.documentElement.classList.add('dark');
+			} else {
+				document.documentElement.classList.remove('dark');
+			}
+			localStorage.setItem('theme', value);
+		});
+	});
 </script>
 
-<div class="min-h-max font-main bg-white">
+<div class="min-h-max font-main">
 	<Header />
 
 	<main>
