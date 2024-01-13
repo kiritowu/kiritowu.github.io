@@ -5,7 +5,7 @@
 	export let descriptions: string[] = ['Sample description'];
 </script>
 
-<section id="about" class="py-16 bg-sky">
+<section id="about" class="py-16 bg-sky dark:bg-sky-dark">
 	<div class="container-sm md:container-lg md:mx-auto px-5 max-w-6xl">
 		<h1 class="mb-6">About Me</h1>
 		<div class="flex md:flex-row flex-col justify-between">
