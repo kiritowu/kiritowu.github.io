@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { theme } from '$lib/stores';
 	import svgMenu from '$lib/images/icons/menu-alt-1-svgrepo-com.svg';
 	import svgClose from '$lib/images/icons/cross-svgrepo-com.svg';
 	export let navs = ['about', 'skills', 'experience', 'projects'];
@@ -27,7 +28,7 @@
 		: ' -top-16'} right-0 font-mono text-primary dark:text-primary-dark"
 >
 	<nav class="px-4 py-6 flex justify-between items-center w-full">
-		<ul class="hidden md:flex ml-auto justify-start">
+		<ul class="hidden md:flex ml-auto justify-start mr-2">
 			{#each navs as nav}
 				<li class="px-3">
 					<a class="font-normal hover:no-underline focus:outline-none" href="#{nav}"
@@ -36,6 +37,19 @@
 				</li>
 			{/each}
 		</ul>
+		<!-- Button for theme -->
+		<button
+			class="hidden md:block rounded-full hover:bg-slate-200 dark:hover:bg-slate-600 p-1 mr-2"
+			on:click={() => {
+				theme.update((value) => (value === 'dark' ? 'light' : 'dark'));
+			}}
+		>
+			{#if $theme === 'dark'}
+				<i class="fa fa-sun-o fa-lg"></i>
+			{:else}
+				<i class="fa fa-moon-o fa-lg"></i>
+			{/if}
+		</button>
 
 		<!-- Menu Navigation on Mobile -->
 		<button
@@ -64,7 +78,7 @@
 				: 'invisible'}"
 		></div>
 		<ul
-			class="fixed inset-y-0 md:hidden right-0 bg-white flex flex-col justify-center transform transition-all duration-300 z-20 overflow-hidden translate-x-0 shadow-lg {menu_visible
+			class="fixed inset-y-0 md:hidden right-0 bg-white dark:bg-slate-800 flex flex-col justify-center transform transition-all duration-300 z-20 overflow-hidden translate-x-0 shadow-lg {menu_visible
 				? 'visible w-56'
 				: 'invisible w-0'}"
 		>
@@ -76,6 +90,19 @@
 					>
 				</li>
 			{/each}
+			<!-- Button for theme -->
+			<button
+				class="rounded-full hover:bg-slate-200 dark:hover:bg-slate-600 p-1 mr-2"
+				on:click={() => {
+					theme.update((value) => (value === 'dark' ? 'light' : 'dark'));
+				}}
+			>
+				{#if $theme === 'dark'}
+					<i class="fa fa-sun-o fa-lg"></i>
+				{:else}
+					<i class="fa fa-moon-o fa-lg"></i>
+				{/if}
+			</button>
 		</ul>
 	</nav>
 </header>
