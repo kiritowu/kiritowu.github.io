@@ -12,7 +12,7 @@
 }
 
 body {
-	@apply min-h-screen bg-neutral-100 dark:bg-neutral-900 text-black dark:text-slate-200 bg-cover;
+	@apply min-h-screen bg-neutral-100 dark:bg-neutral-900 text-neutral-900 dark:text-neutral-300 bg-cover;
 }
 
 h1 {
@@ -33,7 +33,7 @@ a {
 
 a:hover,
 a:focus {
-	@apply text-secondary underline;
+	@apply text-secondary dark:text-secondary;
 }
 
 /* Styles for neo4jd3 */
