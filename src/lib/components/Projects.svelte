@@ -1,5 +1,41 @@
-<script>
-	export let projects = {};
+<script lang="ts">
+	// Import project images
+	import acbiggan from '$lib/images/projects/acbigan.png?enhanced';
+	import aisdc from '$lib/images/projects/aisdc.jpg?enhanced';
+	import aiEnabledQuerySystem from '$lib/images/projects/AI-Enabled Query System.jpg?enhanced';
+	import efficientNet from '$lib/images/projects/efficientnet.png?enhanced';
+	import fasterrcnn from '$lib/images/projects/fasterrcnn.png?enhanced';
+	import projectCactus from '$lib/images/projects/project-cactus.gif';
+	import humanCounter from '$lib/images/projects/human-counter.gif';
+	import machineLearning from '$lib/images/projects/machine-learning.jpg?enhanced';
+	import reimaginingPublicTransport from '$lib/images/projects/reimagining-public-transport.jpg?enhanced';
+	import fpv from '$lib/images/projects/FPV-Demo.gif';
+
+	const enhancedImgs: { [key: string]: any } = {
+		'AI-Enabled Query System': aiEnabledQuerySystem,
+		acbiggan: acbiggan,
+		EfficientNet: efficientNet,
+		'Faster R-CNN': fasterrcnn,
+		'Machine Learning': machineLearning,
+		aisdc: aisdc,
+		reimaginingPublicTransport: reimaginingPublicTransport
+	};
+	const imgs: { [key: string]: any } = {
+		'Human Counter': humanCounter,
+		'Project Cactus': projectCactus,
+		'FPV Demo': fpv
+	};
+
+	export let projects: {
+		[cat: string]: {
+			title: string;
+			shortDescription: string;
+			longDescription: string;
+			img: string;
+			link: string;
+			tags: string[];
+		}[];
+	} = {};
 </script>
 
 <section id="projects" class="container-sm md:container-lg md:mx-auto px-5 max-w-6xl py-16">
@@ -31,7 +67,15 @@
 								href={item.link}
 								target="_blank"
 							>
-								<img class="w-full rounded-t-md" src={item.img} alt={item.title} />
+								{#if enhancedImgs[item.img] !== undefined}
+									<enhanced:img
+										class="w-full rounded-t-md"
+										src={enhancedImgs[item.img]}
+										alt={item.title}
+									/>
+								{:else}
+									<img class="w-full rounded-t-md" src={imgs[item.img]} alt={item.title} />
+								{/if}
 								<div class="m-3">
 									<div class="mb-4">
 										<h3 class="py-auto text-lg">{item.title}</h3>
