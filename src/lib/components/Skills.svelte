@@ -202,7 +202,9 @@
 <section id="skills" class="bg-sky dark:bg-sky-dark">
 	<div class="container-sm md:container-lg md:mx-auto px-5 max-w-6xl py-16">
 		<h1 class="mb-6">Skills</h1>
-		<div class="w-full h-[80vh] bg-whiteBlue dark:bg-whiteBlue-dark rounded-md shadow-lg">
+		<div
+			class="w-full h-[80vh] bg-whiteBlue dark:bg-whiteBlue-dark rounded-md shadow-lg dark:shadow-gray-600"
+		>
 			<div id="graph" style="width: 100%; height:100%; overflow: hidden;">
 				{#if !intersecting}
 					<div class="flex h-full justify-center items-center">
