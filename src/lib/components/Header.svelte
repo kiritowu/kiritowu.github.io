@@ -75,9 +75,15 @@
 			{/if}
 		</button>
 		<div
-			class="fixed inset-0 md:hidden bg-black bg-opacity-50 z-20 opacity-100 {menu_visible
+			class="fixed inset-0 md:hidden bg-black bg-opacity-50 z-10 opacity-100 {menu_visible
 				? 'visible'
 				: 'invisible'}"
+			role="button"
+			tabindex="-1"
+			on:mousedown={() => {
+				// Hide menu when click on blured region
+				menu_visible = false;
+			}}
 		></div>
 		<ul
 			class="fixed inset-y-0 md:hidden right-0 bg-white dark:bg-slate-800 flex flex-col justify-center transform transition-all duration-300 z-20 overflow-hidden translate-x-0 shadow-lg {menu_visible
