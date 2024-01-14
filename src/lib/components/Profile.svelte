@@ -9,7 +9,7 @@
 	<div class="container-sm md:container-lg md:mx-auto px-5 max-w-6xl">
 		<h1 class="mb-6">About Me</h1>
 		<div class="flex md:flex-row flex-col justify-between">
-			<div class="md:basis-1/3 pr-10 mb-7">
+			<div class="md:basis-1/3 md:pr-10 md:pl-0 px-7 mb-10">
 				<enhanced:img
 					class="rounded-xl shadow-lg shadow-slate-800"
 					src={profilePic}

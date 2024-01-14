@@ -1,8 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
 	import { theme } from '$lib/stores';
-	import svgMenu from '$lib/images/icons/menu-alt-1-svgrepo-com.svg';
-	import svgClose from '$lib/images/icons/cross-svgrepo-com.svg';
+	import Icons from '$lib/components/Icons.svelte';
+
 	export let navs = ['about', 'skills', 'experience', 'projects'];
 
 	let menu_visible = false; // menu navigation on mobile
@@ -59,23 +59,31 @@
 			}}
 		>
 			{#if !menu_visible}
-				<img
-					class="text-primary dark:text-primary-dark object-contain w-10 h-10 -scale-x-100"
-					src={svgMenu}
-					alt="menu"
-				/>
+				<Icons
+					width="1.5rem"
+					height="1.5rem"
+					name="menuOpen"
+					class="stroke-primary dark:stroke-primary-dark -scale-x-100"
+				></Icons>
 			{:else}
-				<img
-					class="text-primary dark:text-primary-dark object-contain w-10 h-10 -scale-x-100"
-					src={svgClose}
-					alt="close"
-				/>
+				<Icons
+					width="1.5rem"
+					height="1.5rem"
+					name="menuClose"
+					class="fill-primary dark:fill-primary-dark -scale-x-100"
+				></Icons>
 			{/if}
 		</button>
 		<div
-			class="fixed inset-0 md:hidden bg-black bg-opacity-50 z-20 opacity-100 {menu_visible
+			class="fixed inset-0 md:hidden bg-black bg-opacity-50 z-10 opacity-100 {menu_visible
 				? 'visible'
 				: 'invisible'}"
+			role="button"
+			tabindex="-1"
+			on:mousedown={() => {
+				// Hide menu when click on blured region
+				menu_visible = false;
+			}}
 		></div>
 		<ul
 			class="fixed inset-y-0 md:hidden right-0 bg-white dark:bg-slate-800 flex flex-col justify-center transform transition-all duration-300 z-20 overflow-hidden translate-x-0 shadow-lg {menu_visible
