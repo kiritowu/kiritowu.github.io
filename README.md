@@ -27,4 +27,4 @@ You can preview the production build with `npm run preview`.
 
 To deploy the production build to GitHub Pages, simply commit and push the changes to `main` branch.
 
-A Github Action(`.github/workflows/deploy.yml`) is provided to deploy the built state static to [Github Pages](https://pages.github.com/).
+A Github Action(`.github/workflows/deploy.yml`) is provided to deploy the built state static website to [Github Pages](https://pages.github.com/).
