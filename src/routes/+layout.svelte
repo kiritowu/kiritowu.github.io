@@ -26,6 +26,10 @@
 	});
 </script>
 
+<svelte:head>
+	<meta name="google-site-verification" content="K3w6iuhMwMqP0lFTlrErB5WZ9v-l0w-MIdQBtyvgFks" />
+</svelte:head>
+
 <div class="min-h-max font-main">
 	<Header />
 
