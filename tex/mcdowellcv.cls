@@ -78,6 +78,13 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 
 % To customize lists
 \usepackage{enumitem}
+
+% Show Icons
+\usepackage{fontawesome}
+
+% Show Clickable Links
+\usepackage{hyperref}
+
 % Remove left margin from lists, suppress vertical item separation and set top
 % separation to a negative value to suppress a single parskip before lists
 \setlist{leftmargin=*, noitemsep, topsep=-1\parskip}
@@ -151,10 +158,9 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 \address{}
 
 \newcommand\printaddress{
-  \small{\@address}
+	\small{\@address}
 }
 
-\makeatother
 
 % Name
 \makeatletter
@@ -166,7 +172,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
   \typeout {kokoko}
   \typeout \spaceskip
   \spaceskip \namespaceskip \relax
-  \textbf{\LARGE\textls[110]{\textsc{\@name}}}
+  \textbf{\LARGE\textls[90]{\textsc{\@name}}}
 }
 
 \makeatother
@@ -174,23 +180,36 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 % Contacts
 \makeatletter
 
-\newcommand\contacts[1]{\def\@contacts{#1}}
-\contacts{}
+\newcommand\email[1]{\def\@email{\href{mailto:#1}{\faEnvelope #1 }}}
+\newcommand\call[1]{\def\@call{\href{tel:#1}{\faPhoneSquare #1 }}}
 
 \newcommand\printcontacts{
-  \small{\@contacts}
+	\footnotesize{\@call} \par \footnotesize{\@email}
+}
+
+\makeatother
+
+% Webpage and Socials
+\makeatletter
+
+\newcommand\webpage[1]{\def\@webpage{\href{https://#1}{\faExternalLink https://#1 \ }}}
+\newcommand\github[1]{\def\@github{\href{https://#1}{\faGithubSquare #1}}}
+\newcommand\linkedin[1]{\def\@linkedin{\href{https://#1}{\faLinkedinSquare #1}}}
+
+\newcommand\printsocials{
+	\footnotesize{\@webpage} \par \footnotesize{\@linkedin} 
 }
 
 \makeatother
 
 \makeatletter
 \newcommand\makeheader{
-  \begin{center}
-    \begin{tabu} to 1\textwidth { X[l,m] X[2,c,m] X[r,m] }
-      \printaddress & \printname & \printcontacts \\
-    \end{tabu}
-  \end{center}
-  \vspace*{\afterheaderspace}
+	\begin{center}
+		\begin{tabu} to 1\textwidth { X[l,m] X[2,c,m] X[l,m] }
+			\printaddress \printcontacts & \printname & \printsocials \\
+		\end{tabu}
+	\end{center}
+	\vspace*{\afterheaderspace}
 }
 \makeatother
 
