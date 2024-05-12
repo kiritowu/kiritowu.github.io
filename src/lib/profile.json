@@ -44,8 +44,9 @@
 		{
 			"title": "Chairperson, AI Student Developer Conference 2023",
 			"org": "AI Singapore",
-			"startDate": "02/2023",
-			"endDate": "05/2023",
+			"isJob": false,
+			"startDate": "Feb 2023",
+			"endDate": "May 2023",
 			"descriptions": [
 				"Leading a team of student organizers with diverse educational backgrounds and skillset.",
 				"Liaising with event management vendors and industry partners like NVIDIA, Govtech, SAP, SCS and Pand.ai to ensure smooth execution of the conference.",
@@ -59,14 +60,27 @@
 			"skills": ["Event Planning", "Project Management", "Machine Learning", "Firebase", "ML-Ops"]
 		},
 		{
+			"title": "Co-Founder, AI Engineer",
+			"org": "Flora Softworks Pte Ltd",
+			"isJob": true,
+			"startDate": "Feb 2022",
+			"endDate": "Apr 2023",
+			"descriptions": [
+            	"Co-Founded and developed Flora, a SaaS enterprise search solution using docarray and elasticsearch.",
+				"Presented Flora to 10+ potential clients, resulting in 1 successful pilots."
+			],
+			"skills": ["Python", "Docker", "Elasticsearch", "MLOps", "ML Pipeline"]
+		},
+		{
 			"title": "AI Engineer Intern",
 			"org": "ANOR Technologies Pte Ltd",
-			"startDate": "09/2022",
-			"endDate": "02/2023",
+			"isJob": true,
+			"startDate": "Sep 2022",
+			"endDate": "Feb 2023",
 			"descriptions": [
-				"Modularize and optimize signal processing functions into Python API across multiple research-oriented programme (e.g. Matlab, Origin)",
-				"Attached to an active research project as data analyst to clean, process, visualize and presenting the insights and recommendations gathered to relevant stakeholders.",
-				"Ongoing trial for the use of supervised contrastive learning for material classification."
+				"Modularize and optimized signal processing logic into Python functions from multiple research-oriented software (e.g. Matlab, Origin).",
+				"Supported research project by analyzing data and presenting experiment insights to relevant stakeholders.",
+				"Developed FastAPI backend for the no-code data analysis and signal processing application for Terahertz spectrogram samples."
 			],
 			"externalLinks": ["https://anor-tech.com/aboutus"],
 			"skills": ["Python", "Data Analysis", "Data Visualisation", "Deep Learning"]
@@ -74,8 +88,9 @@
 		{
 			"title": "President & Founder, SPAI Student Chapter",
 			"org": "SP Aritificial Intelligence Student Chapter",
-			"startDate": "04/2021",
-			"endDate": "04/2022",
+			"isJob": false,
+			"startDate": "Apr 2021",
+			"endDate": "Apr 2022",
 			"descriptions": [
 				"Founded and led the student committee to build a community of AI Enthusiast in SP through numerous student initiated workshops, competition and student-led projects.",
 				"Awarded the Outstanding Contributions (Group) Excellence Award with over 200 members across different schools all within the first year of existence."
@@ -92,6 +107,29 @@
 				"Event Planning",
 				"Machine Learning",
 				"Deep Learning"
+			]
+		}
+	],
+	"education": [
+		{
+			"qualification": "B.Comp. in Computer Science with NUS College",
+			"school": "National University of Singapore",
+			"startDate": "Aug 2025",
+			"endDate": "Jul 2029",
+			"descriptions": [
+				"B.Comp. in Computer Science with NUS College.",
+				"Recipient of NUS ASEAN Undergraduate Scholarship."
+			]
+		},
+		{
+			"qualification": "Diploma with Merit in Applied AI and Analytics",
+			"school": "Singapore Polytechnic",
+			"startDate": "Apr 2020",
+			"endDate": "Apr 2023",
+			"descriptions": [
+				"Diploma with Merit in Applied AI and Analytics, GPA 4.0/4.0.",
+				"Recipient of IMDA Gold Medal and SP Scholarship.",
+				"Graduate Coursework: Machine Learning, Deep Learning, DevOps, Data Analytics, Data Engineering, Data Visualisation."
 			]
 		}
 	],
