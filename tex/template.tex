@@ -43,46 +43,41 @@
 	% Print the content
 
 	\begin{cvsection}{Employment}
-		<%  %>
-		\begin{cvsubsection}{Co-Founder, AI Engineer}{Flora Softworks Pte Ltd}{Feb 2022 - Apr 2023}
+		<% for exp in experience %>
+		<% if exp.isJob %>
+		\begin{cvsubsection}{<$ exp.title $>}{<$ exp.org $>}{<$ exp.startDate $> - <$ exp.endDate $>}
 			\begin{itemize}
-            \item Co-Founded and developed Flora, a SaaS enterprise search solution using docarray and elasticsearch.
-			\item Presented Flora to 10+ potential clients, resulting in 1 successful pilots.
+			<% for d in exp.descriptions %>
+				\item <$ d $>
+			<% endfor %>
 			\end{itemize}
 		\end{cvsubsection}
-
-		\begin{cvsubsection}{AI Engineer Intern}{Anor Technologies Pte Ltd}{Sept 2022 - Feb 2023}	
-			\begin{itemize}
-				\item Modularize and optimized signal processing logic into Python functions from multiple research-oriented software (e.g. Matlab, Origin).
-				\item Supported research project by analyzing data and presenting experiment insights to relevant stakeholders.
-				\item Developed FastAPI backend for the no-code data analysis and signal processing application for Terahertz spectrogram samples.
-			\end{itemize}
-		\end{cvsubsection}
+		<% endif %>
+		<% endfor %>
 	\end{cvsection}
 	
 	\begin{cvsection}{Education}
-		\begin{cvsubsection}{National University of Singapore}{}{Aug 2025 -- Jul 2029}
+		<% for edu in education %>
+		\begin{cvsubsection}{<$ edu.school $>}{}{<$ edu.startDate $> -- <$ edu.endDate $>}
 			\begin{itemize}
-				\item B.Comp. in Computer Science with NUS College.
-				\item Recipient of NUS ASEAN Undergraduate Scholarship.
-				% \item Graduate Coursework: Software Foundations; Computer Architecture; Algorithms; Artificial Intelligence; Comparison of Learning Algorithms; Computational Theory.
+				<% for d in edu.descriptions %>
+				\item <$ d $>
+				<% endfor %>
 			\end{itemize}
 		\end{cvsubsection}
-		\begin{cvsubsection}{Singapore Polytechnic}{}{Apr 2020 -- May 2023}
-			\begin{itemize}
-				\item Diploma with Merit in Applied AI \& Analytics, GPA 4.0/4.0.
-				\item Recipient of IMDA Gold Medal and SP Scholarship.
-				\item Graduate Coursework: Machine Learning, Deep Learning, DevOps, Data Analytics, Data Engineering, Data Visualisation.
-			\end{itemize}
-		\end{cvsubsection}
+		<% endfor %> 
 	\end{cvsection}
 		
     \begin{cvsection}{Technical Experience}
         \begin{cvsubsection}{Projects}{}{}
             \begin{itemize}
-                \item \textbf{OwlShield} (2024). LLM Safety Firewall that validates user inputs and LLM outputs against adversarial attacks for organization’s LLM applications.
-                \item \textbf{Neural Information Retrieval System} (2022). Neural Search to retrieve relevant passages from a set of unstructured text documents.
-                % \item \textbf{Human Entrance Counter Project} (2021). Project coordinator for a team of 5 to develop a real-time human entrance counter using OpenCV, PeekingDuck and ESP32-Cam.
+				<% for name, cat in projects %>
+				<% for project in cat %>
+				<% if project.title in resume.projects %>
+				\item \textbf{<$ project.title $>} (<$ project.year $>). <$ project.shortDescription $>
+				<% endif %>
+				<% endfor %>
+				<% endfor %>
             \end{itemize}
         \end{cvsubsection}
 	\end{cvsection}
@@ -91,8 +86,11 @@
 		\begin{cvsubsection}{}{}{}	
 			\begin{itemize}
 				\item \textbf{Google Cloud Certified Professional Machine Learning Engineer:} Certified in designing, building, and productionizing ML solutions on Google Cloud. (ID: 43ffb52bffed42bbad16545107dd7723)
-				\item \textbf{Chairperson, AI Student Developer Conference 2023:} Led a diverse student team, partnered with industry leaders, moderated fireside chats, and developed gamified companion app, driving success of inaugural conference with 300+ AI youth participants.
-				\item \textbf{Founder \& President, SP Artificial Intelligence (SPAI) Student Chapter:} Moulded a community of AI Enthusiast in SP through workshops, competition and student-led projects, resulted in an Outstanding Contributions (Group) Excellence Award and 200 members within the first year of existence.
+				<% for exp in experience %>
+				<% if exp.title in resume.additionalExperience %>
+				\item \textbf{<$ exp.title |  replace("&", "\\&")  $>:} (<$ exp.year $>): <$ exp.shortDescription $>
+				<% endif %>
+				<% endfor %>
 			\end{itemize}
 		\end{cvsubsection}
 	\end{cvsection}
