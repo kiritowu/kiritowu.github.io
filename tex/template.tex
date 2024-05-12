@@ -27,13 +27,13 @@
 \usepackage{amsmath}
 
 % Set applicant's personal data for header
-\name{\underline{Wong} Zhao Wu, Bryan}
+\name{\underline{<$ profile.lastName $>} <$ profile.firstName $>, <$ profile.nickName $>}
 \address{}
-\webpage{kiritowu.github.io}
+\webpage{<$ contact.website $>}
 \call{(+65) XXXX XXXX}
-\email{zhaowu.wong@gmail.com}
-\github{github.com/kiritowu}
-\linkedin{linkedin.com/in/zw-wong}
+\email{<$ contact.email $>}
+\github{<$ contact.github $>}
+\linkedin{<$ contact.linkedin $>}
 
 \begin{document}
 
@@ -43,6 +43,7 @@
 	% Print the content
 
 	\begin{cvsection}{Employment}
+		<%  %>
 		\begin{cvsubsection}{Co-Founder, AI Engineer}{Flora Softworks Pte Ltd}{Feb 2022 - Apr 2023}
 			\begin{itemize}
             \item Co-Founded and developed Flora, a SaaS enterprise search solution using docarray and elasticsearch.
