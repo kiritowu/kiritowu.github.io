@@ -38,7 +38,10 @@
 			"Typescript",
 			"Javascript"
 		],
-		"Leadership": ["Project Management", "Event Planning"]
+		"Leadership": [
+			"Project Management",
+			"Event Planning"
+		]
 	},
 	"experience": [
 		{
@@ -47,17 +50,25 @@
 			"isJob": false,
 			"startDate": "Feb 2023",
 			"endDate": "May 2023",
+			"year": "2023",
 			"descriptions": [
 				"Leading a team of student organizers with diverse educational backgrounds and skillset.",
 				"Liaising with event management vendors and industry partners like NVIDIA, Govtech, SAP, SCS and Pand.ai to ensure smooth execution of the conference.",
 				"Moderating a fireside chat on what it takes to bring machine learning to life into a real-world AI project and how Machine Learning Operations (ML-Ops) is implemented in real-world AI project with industry professional.",
 				"Spearheading the development of a Firebase native companion application for gamification elements during Track 3: AI Playground."
 			],
+			"shortDescription": "Led a diverse student team, partnered with industry leaders, moderated fireside chats, and developed gamified companion app, driving success of inaugural conference with 300+ AI youth participants.",
 			"githubLink": "https://github.com/AISDC-2023/aisdc",
 			"externalLinks": [
 				"https://www.mindef.gov.sg/web/portal/mindef/news-and-events/latest-releases/article-detail/2023/May/13may23_nr2"
 			],
-			"skills": ["Event Planning", "Project Management", "Machine Learning", "Firebase", "ML-Ops"]
+			"skills": [
+				"Event Planning",
+				"Project Management",
+				"Machine Learning",
+				"Firebase",
+				"ML-Ops"
+			]
 		},
 		{
 			"title": "Co-Founder, AI Engineer",
@@ -66,10 +77,16 @@
 			"startDate": "Feb 2022",
 			"endDate": "Apr 2023",
 			"descriptions": [
-            	"Co-Founded and developed Flora, a SaaS enterprise search solution using docarray and elasticsearch.",
+				"Co-Founded and developed Flora, a SaaS enterprise search solution using docarray and elasticsearch.",
 				"Presented Flora to 10+ potential clients, resulting in 1 successful pilots."
 			],
-			"skills": ["Python", "Docker", "Elasticsearch", "MLOps", "ML Pipeline"]
+			"skills": [
+				"Python",
+				"Docker",
+				"Elasticsearch",
+				"MLOps",
+				"ML Pipeline"
+			]
 		},
 		{
 			"title": "AI Engineer Intern",
@@ -82,15 +99,24 @@
 				"Supported research project by analyzing data and presenting experiment insights to relevant stakeholders.",
 				"Developed FastAPI backend for the no-code data analysis and signal processing application for Terahertz spectrogram samples."
 			],
-			"externalLinks": ["https://anor-tech.com/aboutus"],
-			"skills": ["Python", "Data Analysis", "Data Visualisation", "Deep Learning"]
+			"externalLinks": [
+				"https://anor-tech.com/aboutus"
+			],
+			"skills": [
+				"Python",
+				"Data Analysis",
+				"Data Visualisation",
+				"Deep Learning"
+			]
 		},
 		{
-			"title": "President & Founder, SPAI Student Chapter",
+			"title": "Founder & President, SP Artificial Intelligence (SPAI) Student Chapter",
 			"org": "SP Aritificial Intelligence Student Chapter",
 			"isJob": false,
 			"startDate": "Apr 2021",
 			"endDate": "Apr 2022",
+			"year": 2021,
+			"shortDescription": "Moulded a community of AI Enthusiast in SP through workshops, competition and student-led projects, resulted in an Outstanding Contributions (Group) Excellence Award and 200 members within the first year of existence.",
 			"descriptions": [
 				"Founded and led the student committee to build a community of AI Enthusiast in SP through numerous student initiated workshops, competition and student-led projects.",
 				"Awarded the Outstanding Contributions (Group) Excellence Award with over 200 members across different schools all within the first year of existence."
@@ -133,95 +159,189 @@
 			]
 		}
 	],
+	"resume":{
+		"projects": [
+			"OwlShield",
+			"Neural Information Retrieval System"
+		],
+		"additionalExperience": [
+			"Chairperson, AI Student Developer Conference 2023",
+			"Founder & President, SP Artificial Intelligence (SPAI) Student Chapter"
+		]
+	},
 	"projects": {
 		"Natural Language Processing": [
 			{
-				"title": "AI-Enabled Query System",
-				"shortDescription": "Informational retrieval engine for unstructured text documents.",
-				"longDescription": ["lorem ipsum"],
+				"title": "OwlShield",
+				"year": "2024",
+				"shortDescription": "LLM Safety Firewall that validates user inputs and LLM outputs against adversarial attacks for organization’s LLM applications.",
+				"longDescription": [
+					"lorem ipsum"
+				],
+				"img": "owlShield",
+				"link": "",
+				"tags": [
+					"LLM",
+					"Adversarial Attacks",
+					"FastAPI",
+					"supabase"
+				]
+			},
+			{
+				"title": "Neural Information Retrieval System",
+				"year": "2022",
+				"shortDescription": "Neural Search to retrieval engine for unstructured text documents.",
+				"longDescription": [
+					"lorem ipsum"
+				],
 				"img": "AI-Enabled Query System",
 				"link": "",
-				"tags": ["Information Retrieval", "Google Cloud", "Firebase", "Sentence Transformers"]
+				"tags": [
+					"Information Retrieval",
+					"Google Cloud",
+					"Firebase",
+					"Sentence Transformers"
+				]
 			},
 			{
 				"title": "Project Cactus",
+				"year": "2022",
 				"shortDescription": "A cross-platform AI Fake News Classifier.",
-				"longDescription": ["lorem ipsum"],
+				"longDescription": [
+					"lorem ipsum"
+				],
 				"img": "Project Cactus",
 				"link": "https://github.com/Ducksss/Project-Cactus",
-				"tags": ["RNN", "Google Cloud"]
+				"tags": [
+					"RNN",
+					"Google Cloud"
+				]
 			}
 		],
 		"Computer Vision": [
 			{
 				"title": "SPAI Human Entrance Counter",
+				"year": "2022",
 				"shortDescription": "Detect and track the human footfall.",
-				"longDescription": ["lorem ipsum"],
+				"longDescription": [
+					"lorem ipsum"
+				],
 				"img": "Human Counter",
 				"link": "https://github.com/SPAI-Team/Human-Entrance-Counter",
-				"tags": ["Object Detection", "Object Tracking"]
+				"tags": [
+					"Object Detection",
+					"Object Tracking"
+				]
 			},
 			{
 				"title": "EfficientNetV2 Benchmarks",
+				"year": "2021",
 				"shortDescription": "Train an image classifier for CIFAR-10 and Fashion-MNIST.",
-				"longDescription": ["lorem ipsum"],
+				"longDescription": [
+					"lorem ipsum"
+				],
 				"img": "EfficientNet",
 				"link": "https://github.com/kiritowu/Deep-Learning/tree/main/CV/EfficientNetV2_with_Image_Classification_Benchmarks",
-				"tags": ["Image Classification", "CNN", "PyTorch"]
+				"tags": [
+					"Image Classification",
+					"CNN",
+					"PyTorch"
+				]
 			},
 			{
 				"title": "Vehicle Detection with Faster R-CNN",
+				"year": "2021",
 				"shortDescription": "Train an object detection on vehicles in a video.",
-				"longDescription": ["lorem ipsum"],
+				"longDescription": [
+					"lorem ipsum"
+				],
 				"img": "Faster R-CNN",
 				"link": "https://github.com/kiritowu/Deep-Learning/tree/main/CV/FasterRCNN_VehiclesDetection",
-				"tags": ["Object Detection", "Faster R-CNN", "PyTorch"]
+				"tags": [
+					"Object Detection",
+					"Faster R-CNN",
+					"PyTorch"
+				]
 			},
 			{
 				"title": "AC-BigGAN with CIFAR 10",
+				"year": "2021",
 				"shortDescription": "Train a GAN for CIFAR-10",
-				"longDescription": ["lorem ipsum"],
+				"longDescription": [
+					"lorem ipsum"
+				],
 				"img": "acbiggan",
 				"link": "https://github.com/kiritowu/Deep-Learning/tree/main/GAN/AC-BIGGAN-with-CIFAR10",
-				"tags": ["GAN", "PyTorch"]
+				"tags": [
+					"GAN",
+					"PyTorch"
+				]
 			}
 		],
 		"Full-Stack Development": [
 			{
 				"title": "AISDC 2023",
+				"year": "2023",
 				"shortDescription": "Companion web application for AI Student Developer Conference 2023",
-				"longDescription": ["lorem ipsum"],
+				"longDescription": [
+					"lorem ipsum"
+				],
 				"img": "aisdc",
 				"link": "https://github.com/AISDC-2023/aisdc",
-				"tags": ["Firebase", "React", "Typescript"]
+				"tags": [
+					"Firebase",
+					"React",
+					"Typescript"
+				]
 			}
 		],
 		"Data Science & Analytics": [
 			{
 				"title": "Machine Learning Repo",
+				"year": "2021",
 				"shortDescription": "A collection of machine learning projects.",
-				"longDescription": ["lorem ipsum"],
+				"longDescription": [
+					"lorem ipsum"
+				],
 				"img": "Machine Learning",
 				"link": "https://github.com/kiritowu/Machine-Learning",
-				"tags": ["Classfication", "Regression", "Clustering", "Time Series", "Scikit-Learn"]
+				"tags": [
+					"Classfication",
+					"Regression",
+					"Clustering",
+					"Time Series",
+					"Scikit-Learn"
+				]
 			},
 			{
 				"title": "Reimagining Public Transport, Post-Covid",
+				"year": "2020",
 				"shortDescription": "Analysis of public transport usage in Singapore during the Covid-19 pandemic.",
-				"longDescription": ["lorem ipsum"],
+				"longDescription": [
+					"lorem ipsum"
+				],
 				"img": "reimaginingPublicTransport",
 				"link": "https://github.com/kiritowu/Reimagining-Public-Transport-Post-COVID-19/tree/main",
-				"tags": ["Data Analysis", "Data Visualisation"]
+				"tags": [
+					"Data Analysis",
+					"Data Visualisation"
+				]
 			}
 		],
 		"IOT": [
 			{
 				"title": "ESP32 First Person View Robot",
+				"year": "2021",
 				"shortDescription": "Design and build remote vehicle with a first person view powered by ESP-32 Cam.",
-				"longDescription": ["lorem ipsum"],
+				"longDescription": [
+					"lorem ipsum"
+				],
 				"img": "FPV Demo",
 				"link": "https://github.com/kiritowu/ESP32-First-Person-View-Robot",
-				"tags": ["ESP32 Cam", "Arduino"]
+				"tags": [
+					"ESP32 Cam",
+					"Arduino"
+				]
 			}
 		]
 	}
