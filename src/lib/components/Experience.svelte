@@ -1,7 +1,4 @@
 <script lang="ts">
-	import { marked } from 'marked';
-	import moment from 'moment';
-
 	// Icons
 	import Icon from '$lib/components/Icons.svelte';
 	import icon_selected from '$lib/images/icons/chevron-right-svgrepo-com.svg';
@@ -52,33 +49,33 @@
 							{experience.title}
 						</h3>
 						<p class="text-base mt-auto">
-							{experience.startDate
-								? moment(experience.startDate, 'MM/YYYY').format('MMM YYYY') + ' - '
-								: ''}{experience.endDate
-								? moment(experience.endDate, 'MM/YYYY').format('MMM YYYY')
+							{experience.startDate ? experience.startDate + ' - ' : ''}{experience.endDate
+								? experience.endDate
 								: 'Present'}
 						</p>
 					</div>
 					<ul class="list-disc md:text-lg pl-5">
 						{#each experience.descriptions as description}
-							<li class="mb-2">{@html marked(description)}</li>
+							<li class="mb-2">{description}</li>
 						{/each}
 					</ul>
 					<div class="flex justify-start">
-						{#each experience.externalLinks as link}
-							<a
-								class="mx-1 hover:bg-slate-200 dark:hover:bg-slate-600 rounded-full w-12 h-12 flex justify-center items-center"
-								href={link}
-								target="_blank"
-							>
-								<Icon
-									name="baselineLink"
-									width="2rem"
-									height="2rem"
-									class="fill-primary dark:fill-primary-dark"
-								></Icon>
-							</a>
-						{/each}
+						{#if experience.externalLinks}
+							{#each experience.externalLinks as link}
+								<a
+									class="mx-1 hover:bg-slate-200 dark:hover:bg-slate-600 rounded-full w-12 h-12 flex justify-center items-center"
+									href={link}
+									target="_blank"
+								>
+									<Icon
+										name="baselineLink"
+										width="2rem"
+										height="2rem"
+										class="fill-primary dark:fill-primary-dark"
+									></Icon>
+								</a>
+							{/each}
+						{/if}
 						{#if experience.linkedInLink}
 							<a
 								class="mx-1 hover:bg-slate-200 dark:hover:bg-slate-600 rounded-full w-12 h-12 flex justify-center items-center"

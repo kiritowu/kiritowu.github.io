@@ -1,5 +1,6 @@
 <script lang="ts">
 	// Import project images
+	import owlshield from '$lib/images/projects/owlshield.png?enhanced';
 	import acbiggan from '$lib/images/projects/acbigan.png?enhanced';
 	import aisdc from '$lib/images/projects/aisdc.jpg?enhanced';
 	import aiEnabledQuerySystem from '$lib/images/projects/ai-enabled-query-system.jpg?enhanced';
@@ -18,7 +19,8 @@
 		'Faster R-CNN': fasterrcnn,
 		'Machine Learning': machineLearning,
 		aisdc: aisdc,
-		reimaginingPublicTransport: reimaginingPublicTransport
+		reimaginingPublicTransport: reimaginingPublicTransport,
+		owlShield: owlshield
 	};
 	const imgs: { [key: string]: any } = {
 		'Human Counter': humanCounter,
