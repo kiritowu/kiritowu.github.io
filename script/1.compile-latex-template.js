@@ -1,4 +1,4 @@
-// compile-latex.js
+// compile-latex-template.js
 
 import fs from 'fs';
 import { Command } from 'commander';
