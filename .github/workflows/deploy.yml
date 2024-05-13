@@ -2,52 +2,63 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: 'main'
+    branches:
+      - 'main'
+      - feat/latex-resume-export
 
 jobs:
-  build_jinja:
+  compile-latex:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Install Python
-        uses: actions/setup-python@v2
+      - name: Install Node.js
+        uses: actions/setup-node@v4
         with:
-          python-version: '3.x'
+          node-version: 20
+          cache: npm
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: npm install
 
-      - name: Build
-        run: python build.py
+      - name: Compile latex
+        run: |
+          node scripts/1.compile-latex-template.js
 
-  build_tex:
-    needs: build_jinja
+  export-latex-to-pdf:
+    needs: compile-latex
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
+      - name: Install Docker
+        uses: docker/setup-buildx-action@v3
+      
       - name: Build Docker image
-        run: docker build -t texlive .
+        run: docker build -t texlive-extended .
         working-directory: ./tex
 
       - name: Run Docker container
-        run: docker run --rm \
-          --volume `pwd`:/work/src:ro \
-          --volume `pwd`/out:/work/out \
-          ${tty_params} \
-          texlive:latest \
-          work lualatex template.tex
+        run: |
+          docker run --rm \
+            --volume `pwd`/tex:/work/src:ro \
+            --volume `pwd`/tex/out:/work/out \
+            texlive-extended:latest \
+            work lualatex WongZhaoWu-resume.tex
 
+      - name: Copy PDF to static
+        run: |
+          cp tex/out/WongZhaoWu-resume.pdf \
+          ./static/WongZhaoWu-resume.pdf
 
   build_site:
-    needs: build_tex
+    needs: export-latex-to-pdf
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # If you're using pnpm, add this step then change the commands and cache key below to use `pnpm`
       # - name: Install pnpm
