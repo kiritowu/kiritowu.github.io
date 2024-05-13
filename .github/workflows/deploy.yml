@@ -26,11 +26,11 @@ jobs:
         run: |
           node scripts/1.compile-latex-template.js
         
-      # - name: Cache LaTeX files
-      #   uses: actions/cache@v4
-      #   with:
-      #     path: ./tex
-      #     key: tex
+      - name: Cache LaTeX files
+        uses: actions/cache@v4
+        with:
+          path: ./tex
+          key: tex
 
   export-latex-to-pdf:
     needs: compile-latex
@@ -46,11 +46,11 @@ jobs:
         run: docker build -t texlive-extended .
         working-directory: ./tex
 
-      # - name: Cache LaTeX files
-      #   uses: actions/cache@v4
-      #   with:
-      #     path: ./tex
-      #     key: tex
+      - name: Cache LaTeX files
+        uses: actions/cache@v4
+        with:
+          path: ./tex
+          key: tex
 
       - name: Run Docker container
         run: |
@@ -65,13 +65,13 @@ jobs:
           cp tex/out/WongZhaoWu-resume.pdf \
           ./static/WongZhaoWu-resume.pdf
 
-      # - name: Cache Static files
-      #   uses: actions/cache@v4
-      #   with:
-      #     path: ./static
-      #     key: static
+      - name: Cache Static files
+        uses: actions/cache@v4
+        with:
+          path: ./static
+          key: static
 
-  build_site:
+  build-site:
     needs: export-latex-to-pdf
     runs-on: ubuntu-latest
     steps:
@@ -94,11 +94,11 @@ jobs:
         run: npm install
       - run: ls -la node_modules
 
-      # - name: Cache Static files
-      #   uses: actions/cache@v4
-      #   with:
-      #     path: ./static
-      #     key: static
+      - name: Cache Static files
+        uses: actions/cache@v4
+        with:
+          path: ./static
+          key: static
 
       - name: build
         env:
@@ -113,7 +113,7 @@ jobs:
           path: 'build/'
 
   deploy:
-    needs: build_site
+    needs: build-site
     runs-on: ubuntu-latest
 
     permissions:
