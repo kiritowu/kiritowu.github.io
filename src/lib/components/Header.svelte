@@ -36,6 +36,11 @@
 					>
 				</li>
 			{/each}
+			<li class="px-3">
+				<a class="font-normal hover:no-underline focus:outline-none" href="/WongZhaoWu-resume.pdf">
+					Résumé
+				</a>
+			</li>
 		</ul>
 		<!-- Button for theme -->
 		<button
@@ -98,6 +103,13 @@
 					>
 				</li>
 			{/each}
+			<!-- Hyperlink for Resume -->
+            <li class="px-3">
+                <a
+                    class="mb-8 px-4 py-2 text-center block hover:text-secondary focus:text-secondary focus:outline-none"
+                    href="/WongZhaoWu-resume.pdf">Résumé</a
+                >
+            </li>
 			<!-- Button for theme -->
 			<button
 				class="rounded-full hover:bg-slate-200 dark:hover:bg-slate-600 p-1 mr-2"
