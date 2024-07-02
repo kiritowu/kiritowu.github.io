@@ -174,17 +174,19 @@
 			{
 				"title": "OwlShield",
 				"year": "2024",
-				"shortDescription": "LLM Safety Firewall that validates user inputs and LLM outputs against adversarial attacks for organization’s LLM applications.",
+				"shortDescription": "LLM Safety Firewall Solution that close the safety and compliance gap of LLM Application by organisations.",
 				"longDescription": [
 					"lorem ipsum"
 				],
 				"img": "owlShield",
-				"link": "",
+				"link": "https://youtu.be/NuvWw_M4ErA",
 				"tags": [
-					"LLM",
+					"LLM Safety",
 					"Adversarial Attacks",
+					"SvelteKit",
 					"FastAPI",
-					"supabase"
+					"Supabase",
+					"HPC"
 				]
 			},
 			{
