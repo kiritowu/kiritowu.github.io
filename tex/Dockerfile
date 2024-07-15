@@ -1,4 +1,4 @@
-ARG base_image="reitzig/texlive-base-luatex:2024.1"
+ARG base_image="reitzig/texlive-base-luatex:latest"
 FROM ${base_image}
 
 RUN apk --no-cache add font-linux-libertine msttcorefonts-installer fontconfig && \
