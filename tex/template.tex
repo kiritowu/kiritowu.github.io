@@ -74,7 +74,7 @@
 				<% for name, cat in projects %>
 				<% for project in cat %>
 				<% if project.title in resume.projects %>
-				\item \textbf{<$ project.title $>} (<$ project.year $>). <$ project.shortDescription $>
+				\item \textbf{<$ project.title $>} (<$ project.year $>). <$ project.longDescription $>
 				<% endif %>
 				<% endfor %>
 				<% endfor %>

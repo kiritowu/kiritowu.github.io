@@ -176,7 +176,7 @@
 				"year": "2024",
 				"shortDescription": "LLM Safety Firewall Solution that close the safety and compliance gap of LLM Application by organisations.",
 				"longDescription": [
-					"lorem ipsum"
+					"Real-time LLM Safety Firewall Solution that close the safety and compliance gap of LLM Application. Winner of HPC AI Innovation Challenge 2023."
 				],
 				"img": "owlShield",
 				"link": "https://youtu.be/NuvWw_M4ErA",
@@ -194,7 +194,7 @@
 				"year": "2022",
 				"shortDescription": "Neural Search to retrieval engine for unstructured text documents.",
 				"longDescription": [
-					"lorem ipsum"
+					"Neural Search to retrieval engine for unstructured text documents built with ElasticSearch and Jina AI."
 				],
 				"img": "AI-Enabled Query System",
 				"link": "",
