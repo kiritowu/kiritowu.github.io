@@ -16,6 +16,7 @@ docker build --tag texlive-extended ./tex
 docker run --rm \
     --volume `pwd`/tex:/work/src:ro \
     --volume `pwd`/tex/out:/work/out \
+    -e TEXLIVE_REPOSITORY='https://sg.mirrors.cicku.me/ctan/systems/texlive/tlnet' \
     ${tty_params} \
     texlive-extended:latest \
     work lualatex WongZhaoWu-resume.tex
