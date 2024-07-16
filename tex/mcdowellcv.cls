@@ -55,7 +55,7 @@
 % Set font face
 \usepackage{fontspec}
 \setmainfont[SmallCapsFeatures={Renderer=Basic},
-Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
+Ligatures={TeX, NoCommon, NoDiscretionary}]{LiberationSerif}
 
 % Remove paragraph indentation
 \usepackage[parfill]{parskip}
