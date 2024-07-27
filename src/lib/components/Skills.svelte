@@ -91,7 +91,8 @@
 
 		const createNeoChart = neo4jd3Ts.default;
 		const data = convertData(skills);
-		const svg2href = (svg: String) => `data:image/svg+xml;utf8, ${svg}`;
+		const svg2HrefwithFill = (svg: String, fill: String = 'white') =>
+			`data:image/svg+xml;utf8, ${svg.replace('/></svg>', ` fill="${fill.replace('#', '%23')}" /></svg>`)}`;
 		const options = {
 			highlight: [
 				{
@@ -119,17 +120,17 @@
 				'Google Cloud': ''
 			},
 			images: {
-				Docker: svg2href(icons.siDocker.svg),
-				'Google Cloud': svg2href(icons.siGooglecloud.svg),
-				Firebase: svg2href(icons.siFirebase.svg),
-				Python: svg2href(icons.siPython.svg),
-				Typescript: svg2href(icons.siTypescript.svg),
-				Javascript: svg2href(icons.siJavascript.svg),
-				'Machine Learning': svg2href(icons.siGooglecolab.svg),
-				'Computer Vision': svg2href(icons.siOpencv.svg),
-				'Natural Language Processing': svg2href(icons.siHuggingface.svg),
-				MLOps: svg2href(icons.siGooglepubsub.svg),
-				'ML Pipeline': svg2href(icons.siKubernetes.svg)
+				Docker: svg2HrefwithFill(icons.siDocker.svg),
+				'Google Cloud': svg2HrefwithFill(icons.siGooglecloud.svg),
+				Firebase: svg2HrefwithFill(icons.siFirebase.svg),
+				Python: svg2HrefwithFill(icons.siPython.svg),
+				Typescript: svg2HrefwithFill(icons.siTypescript.svg),
+				Javascript: svg2HrefwithFill(icons.siJavascript.svg),
+				'Machine Learning': svg2HrefwithFill(icons.siGooglecolab.svg),
+				'Computer Vision': svg2HrefwithFill(icons.siOpencv.svg),
+				'Natural Language Processing': svg2HrefwithFill(icons.siHuggingface.svg),
+				MLOps: svg2HrefwithFill(icons.siGooglepubsub.svg),
+				'ML Pipeline': svg2HrefwithFill(icons.siKubernetes.svg)
 			}
 		};
 		let d3TextSelector = '.neo4jd3-graph .relationships text'; // Select all text in relationships
