@@ -1,7 +1,5 @@
 <script lang="ts">
-	// Icons
-	import Icon from '$lib/components/Icons.svelte';
-	import icon_selected from '$lib/images/icons/chevron-right-svgrepo-com.svg';
+	import SimpleIcon from '$lib/components/SimpleIcon.svelte';
 
 	// Change visble section
 	let visibleIdx = 0;
@@ -33,12 +31,10 @@
 						visibleIdx = idx;
 					}}
 					>{experience.org}
-					<img
-						src={icon_selected}
-						alt={experience.org}
-						class="inline-block my-auto w-5 h-auto {visibleIdx === idx ? '' : 'hidden'}"
-					/></button
-				>
+					<div class="inline-block my-auto w-5 h-auto {visibleIdx === idx ? '' : 'hidden'}">
+						<i class="fa fa-chevron-right"> </i>
+					</div>
+				</button>
 			{/each}
 		</div>
 		<div class="md:basis-3/4">
@@ -67,12 +63,7 @@
 									href={link}
 									target="_blank"
 								>
-									<Icon
-										name="baselineLink"
-										width="2rem"
-										height="2rem"
-										class="fill-primary dark:fill-primary-dark"
-									></Icon>
+									<i class="fa fa-link fa-lg" />
 								</a>
 							{/each}
 						{/if}
@@ -82,12 +73,7 @@
 								href={experience.linkedInLink}
 								target="_blank"
 							>
-								<Icon
-									name="linkedIn"
-									width="2rem"
-									height="2rem"
-									class="fill-primary dark:fill-primary-dark"
-								></Icon>
+								<SimpleIcon baseName="siLinkedin" class="fill-primary dark:fill-primary-dark" />
 							</a>
 						{/if}
 						{#if experience.githubLink}
@@ -96,12 +82,7 @@
 								href={experience.githubLink}
 								target="_blank"
 							>
-								<Icon
-									name="github"
-									width="2rem"
-									height="2rem"
-									class="fill-primary dark:fill-primary-dark"
-								></Icon>
+								<SimpleIcon baseName="siGithub" class="fill-primary dark:fill-primary-dark" />
 							</a>
 						{/if}
 					</div>

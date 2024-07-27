@@ -1,31 +1,33 @@
 <script lang="ts">
+	import * as simpleIcons from 'simple-icons';
+
 	import profile from '$lib/profile.json';
-	import Icons from '$lib/components/Icons.svelte';
+	import SimpleIcon from '$lib/components/SimpleIcon.svelte';
 
 	let contacts: {
 		name: string;
 		url: string;
-		iconName: 'github' | 'linkedIn' | 'twitter' | 'myAnimeList';
+		iconName: keyof typeof simpleIcons;
 	}[] = [
 		{
 			name: 'GitHub',
 			url: `https://${profile.contact.github}`,
-			iconName: 'github'
+			iconName: 'siGithub'
 		},
 		{
 			name: 'LinkedIn',
 			url: `https://${profile.contact.linkedin}`,
-			iconName: 'linkedIn'
+			iconName: 'siLinkedin'
 		},
 		{
 			name: 'Twitter',
 			url: `https://${profile.contact.twitter}`,
-			iconName: 'twitter'
+			iconName: 'siX'
 		},
 		{
 			name: 'Myanimelist',
 			url: `https://${profile.contact.myanimelist}`,
-			iconName: 'myAnimeList'
+			iconName: 'siMyanimelist'
 		}
 	];
 </script>
@@ -34,25 +36,11 @@
 	<div class="flex flex-row lg:flex-col mb-4 justify-center">
 		{#each contacts as contact}
 			<a
-				class="mb-2 mx-2 hover:bg-slate-200 dark:hover:bg-slate-600 rounded-full w-10 h-10 flex justify-center items-center"
+				class="mb-2 mx-2 w-10 h-10 flex justify-center items-center"
 				href={contact.url}
 				target="_blank"
 			>
-				{#if contact.name == 'Myanimelist'}
-					<Icons
-						name={contact.iconName}
-						width="2rem"
-						height="2rem"
-						class="fill-primary dark:primary-dark"
-					/>
-				{:else}
-					<Icons
-						name={contact.iconName}
-						width="2rem"
-						height="2rem"
-						class="fill-primary dark:fill-primary-dark"
-					/>
-				{/if}
+				<SimpleIcon baseName={contact.iconName} />
 			</a>
 		{/each}
 	</div>

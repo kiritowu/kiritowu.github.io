@@ -1,28 +1,21 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
+	import { browser } from '$app/environment';
 	import { theme } from '$lib/stores';
 
 	// Import skill icons
-	import docker_icon from '$lib/images/icons/docker-svgrepo-com.svg';
-	import google_cloud_icon from '$lib/images/icons/google-cloud.svg';
-	import firebase_icon from '$lib/images/icons/firebase_icon.svg';
-	import python_icon from '$lib/images/icons/python_icon.svg';
-	import typescript_icon from '$lib/images/icons/typescript_icon.svg';
-	import javascript_icon from '$lib/images/icons/javascript_icon.svg';
-	import machine_learning_icon from '$lib/images/icons/machine-learning.svg';
-	import computer_vision_icon from '$lib/images/icons/image-combiner-svgrepo-com.svg';
-	import natural_language_processing_icon from '$lib/images/icons/language-svgrepo-com.svg';
-	import mlops_icon from '$lib/images/icons/cycle-svgrepo-com.svg';
-	import ml_pipeline_icon from '$lib/images/icons/pipeline-svgrepo-com.svg';
-	import loading_gif from '$lib/images/icons/Ripple-1s-200px.gif';
+	import * as icons from 'simple-icons';
+	import loading_gif from '$lib/images/Ripple-1s-200px.gif';
 
 	export let skills: Record<string, string[]> = {};
 
-	// Variables for showing component on Intersected
+	// Attribute for showing component on Intersected
 	let container: HTMLDivElement;
 	let intersecting = false;
+	let handler: () => any;
+	let observer: IntersectionObserver;
 
-	// Variables for textFill
+	// Attribute for textFill
 	let textFill = $theme === 'dark' ? '#D4D4D4' : '#171717';
 
 	const convertData = (skills: {}) => {
@@ -92,57 +85,62 @@
 			errors: []
 		};
 	};
+	const svg2HrefwithFill = (svg: String, fill: String = 'white') => {
+		const prefix = 'data:image/svg+xml;utf8, ';
+		const fillProperty = `fill="${fill.replace('#', '%23')}"`;
+		return prefix + `${svg.replace('/></svg>', ` ${[fillProperty].join(' ')}  /></svg>`)}`;
+	};
+
+	const options = {
+		highlight: [
+			{
+				class: 'User',
+				property: 'userId',
+				value: 'Zhao Wu'
+			}
+		],
+		neo4jData: convertData(skills),
+		nodeRadius: 18,
+		minCollision: 38.6,
+		infoPanel: true,
+		zoomFit: true,
+		arrowSize: 1,
+		icons: {
+			User: 'user',
+			Leadership: 'users',
+			'Software Engineering': 'laptop',
+			'Artificial Intelligence': 'android',
+			'Event Planning': 'calendar',
+			'Project Management': 'tasks',
+			'Data Analysis': 'line-chart',
+			'Data Visualisation': 'pie-chart',
+			'Data Engineering': 'table',
+			'Google Cloud': ''
+		},
+		images: {
+			Docker: svg2HrefwithFill(icons.siDocker.svg),
+			'Google Cloud': svg2HrefwithFill(icons.siGooglecloud.svg),
+			Firebase: svg2HrefwithFill(icons.siFirebase.svg),
+			Python: svg2HrefwithFill(icons.siPython.svg),
+			Typescript: svg2HrefwithFill(icons.siTypescript.svg),
+			Javascript: svg2HrefwithFill(icons.siJavascript.svg),
+			'Machine Learning': svg2HrefwithFill(icons.siGooglecolab.svg),
+			'Computer Vision': svg2HrefwithFill(icons.siOpencv.svg),
+			'Natural Language Processing': svg2HrefwithFill(icons.siHuggingface.svg),
+			MLOps: svg2HrefwithFill(icons.siGooglepubsub.svg),
+			'ML Pipeline': svg2HrefwithFill(icons.siKubernetes.svg)
+		}
+	};
+	const d3TextSelector = '.neo4jd3-graph .relationships text'; // Select all text in relationships
+	const d3ImgTextSelector = '.neo4jd3-graph .node-image text'; // Select text in node-image
+	const d3ImgIconSelector = '.neo4jd3-graph .node-image image'; // Select image in node-image
 
 	onMount(async () => {
 		// @ts-ignore
 		const neo4jd3Ts = await import('neo4jd3-ts');
 		// @ts-ignore
 		const d3 = await import('d3');
-
 		const createNeoChart = neo4jd3Ts.default;
-		const data = convertData(skills);
-		const options = {
-			highlight: [
-				{
-					class: 'User',
-					property: 'userId',
-					value: 'Zhao Wu'
-				}
-			],
-			neo4jData: data,
-			nodeRadius: 18,
-			minCollision: 38.6,
-			infoPanel: true,
-			zoomFit: true,
-			arrowSize: 1,
-			icons: {
-				User: 'user',
-				Leadership: 'users',
-				'Software Engineering': 'laptop',
-				'Artificial Intelligence': 'android',
-				'Event Planning': 'calendar',
-				'Project Management': 'tasks',
-				'Data Analysis': 'line-chart',
-				'Data Visualisation': 'pie-chart',
-				'Data Engineering': 'table',
-				'Google Cloud': ''
-			},
-			images: {
-				Docker: docker_icon,
-				'Google Cloud': google_cloud_icon,
-				Firebase: firebase_icon,
-				Python: python_icon,
-				Typescript: typescript_icon,
-				Javascript: javascript_icon,
-				'Machine Learning': machine_learning_icon,
-				'Computer Vision': computer_vision_icon,
-				'Natural Language Processing': natural_language_processing_icon,
-				MLOps: mlops_icon,
-				'ML Pipeline': ml_pipeline_icon
-			}
-		};
-		let d3TextSelector = '.neo4jd3-graph .relationships text'; // Select all text in relationships
-		let d3ImgTextSelector = '.neo4jd3-graph .node-image text'; // Select text in node-image
 
 		// Change text color based on theme
 		theme.subscribe((value) => {
@@ -157,41 +155,55 @@
 			}
 		});
 
+		// Create neo4j chart with d3
+		function buildChart() {
+			createNeoChart('#graph', options);
+			d3.selectAll(d3TextSelector).attr('fill', textFill); // Change text color
+			d3.selectAll(d3ImgTextSelector).remove(); // Remove text in node-image
+			// Rescale icon to be smaller
+			d3.selectAll(d3ImgIconSelector)
+				.attr('width', '22px')
+				.attr('height', '22px')
+				.attr('x', '-11px')
+				.attr('y', '-11px');
+		}
+
 		// Create chart when container is scrolled/intersected
+		// using IntersectionObserver API if available
 		if (typeof IntersectionObserver !== 'undefined') {
-			// Make use of IntersectionObserver when it is available
-			const observer = new IntersectionObserver((entries) => {
+			observer = new IntersectionObserver((entries) => {
 				intersecting = entries[0].isIntersecting;
 				if (intersecting) {
-					createNeoChart('#graph', options);
-					d3.selectAll(d3TextSelector).attr('fill', textFill); // Change text color
-					d3.selectAll(d3ImgTextSelector).remove(); // Remove text in node-image
+					buildChart();
 					observer.unobserve(container);
 				}
 			});
 
 			observer.observe(container);
-			return () => observer.unobserve(container);
+		} else {
+			handler = () => {
+				const bcr = container.getBoundingClientRect();
+				intersecting =
+					bcr.bottom > 0 &&
+					bcr.right > 0 &&
+					bcr.top < window.innerHeight &&
+					bcr.left < window.innerWidth;
+
+				if (intersecting) {
+					buildChart();
+					window.removeEventListener('scroll', handler);
+				}
+			};
+			window.addEventListener('scroll', handler);
 		}
+	});
 
-		function handler() {
-			const bcr = container.getBoundingClientRect();
-			intersecting =
-				bcr.bottom > 0 &&
-				bcr.right > 0 &&
-				bcr.top < window.innerHeight &&
-				bcr.left < window.innerWidth;
-
-			if (intersecting) {
-				console.log('Intersected');
-				createNeoChart('#graph', options);
-				d3.selectAll(d3TextSelector).attr('fill', textFill);
-				window.removeEventListener('scroll', handler);
-			}
+	onDestroy(() => {
+		// Unmount event listener when component destroyed
+		if (browser) {
+			window.removeEventListener('scroll', handler);
+			observer.unobserve(container);
 		}
-
-		window.addEventListener('scroll', handler);
-		return () => window.removeEventListener('scroll', handler);
 	});
 </script>
 
