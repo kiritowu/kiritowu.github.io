@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # Parameter for CI/CD and offline testing
