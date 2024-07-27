@@ -1,6 +1,6 @@
 <script lang="ts">
 	// User profile from database
-	import profile from '$lib/profile.json';
+	import profile from '$lib/profile.yaml';
 
 	// Import Components
 	import Hero from '$lib/components/Hero.svelte';
