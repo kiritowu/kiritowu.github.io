@@ -1,7 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
 	import { theme } from '$lib/stores';
-	import Icons from '$lib/components/Icons.svelte';
 
 	export let navs = ['about', 'skills', 'experience', 'projects'];
 
@@ -64,19 +63,9 @@
 			}}
 		>
 			{#if !menu_visible}
-				<Icons
-					width="1.5rem"
-					height="1.5rem"
-					name="menuOpen"
-					class="stroke-primary dark:stroke-primary-dark -scale-x-100"
-				></Icons>
+				<i class="fa fa-bars fa-lg" />
 			{:else}
-				<Icons
-					width="1.5rem"
-					height="1.5rem"
-					name="menuClose"
-					class="fill-primary dark:fill-primary-dark -scale-x-100"
-				></Icons>
+				<i class="fa fa-times fa-lg" />
 			{/if}
 		</button>
 		<div
@@ -104,12 +93,12 @@
 				</li>
 			{/each}
 			<!-- Hyperlink for Resume -->
-            <li class="px-3">
-                <a
-                    class="mb-8 px-4 py-2 text-center block hover:text-secondary focus:text-secondary focus:outline-none"
-                    href="/WongZhaoWu-resume.pdf">Résumé</a
-                >
-            </li>
+			<li class="px-3">
+				<a
+					class="mb-8 px-4 py-2 text-center block hover:text-secondary focus:text-secondary focus:outline-none"
+					href="/WongZhaoWu-resume.pdf">Résumé</a
+				>
+			</li>
 			<!-- Button for theme -->
 			<button
 				class="rounded-full hover:bg-slate-200 dark:hover:bg-slate-600 p-1 mr-2"
