@@ -1,7 +1,7 @@
 <script lang="ts">
 	import * as simpleIcons from 'simple-icons';
 
-	import profile from '$lib/profile.json';
+	import profile from '$lib/profile.yaml';
 	import SimpleIcon from '$lib/components/SimpleIcon.svelte';
 
 	let contacts: {
