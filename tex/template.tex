@@ -42,6 +42,18 @@
 	
 	% Print the content
 
+	\begin{cvsection}{Education}
+		<% for edu in education %>
+		\begin{cvsubsection}{<$ edu.school $>}{}{<$ edu.startDate $> -- <$ edu.endDate $>}
+			\begin{itemize}
+					<% for d in edu.descriptions %>
+				\item <$ d $>
+					<% endfor %>
+			\end{itemize}
+		\end{cvsubsection}
+		<% endfor %> 
+	\end{cvsection}
+
 	\begin{cvsection}{Employment}
 		<% for exp in experience %>
 		<% if exp.isJob %>
@@ -54,18 +66,6 @@
 		\end{cvsubsection}
 		<% endif %>
 		<% endfor %>
-	\end{cvsection}
-	
-	\begin{cvsection}{Education}
-		<% for edu in education %>
-		\begin{cvsubsection}{<$ edu.school $>}{}{<$ edu.startDate $> -- <$ edu.endDate $>}
-			\begin{itemize}
-				<% for d in edu.descriptions %>
-				\item <$ d $>
-				<% endfor %>
-			\end{itemize}
-		\end{cvsubsection}
-		<% endfor %> 
 	\end{cvsection}
 		
     \begin{cvsection}{Technical Experience}
@@ -98,7 +98,7 @@
 	\begin{cvsection}{Technologies and Skills}
 		\begin{cvsubsection}{}{}{}	
 			\begin{itemize}
-				\item Python, SQL, Typescript, Javascript, HTML, CSS, Bash, \LaTeX
+				\item Python, SQL, Svelte, Typescript, Javascript, HTML, CSS, Bash, \LaTeX
 				\item Pytorch, Huggingface, Scikit-Learn, FastAPI, Numpy, Pandas, Matplotlib, Seaborn, MySQL, PostgreSQL, MongoDB, Node.js, Fastify, Git
 				\item Docker, Kubeflow, Google Cloud, Firebase, Supabase
 				\item Natural Leader, Team Player, Fast Learner, Critical Thinker
