@@ -1,11 +1,10 @@
 <script lang="ts">
-	import * as icons from 'simple-icons';
+	import * as simpleIcons from 'simple-icons';
 
 	let className = '';
-	export let baseName: keyof typeof icons;
+	export let baseName: keyof typeof simpleIcons;
 	export let color = 'currentColor';
 	export let size = 24;
-	export let title = '${baseName}';
 	export { className as class };
 
 	$: defaultAttrs = {
@@ -18,6 +17,6 @@
 </script>
 
 <svg {...defaultAttrs} class={className}>
-	<title>{title}</title>
-	<path d={icons[baseName].path} />
+	<title>{baseName}</title>
+	<path d={simpleIcons[baseName].path} />
 </svg>
