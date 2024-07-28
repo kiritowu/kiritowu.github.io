@@ -188,16 +188,6 @@ projects:
     - Google Cloud
     - Firebase
     - Sentence Transformers
-  - title: Project Cactus
-    year: '2022'
-    shortDescription: A cross-platform AI Fake News Classifier.
-    longDescription:
-    - lorem ipsum
-    img: Project Cactus
-    link: https://github.com/Ducksss/Project-Cactus
-    tags:
-    - RNN
-    - Google Cloud
   Computer Vision:
   - title: SPAI Human Entrance Counter
     year: '2022'
