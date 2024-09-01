@@ -95,12 +95,9 @@ experience:
   startDate: Sep 2022
   endDate: Feb 2023
   descriptions:
-  - Modularize and optimized signal processing logic into Python functions from multiple
-    research-oriented software (e.g. Matlab, Origin).
-  - Supported research project by analyzing data and presenting experiment insights
-    to relevant stakeholders.
-  - Developed FastAPI backend for the no-code data analysis and signal processing
-    application for Terahertz spectrogram samples.
+  - Developed FastAPI backend for the no-code data analysis and signal processing application for Terahertz spectrogram samples.
+  - Modularize and optimized signal processing logic into Python functions from multiple research-oriented software (e.g. Matlab, Origin).
+  - Supported research project by analyzing data and presenting experiment insights to relevant stakeholders.
   externalLinks:
   - https://anor-tech.com/aboutus
   skills:
@@ -148,8 +145,7 @@ education:
   descriptions:
   - Diploma with Merit in Applied AI and Analytics, GPA 4.0/4.0.
   - Recipient of IMDA Gold Medal and SP Scholarship.
-  - 'Graduate Coursework: Machine Learning, Deep Learning, DevOps, Data Analytics,
-    Data Engineering, Data Visualisation.'
+  - 'Graduate Coursework: Full-Stack Development, Machine Learning, Deep Learning, DevOps, Data Analytics, Data Engineering, Data Visualisation.'
 resume:
   projects:
   - OwlShield
@@ -281,3 +277,13 @@ projects:
     tags:
     - ESP32 Cam
     - Arduino
+  - title: Fitbit Calculator App for Versa 4
+    year: '2024'
+    shortDescription: A simple Calculator and currency converter app based on an unofficial approach for sideloading a 3rd-party application to Fitbit Versa 4 and Sense 2 devices.
+    longDescription:
+    - lorem ipsum
+    img: fitbitCalculatorVersa4
+    link: https://github.com/kiritowu/calculator-app-versa4
+    tags:
+    - FitBit SDK
+    - Side-Loading
