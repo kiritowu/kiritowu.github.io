@@ -10,6 +10,7 @@
 	import machineLearning from '$lib/images/projects/machine-learning.jpg?enhanced';
 	import reimaginingPublicTransport from '$lib/images/projects/reimagining-public-transport.jpg?enhanced';
 	import fpv from '$lib/images/projects/FPV-Demo.gif';
+	import fitbitCalculatorVersa4 from '$lib/images/projects/calculator-versa4.png?enhanced';
 
 	const enhancedImgs: { [key: string]: any } = {
 		'AI-Enabled Query System': aiEnabledQuerySystem,
@@ -19,7 +20,8 @@
 		'Machine Learning': machineLearning,
 		aisdc: aisdc,
 		reimaginingPublicTransport: reimaginingPublicTransport,
-		owlShield: owlshield
+		owlShield: owlshield,
+		fitbitCalculatorVersa4: fitbitCalculatorVersa4
 	};
 	const imgs: { [key: string]: any } = {
 		'Human Counter': humanCounter,
