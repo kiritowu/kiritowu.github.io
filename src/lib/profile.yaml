@@ -148,6 +148,7 @@ education:
   - 'Graduate Coursework: Full-Stack Development, Machine Learning, Deep Learning, DevOps, Data Analytics, Data Engineering, Data Visualisation.'
 resume:
   projects:
+  - OneService Hotline
   - OwlShield
   - Neural Information Retrieval System
   additionalExperience:
@@ -155,6 +156,19 @@ resume:
   - Founder & President, SP Artificial Intelligence (SPAI) Student Chapter
 projects:
   Natural Language Processing:
+  - title: OneService Hotline
+    year: '2024'
+    shortDescription: OneService Hotline is a helpful AI assistant, responsible for
+      helping users (primarily elderly) to submit a case or feedback on municipal issues. Winning solution of GovTech Sing
+    longDescription:
+    - OneService Hotline is a AI assistant, responsible for helping elderly to submit a case on municipal issues. Winner of Govtech x OpenAI Hackathon 2024.
+    img: oneServiceHotline
+    link: https://github.com/aqilakmal/OneService-Hotline
+    tags:
+    - LLM Agent
+    - OpenAI's Realtime-API
+    - Prompt Engineering
+    - React
   - title: OwlShield
     year: '2024'
     shortDescription: LLM Safety Firewall Solution that close the safety and compliance
