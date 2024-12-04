@@ -68,18 +68,20 @@
 		<% endfor %>
 	\end{cvsection}
 		
-    \begin{cvsection}{Technical Experience}
-        \begin{cvsubsection}{Projects}{}{}
+    \begin{cvsection}{Projects}
+	<% for name, cat in projects %>
+	<% for project in cat %>
+	<% if project.title in resume.projects %>
+        \begin{cvsubsection}{<$ project.title $>}{}{<$ project.year $>}
             \begin{itemize}
-				<% for name, cat in projects %>
-				<% for project in cat %>
-				<% if project.title in resume.projects %>
-				\item \textbf{<$ project.title $>} (<$ project.year $>). <$ project.longDescription $>
-				<% endif %>
-				<% endfor %>
-				<% endfor %>
+		<% for description in project.longDescriptions %>
+		\item  <$ description $>
+		<% endfor %>
             \end{itemize}
         \end{cvsubsection}
+	<% endif %>
+	<% endfor %>
+	<% endfor %>
 	\end{cvsection}
 
 	\begin{cvsection}{Additional Experience and Certification}
@@ -98,10 +100,10 @@
 	\begin{cvsection}{Technologies and Skills}
 		\begin{cvsubsection}{}{}{}	
 			\begin{itemize}
-				\item Svelte, Typescript, Javascript, HTML, CSS, SQL, Python, Bash, \LaTeX
-				\item FastAPI, Fastify, Node.JS, TailwindCSS, PostgreSQL, MySQL, MongoDB, Git, Pytorch, Huggingface, Scikit-Learn, Numpy, Pandas
-				\item Google Cloud, Firebase, Supabase, Docker, Kubeflow
-				\item Natural Leader, Team Player, Fast Learner, Critical Thinker
+				\item \textbf{Programming Language: } Python, SQL, Bash, Typescript, Javascript, HTML, CSS, \LaTeX
+				\item \textbf{Frameworks and Tools: } Pytorch, Huggingface, Scikit-Learn, Numpy, Pandas, FastAPI, Fastify, Node.JS, TailwindCSS, PostgreSQL, MySQL, MongoDB, Git.
+				\item \textbf{Deployment Experience: } Google Cloud, Firebase, Supabase, Docker, Kubeflow
+				% \item \textbf{Personal Traits: } Natural Leader, Team Player, Fast Learner, Critical Thinker
 			\end{itemize}
 		\end{cvsubsection}
 	\end{cvsection}

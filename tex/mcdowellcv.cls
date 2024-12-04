@@ -23,7 +23,7 @@
 \ProvidesClass{mcdowellcv}[2022/03/18 v1.2.0 McDowell CV class]
 
 % Set up the fonts according to options
-\def\mainfontsize{11pt}
+\def\mainfontsize{10pt}
 \def\mainfontface{LiberationSerif}  % A free alternative to Times New Roman
 
 \DeclareOption{calibri}{%
