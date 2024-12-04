@@ -34,7 +34,7 @@
 		[cat: string]: {
 			title: string;
 			shortDescription: string;
-			longDescription: string;
+			longDescriptions: string[];
 			img: string;
 			link: string;
 			tags: string[];
