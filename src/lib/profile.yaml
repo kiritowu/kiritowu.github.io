@@ -74,21 +74,20 @@ experience:
   - Machine Learning
   - Firebase
   - ML-Ops
-# - title: Co-Founder, AI Engineer
-#   org: Flora Softworks Pte Ltd
-#   isJob: true
-#   startDate: Feb 2022
-#   endDate: Apr 2023
-#   descriptions:
-#   - Co-Founded and developed Flora, a SaaS enterprise search solution using docarray
-#     and elasticsearch.
-#   - Presented Flora to 10+ potential clients, resulting in 1 successful pilots.
-#   skills:
-#   - Python
-#   - Docker
-#   - Elasticsearch
-#   - MLOps
-#   - ML Pipeline
+- title: Co-Founder, AI Engineer
+  org: Flora Softworks Pte Ltd
+  isJob: true
+  startDate: Feb 2022
+  endDate: Apr 2023
+  descriptions:
+  - Developed an enterprise search engine using Elasticsearch, ONNX Runtime, Jina, FastAPI and MongoDB that enables organisations to index and search through unstructured documents.
+  - Deployed solution to the cloud (GCP) and locally (Docker Compose) and presented Flora to 5+ potential clients, resulting in 1 successful pilot.
+  skills:
+  - Python
+  - Docker
+  - Elasticsearch
+  - MLOps
+  - ML Pipeline
 - title: AI Engineer Intern
   org: ANOR Technologies Pte Ltd
   isJob: true
@@ -150,7 +149,7 @@ resume:
   projects:
   - OneService Hotline
   - OwlShield
-  - Neural Search Web App
+  # - Neural Search Web App
   additionalExperience:
   - Chairperson, AI Student Developer Conference
   - Founder & President, SP Artificial Intelligence (SPAI) Student Chapter
@@ -179,7 +178,7 @@ projects:
       - Developed a real-time, modular and easily deployable LLM safety firewall solution addressing safety and compliance gaps in organizational LLM applications.
       - Researched and engineered shields to defend against a variety of LLM safety attacks (e.g. prompt injection, jailbreaks, adversarial prompts) using techniques like semantic matching of attack signatures, perplexity filtering, and finetuned LLM content moderation classifier with NSCC's Aspire 2A HPC.
       - Won the High-Performance Computing AI Innovation Challenge (HPCIC) 2023, Student (Senior) Category.
-      - Presented solution in IMDA's Technical Sharing Session on LLM Safeguarding on 15 July 2024.
+      # - Presented solution in IMDA's Technical Sharing Session on LLM Safeguarding on 15 July 2024.
     img: owlShield
     link: https://youtu.be/NuvWw_M4ErA
     tags:
