@@ -257,6 +257,20 @@ projects:
     - Firebase
     - React
     - Typescript
+  - title: SG Lib Books
+    year: '2024'
+    shortDescription: Open source project by a group of Singapore book lovers who want a quick and efficient view to available Singapore library books.
+    longDescriptions:
+    - lorem ipsum
+    img: sgLibBooks
+    link: https://github.com/cliffchew84/SG-Lib-Books
+    tags:
+    - Supabase
+    - Svelte
+    - FastAPI
+    - Firebase
+    - Google Cloud
+    - Typescript
   Data Science & Analytics:
   - title: Machine Learning Repo
     year: '2021'

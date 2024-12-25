@@ -1,17 +1,18 @@
 <script lang="ts">
 	// Import project images
-	import owlshield from '$lib/images/projects/owlshield.png?enhanced';
 	import acbiggan from '$lib/images/projects/acbigan.png?enhanced';
 	import aisdc from '$lib/images/projects/aisdc.jpg?enhanced';
 	import aiEnabledQuerySystem from '$lib/images/projects/ai-enabled-query-system.jpg?enhanced';
 	import efficientNet from '$lib/images/projects/efficientnet.png?enhanced';
 	import fasterrcnn from '$lib/images/projects/fasterrcnn.png?enhanced';
+	import fitbitCalculatorVersa4 from '$lib/images/projects/calculator-versa4.png?enhanced';
+	import fpv from '$lib/images/projects/FPV-Demo.gif';
 	import humanCounter from '$lib/images/projects/human-counter.gif';
 	import machineLearning from '$lib/images/projects/machine-learning.jpg?enhanced';
 	import oneServiceHotline from '$lib/images/projects/oneservice.png?enhanced';
+	import owlshield from '$lib/images/projects/owlshield.png?enhanced';
 	import reimaginingPublicTransport from '$lib/images/projects/reimagining-public-transport.jpg?enhanced';
-	import fpv from '$lib/images/projects/FPV-Demo.gif';
-	import fitbitCalculatorVersa4 from '$lib/images/projects/calculator-versa4.png?enhanced';
+	import sglibbook from '$lib/images/projects/sg-lib-book.png?enhanced';
 
 	const enhancedImgs: { [key: string]: any } = {
 		'AI-Enabled Query System': aiEnabledQuerySystem,
@@ -23,7 +24,8 @@
 		reimaginingPublicTransport: reimaginingPublicTransport,
 		owlShield: owlshield,
 		fitbitCalculatorVersa4: fitbitCalculatorVersa4,
-		oneServiceHotline: oneServiceHotline
+		oneServiceHotline: oneServiceHotline,
+		sgLibBooks: sglibbook
 	};
 	const imgs: { [key: string]: any } = {
 		'Human Counter': humanCounter,
