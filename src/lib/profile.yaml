@@ -81,7 +81,8 @@ experience:
   endDate: Apr 2023
   descriptions:
   - Developed an enterprise search engine using Elasticsearch, ONNX Runtime, Jina, FastAPI and MongoDB that enables organisations to index and search through unstructured documents.
-  - Deployed solution to the cloud (GCP) and locally (Docker Compose) and presented Flora to 5+ potential clients, resulting in 1 successful pilot.
+  - Presented Flora to 10+ potential clients, resulting in 1 successful pilot.
+  # - Deployed solution to the cloud (GCP) and locally (Docker Compose) and presented Flora to 5+ potential clients, resulting in 1 successful pilot.
   skills:
   - Python
   - Docker
@@ -147,6 +148,7 @@ education:
   - 'Graduate Coursework: Deep Learning, Machine Learning, Reinforcement Learning, Full-Stack Development, DevOps, Data Analytics, Data Engineering, Data Visualisation.'
 resume:
   projects:
+  - SG Lib Books
   - OneService Hotline
   - OwlShield
   # - Neural Search Web App
@@ -154,6 +156,35 @@ resume:
   - Chairperson, AI Student Developer Conference
   - Founder & President, SP Artificial Intelligence (SPAI) Student Chapter
 projects:
+  Full-Stack Development:
+  - title: AISDC 2023
+    year: '2023'
+    shortDescription: Companion web application for AI Student Developer Conference
+      2023
+    longDescriptions:
+    - lorem ipsum
+    img: aisdc
+    link: https://github.com/AISDC-2023/aisdc
+    tags:
+    - Firebase
+    - React
+    - Typescript
+  - title: SG Lib Books
+    year: '2025'
+    shortDescription: Open source project by a group of Singapore book lovers who want a quick and efficient view to available Singapore library books.
+    longDescriptions:
+    - Spearheaded full-stack redesign using modern technologies (SvelteKit, TailwindCSS, Shadcn-ui) to create an intuitive, mobile-friendly interface for instant book availability checking across multiple libraries.
+    - Refactored an open-source project that streamlines public library book discovery experience by transforming its monolithic backend into a maintainable MVC architecture.
+    - Developed and published a type-safe Python SDK for NLB Catalogue API with 100\% test coverage, enabling seamless integration with Singapore's public library catalogue.
+    img: sgLibBooks
+    link: https://github.com/cliffchew84/SG-Lib-Books
+    tags:
+    - Supabase
+    - Svelte
+    - FastAPI
+    - Firebase
+    - Google Cloud
+    - Typescript
   Natural Language Processing:
   - title: OneService Hotline
     year: '2024'
@@ -161,8 +192,9 @@ projects:
       helping users (primarily elderly) to submit a case or feedback on municipal issues. Winning solution of GovTech Sing
     longDescriptions:
     - Developed a multilingual AI-powered assistant to assist elderly users in submitting municipal issue feedback, leveraging OpenAI’s GPT-4o Realtime API and prompt engineering techniques.
-    - Solution demonstrated autonomous decision-making and adaptability, showcasing practical applications of agentic AI in dynamic real-world scenarios.
+    # - Solution demonstrated autonomous decision-making and adaptability, showcasing practical applications of agentic AI in dynamic real-world scenarios.
     - Awarded the first prize at the GovTech x OpenAI Hackathon 2024 while competing with 30 other groups of veterans, working adults and students.
+    - Engaged with Municipal Services Office's Digital Product team to explore potential integration of the solution into their existing product ecosystem.
     img: oneServiceHotline
     link: https://github.com/aqilakmal/OneService-Hotline
     tags:
@@ -193,7 +225,8 @@ projects:
     shortDescription: Neural Search to retrieval engine for unstructured text documents.
     longDescriptions:
     - Developed an enterprise search engine using Elasticsearch, ONNX Runtime, Jina, FastAPI and MongoDB that enables organisations to index and search through unstructured documents.
-    - Deployed solution to the cloud (GCP) and locally (Docker Compose) and presented Flora to 5+ potential clients, resulting in 1 successful pilot.
+    - Presented Flora to 10+ potential clients, resulting in 1 successful pilot.
+    # - Deployed solution to the cloud (GCP) and locally (Docker Compose) and 
     img: AI-Enabled Query System
     link: ''
     tags:
@@ -244,33 +277,6 @@ projects:
     tags:
     - GAN
     - PyTorch
-  Full-Stack Development:
-  - title: AISDC 2023
-    year: '2023'
-    shortDescription: Companion web application for AI Student Developer Conference
-      2023
-    longDescriptions:
-    - lorem ipsum
-    img: aisdc
-    link: https://github.com/AISDC-2023/aisdc
-    tags:
-    - Firebase
-    - React
-    - Typescript
-  - title: SG Lib Books
-    year: '2024'
-    shortDescription: Open source project by a group of Singapore book lovers who want a quick and efficient view to available Singapore library books.
-    longDescriptions:
-    - lorem ipsum
-    img: sgLibBooks
-    link: https://github.com/cliffchew84/SG-Lib-Books
-    tags:
-    - Supabase
-    - Svelte
-    - FastAPI
-    - Firebase
-    - Google Cloud
-    - Typescript
   Data Science & Analytics:
   - title: Machine Learning Repo
     year: '2021'

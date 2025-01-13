@@ -88,11 +88,11 @@
 		\begin{cvsubsection}{}{}{}	
 			\begin{itemize}
 				\item \textbf{Google Cloud Certified Professional Machine Learning Engineer:} Certified in designing, building, and productionizing ML solutions on Google Cloud. (ID: 43ffb52bffed42bbad16545107dd7723)
-				<% for exp in experience %>
-				<% if exp.title in resume.additionalExperience %>
-				\item \textbf{<$ exp.title |  replace("&", "\\&")  $>:} (<$ exp.year $>): <$ exp.shortDescription $>
-				<% endif %>
-				<% endfor %>
+				% <% for exp in experience %>
+				% <% if exp.title in resume.additionalExperience %>
+				% \item \textbf{<$ exp.title |  replace("&", "\\&")  $>:} (<$ exp.year $>): <$ exp.shortDescription $>
+				% <% endif %>
+				% <% endfor %>
 			\end{itemize}
 		\end{cvsubsection}
 	\end{cvsection}
