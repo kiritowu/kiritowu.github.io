@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onDestroy, onMount } from 'svelte';
+	import type { Skill } from '@prisma/client';
 	import { browser } from '$app/environment';
 	import { theme } from '$lib/stores';
 
@@ -7,7 +8,7 @@
 	import * as icons from 'simple-icons';
 	import loading_gif from '$lib/images/Ripple-1s-200px.gif';
 
-	export let skills: Record<string, string[]> = {};
+	export let skills: Skill[] = [];
 
 	// Attribute for showing component on Intersected
 	let container: HTMLDivElement;
@@ -18,7 +19,7 @@
 	// Attribute for textFill
 	let textFill = $theme === 'dark' ? '#D4D4D4' : '#171717';
 
-	const convertData = (skills: {}) => {
+	const convertData = (skills: Skill[]) => {
 		// Convert skills to neo4j data format
 		const nodes: { id: string; labels: string[]; properties?: Record<string, string> }[] = [];
 		const relationships: {
@@ -37,35 +38,38 @@
 			}
 		});
 
-		Object.entries(skills).forEach(([cat, skillArr]) => {
-			const catId = nodes.length.toString();
-			nodes.push({
-				id: catId,
-				labels: [cat],
-				properties: {}
-			});
-			relationships.push({
-				id: relationships.length.toString(),
-				type: cat,
-				startNode: '0',
-				endNode: catId,
-				properties: {}
-			});
-
-			(skillArr as string[]).forEach((skill) => {
-				const skillId = nodes.length.toString();
+		const category2id: { [key: string]: string } = {};
+		skills.forEach((skill) => {
+			// Add category to nodes if category not in hashset
+			if (!category2id.hasOwnProperty(skill.category)) {
+				const catId = nodes.length.toString();
 				nodes.push({
-					id: skillId,
-					labels: [skill],
+					id: catId,
+					labels: [skill.category],
 					properties: {}
 				});
 				relationships.push({
 					id: relationships.length.toString(),
-					type: skill,
-					startNode: catId,
-					endNode: skillId,
+					type: skill.category,
+					startNode: '0',
+					endNode: catId,
 					properties: {}
 				});
+				category2id[skill.category] = catId;
+			}
+
+			const skillId = nodes.length.toString();
+			nodes.push({
+				id: skillId,
+				labels: [skill.name],
+				properties: {}
+			});
+			relationships.push({
+				id: relationships.length.toString(),
+				type: skill.name,
+				startNode: category2id[skill.category],
+				endNode: skillId,
+				properties: {}
 			});
 		});
 
@@ -128,7 +132,8 @@
 			'Computer Vision': svg2HrefwithFill(icons.siOpencv.svg),
 			'Natural Language Processing': svg2HrefwithFill(icons.siHuggingface.svg),
 			MLOps: svg2HrefwithFill(icons.siGooglepubsub.svg),
-			'ML Pipeline': svg2HrefwithFill(icons.siKubernetes.svg)
+			'ML Pipeline': svg2HrefwithFill(icons.siKubernetes.svg),
+			Elasticsearch: svg2HrefwithFill(icons.siElasticsearch.svg)
 		}
 	};
 	const d3TextSelector = '.neo4jd3-graph .relationships text'; // Select all text in relationships

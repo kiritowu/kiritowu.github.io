@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { Project } from '@prisma/client';
 	// Import project images
 	import acbiggan from '$lib/images/projects/acbigan.png?enhanced';
 	import aisdc from '$lib/images/projects/aisdc.jpg?enhanced';
@@ -32,16 +33,12 @@
 		'FPV Demo': fpv
 	};
 
-	export let projects: {
-		[cat: string]: {
-			title: string;
-			shortDescription: string;
-			longDescriptions: string[];
-			img: string;
-			link: string;
-			tags: string[];
-		}[];
-	} = {};
+	export let projects: Project[] = [];
+
+	const categories: Set<string> = new Set();
+	projects.forEach((project) => {
+		categories.add(project.category);
+	});
 
 	let selectedTab = 'all';
 	function hideArticle(selectedTab: string, category: string): string {
@@ -62,7 +59,7 @@
 				selectedTab = 'all';
 			}}>All</button
 		>
-		{#each Object.keys(projects) as cat}
+		{#each categories as cat}
 			<button
 				class="p-3 text-lg hover:text-secondary text-wrap {selectedTab == cat
 					? 'text-secondary'
@@ -74,49 +71,43 @@
 		{/each}
 	</div>
 	<div class="grid md:grid-cols-3 gap-5 transition-all">
-		{#each Object.entries(projects) as [cat, items]}
-			{#each items as item}
-				<article
-					class="md:h-[400px] flex flex-col justify-between text-primary dark:text-primary-dark rounded-md border border-gray-300 dark:border-neutral-700 shadow-md md:shadow-lg shadow-slate-800 dark:shadow-none {hideArticle(
-						selectedTab,
-						cat
-					)}"
+		{#each projects as item}
+			<article
+				class="md:h-[400px] flex flex-col justify-between text-primary dark:text-primary-dark rounded-md border border-gray-300 dark:border-neutral-700 shadow-md md:shadow-lg shadow-slate-800 dark:shadow-none {hideArticle(
+					selectedTab,
+					item.category
+				)}"
+			>
+				<a
+					class="text-primary dark:text-primary-dark hover:text-secondary hover:no-underline"
+					href={item.link}
+					target="_blank"
 				>
-					<a
-						class="text-primary dark:text-primary-dark hover:text-secondary hover:no-underline"
-						href={item.link}
-						target="_blank"
-					>
-						{#if enhancedImgs[item.img] !== undefined}
-							<enhanced:img
-								class="w-full rounded-t-md max-h-[200px]"
-								src={enhancedImgs[item.img]}
-								alt={item.title}
-							/>
-						{:else}
-							<img
-								class="w-full rounded-t-md max-h-[200px]"
-								src={imgs[item.img]}
-								alt={item.title}
-							/>
-						{/if}
-						<div class="m-3">
-							<h3 class="py-auto text-lg mb-1">{item.title}</h3>
-							<p class="text-xs text-primary dark:text-primary-dark">
-								{item.shortDescription}
-							</p>
-						</div>
-					</a>
-					<div class="flex flex-row flex-wrap gap-1 text-sm m-3">
-						{#each item.tags as tag}
-							<button
-								class="rounded-2xl border-primary border hover:bg-gray-200 p-2 text-secondary text-xs"
-								>{tag}</button
-							>
-						{/each}
+					{#if enhancedImgs[item.img] !== undefined}
+						<enhanced:img
+							class="w-full rounded-t-md max-h-[200px]"
+							src={enhancedImgs[item.img]}
+							alt={item.title}
+						/>
+					{:else}
+						<img class="w-full rounded-t-md max-h-[200px]" src={imgs[item.img]} alt={item.title} />
+					{/if}
+					<div class="m-3">
+						<h3 class="py-auto text-lg mb-1">{item.title}</h3>
+						<p class="text-xs text-primary dark:text-primary-dark">
+							{item.shortDescription}
+						</p>
 					</div>
-				</article>
-			{/each}
+				</a>
+				<div class="flex flex-row flex-wrap gap-1 text-sm m-3">
+					{#each item.tags as tag}
+						<button
+							class="rounded-2xl border-primary border hover:bg-gray-200 p-2 text-secondary text-xs"
+							>{tag}</button
+						>
+					{/each}
+				</div>
+			</article>
 		{/each}
 	</div>
 </section>

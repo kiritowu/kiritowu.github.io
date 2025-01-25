@@ -4,8 +4,11 @@
 	// Props for Name Typewriter
 	export let firstName = '';
 	export let lastName = '';
-	export let nickName = '';
-	export let ign = '';
+	export let nickName: string | null;
+	export let ign: string | null;
+
+	nickName = nickName || '';
+	ign = ign || '';
 </script>
 
 <section

@@ -1,20 +1,12 @@
 <script lang="ts">
+	import type { Experience } from '@prisma/client';
 	import SimpleIcon from '$lib/components/SimpleIcon.svelte';
 
 	// Change visble section
 	let visibleIdx = 0;
+	const monthYearFormatter = new Intl.DateTimeFormat('en', { month: 'short', year: 'numeric' });
 
-	export let experiences: {
-		title: string;
-		org: string;
-		startDate: string;
-		endDate: string;
-		descriptions: string[];
-		githubLink?: string;
-		linkedInLink?: string;
-		externalLinks: string[];
-		skills: string[];
-	}[] = [];
+	export let experiences: Experience[] = [];
 </script>
 
 <section id="experience" class="container-sm md:container-lg md:mx-auto px-5 max-w-6xl py-16">
@@ -46,8 +38,10 @@
 							{experience.title}
 						</h3>
 						<p class="text-base mt-auto">
-							{experience.startDate ? experience.startDate + ' - ' : ''}{experience.endDate
-								? experience.endDate
+							{experience.startDate
+								? monthYearFormatter.format(experience.startDate) + ' - '
+								: ''}{experience.endDate
+								? monthYearFormatter.format(experience.endDate)
 								: 'Present'}
 						</p>
 					</div>
@@ -68,15 +62,15 @@
 								</a>
 							{/each}
 						{/if}
-						{#if experience.linkedInLink}
-							<a
-								class="mx-1 hover:bg-slate-200 dark:hover:bg-slate-600 rounded-full w-12 h-12 flex justify-center items-center"
-								href={experience.linkedInLink}
-								target="_blank"
-							>
-								<SimpleIcon baseName="siLinkedin" class="fill-primary dark:fill-primary-dark" />
-							</a>
-						{/if}
+						<!-- {#if experience.linkedInLink} -->
+						<!-- 	<a -->
+						<!-- 		class="mx-1 hover:bg-slate-200 dark:hover:bg-slate-600 rounded-full w-12 h-12 flex justify-center items-center" -->
+						<!-- 		href={experience.linkedInLink} -->
+						<!-- 		target="_blank" -->
+						<!-- 	> -->
+						<!-- 		<SimpleIcon baseName="siLinkedin" class="fill-primary dark:fill-primary-dark" /> -->
+						<!-- 	</a> -->
+						<!-- {/if} -->
 						{#if experience.githubLink}
 							<a
 								class="mx-1 hover:bg-slate-200 dark:hover:bg-slate-600 rounded-full w-12 h-12 flex justify-center items-center"
