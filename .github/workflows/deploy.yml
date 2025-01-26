@@ -25,6 +25,9 @@ jobs:
       - name: Compile latex
         run: |
           node scripts/1.compile-latex-template.js
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DIRECT_URL: ${{ secrets.DIRECT_URL }}
         
       - name: Cache LaTeX files
         uses: actions/cache@v4
@@ -106,6 +109,9 @@ jobs:
           BASE_PATH: '/${{ github.event.repository.name }}'
         run: |
           npm run build
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          DIRECT_URL: ${{ secrets.DIRECT_URL }}
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v2
