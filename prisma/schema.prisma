@@ -39,13 +39,13 @@ model Profile {
 model Skill {
   id          String            @id @default(cuid())
   category    String
-  name        String           @unique
+  name        String            @unique
   experiences ExperienceSkill[]
 }
 
 model Experience {
   id               String             @id @default(cuid())
-  title            String
+  title            String             @unique
   org              String
   isJob            Boolean
   startDate        DateTime
@@ -80,11 +80,11 @@ model Education {
 model Project {
   id               String          @id @default(cuid())
   category         String
-  title            String
+  title            String          @unique
   year             String
   shortDescription String
   longDescriptions String[]
-  img              String?
+  img              String
   link             String?
   tags             String[]
   ResumeProject    ResumeProject[]
