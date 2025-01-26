@@ -123,7 +123,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
   \def\aftermultilinesubsectionheaderspace{-7.75pt}
   \def\afteremptysubsectionheaderspace{1.25pt}
   \def\subsectionmargin{9pt}
-  \def\aftersubsectionspace{2.1pt}
+  \def\aftersubsectionspace{0pt}
 }{
   \def\namespaceskip{0.4em}
   \def\afterheaderspace{3pt}
@@ -143,7 +143,7 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
   \def\aftermultilinesubsectionheaderspace{-6pt}
   \def\afteremptysubsectionheaderspace{3pt}
   \def\subsectionmargin{9pt}
-  \def\aftersubsectionspace{4pt}
+  \def\aftersubsectionspace{0pt}
 }
 
 %--------------------------------------------------------------------------------

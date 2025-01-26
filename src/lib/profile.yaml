@@ -28,6 +28,7 @@ contact:
 skills:
   Artificial Intelligence:
   - Machine Learning
+  - Deep Learning
   - Computer Vision
   - Natural Language Processing
   - MLOps
@@ -35,6 +36,7 @@ skills:
   - Data Analysis
   - Data Engineering
   - Data Visualisation
+  - Elasticsearch
   Software Engineering:
   - Google Cloud
   - Docker
@@ -73,7 +75,7 @@ experience:
   - Project Management
   - Machine Learning
   - Firebase
-  - ML-Ops
+  - MLOps
 - title: Co-Founder, AI Engineer
   org: Flora Softworks Pte Ltd
   isJob: true
@@ -84,7 +86,6 @@ experience:
   - Presented Flora to 10+ potential clients, resulting in 1 successful pilot.
   # - Deployed solution to the cloud (GCP) and locally (Docker Compose) and presented Flora to 5+ potential clients, resulting in 1 successful pilot.
   skills:
-  - Python
   - Docker
   - Elasticsearch
   - MLOps
@@ -101,7 +102,6 @@ experience:
   externalLinks:
   - https://anor-tech.com/aboutus
   skills:
-  - Python
   - Data Analysis
   - Data Visualisation
   - Deep Learning
@@ -125,7 +125,6 @@ experience:
   - https://connect.aisingapore.org/2021/07/bridging-the-gap-spais-inaugural-machine-learning-bootcamp/
   githubLink: https://github.com/SPAI-Team
   skills:
-  - Leadership
   - Project Management
   - Event Planning
   - Machine Learning

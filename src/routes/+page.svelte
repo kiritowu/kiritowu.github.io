@@ -1,6 +1,6 @@
 <script lang="ts">
-	// User profile from database
-	import profile from '$lib/profile.yaml';
+	// Import layout data
+	import type { LayoutData } from './$types';
 
 	// Import Components
 	import Hero from '$lib/components/Hero.svelte';
@@ -8,25 +8,33 @@
 	import Experience from '$lib/components/Experience.svelte';
 	import Skills from '$lib/components/Skills.svelte';
 	import Projects from '$lib/components/Projects.svelte';
+
+	export let data: LayoutData;
+	$: ({ profile, skills, experiences, projects } = data);
 </script>
 
 <svelte:head>
-	<meta name="author" content="{profile.profile.firstName} {profile.profile.lastName}" />
-	<meta name="description" content="{profile.profile.firstName}'s personal website" />
+	<meta name="author" content="{profile.firstName} {profile.lastName}" />
+	<meta name="description" content="{profile.firstName}'s personal website" />
 	<title
-		>{profile.profile.nickName}
-		{profile.profile.lastName}
-		{profile.profile.firstName}
+		>{profile.nickName}
+		{profile.lastName}
+		{profile.firstName}
 	</title>
 	<link rel="icon" href="/favicon.png" />
 </svelte:head>
 
-<Hero {...profile.profile} />
+<Hero
+	firstName={profile.firstName}
+	lastName={profile.lastName}
+	ign={profile.ign}
+	nickName={profile.nickName}
+/>
 
-<Profile descriptions={profile.profile.descriptions} />
+<Profile descriptions={profile.descriptions} />
 
-<Skills skills={profile.skills} />
+<Skills {skills} />
 
-<Experience experiences={profile.experience} />
+<Experience {experiences} />
 
-<Projects projects={profile.projects} />
+<Projects {projects} />

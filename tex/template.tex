@@ -29,11 +29,11 @@
 % Set applicant's personal data for header
 \name{\underline{<$ profile.lastName $>} <$ profile.firstName $>, <$ profile.nickName $>}
 \address{}
-\webpage{<$ contact.website $>}
-\call{(+65) XXXX XXXX}
-\email{<$ contact.email $>}
-\github{<$ contact.github $>}
-\linkedin{<$ contact.linkedin $>}
+\webpage{<$ profile.website $>}
+\call{<$ profile.mobile $>}
+\email{<$ profile.email $>}
+\github{<$ profile.github $>}
+\linkedin{<$ profile.linkedin $>}
 
 \begin{document}
 
@@ -43,8 +43,8 @@
 	% Print the content
 
 	\begin{cvsection}{Education}
-		<% for edu in education %>
-		\begin{cvsubsection}{<$ edu.school $>}{}{<$ edu.startDate $> -- <$ edu.endDate $>}
+		<% for edu in educations %>
+		\begin{cvsubsection}{<$ edu.school $>}{}{<$ edu.startDate | date $> -- <$ edu.endDate | date $>}
 			\begin{itemize}
 					<% for d in edu.descriptions %>
 				\item <$ d $>
@@ -55,9 +55,9 @@
 	\end{cvsection}
 
 	\begin{cvsection}{Employment}
-		<% for exp in experience %>
+		<% for exp in experiences %>
 		<% if exp.isJob %>
-		\begin{cvsubsection}{<$ exp.title $>}{<$ exp.org $>}{<$ exp.startDate $> - <$ exp.endDate $>}
+		\begin{cvsubsection}{<$ exp.title $>}{<$ exp.org $>}{<$ exp.startDate | date $> - <$ exp.endDate | date $>}
 			\begin{itemize}
 			<% for d in exp.descriptions %>
 				\item <$ d $>
@@ -69,9 +69,7 @@
 	\end{cvsection}
 		
     \begin{cvsection}{Projects}
-	<% for name, cat in projects %>
-	<% for project in cat %>
-	<% if project.title in resume.projects %>
+	<% for project in projects %>
         \begin{cvsubsection}{<$ project.title $>}{}{<$ project.year $>}
             \begin{itemize}
 		<% for description in project.longDescriptions %>
@@ -79,8 +77,6 @@
 		<% endfor %>
             \end{itemize}
         \end{cvsubsection}
-	<% endif %>
-	<% endfor %>
 	<% endfor %>
 	\end{cvsection}
 
@@ -100,8 +96,8 @@
 	\begin{cvsection}{Technologies and Skills}
 		\begin{cvsubsection}{}{}{}	
 			\begin{itemize}
-				\item \textbf{Programming Language: } Python, SQL, Bash, Typescript, Javascript, HTML, CSS, \LaTeX
-				\item \textbf{Frameworks and Tools: } Pytorch, Huggingface, Scikit-Learn, Numpy, Pandas, FastAPI, Fastify, Node.JS, TailwindCSS, PostgreSQL, MySQL, MongoDB, Git.
+				\item \textbf{Programming Language: } Python, SQL, Typescript, Javascript, HTML, CSS, Bash
+				\item \textbf{Frameworks and Tools: } Pytorch, Huggingface, Scikit-Learn, Numpy, Pandas, FastAPI, Fastify, Node.JS, TailwindCSS, PostgreSQL, MySQL, MongoDB, Git, \LaTeX
 				\item \textbf{Deployment Experience: } Google Cloud, Firebase, Supabase, Docker, Kubeflow
 				% \item \textbf{Personal Traits: } Natural Leader, Team Player, Fast Learner, Critical Thinker
 				\item \textbf{Internship Availibitiy: } 5 May 2025 - 1 Aug 2025 (3-Months)
