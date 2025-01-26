@@ -107,11 +107,10 @@ jobs:
       - name: build
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
-        run: |
-          npm run build
-        env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           DIRECT_URL: ${{ secrets.DIRECT_URL }}
+        run: |
+          npm run build
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v2
