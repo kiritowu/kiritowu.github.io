@@ -25,10 +25,7 @@ jobs:
       - name: Compile latex
         run: |
           node scripts/1.compile-latex-template.js
-        env:
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          DIRECT_URL: ${{ secrets.DIRECT_URL }}
-        
+
       - name: Cache LaTeX files
         uses: actions/cache@v4
         with:
@@ -44,7 +41,7 @@ jobs:
 
       - name: Install Docker
         uses: docker/setup-buildx-action@v3
-      
+
       - name: Build Docker image
         run: docker build -t texlive-extended .
         working-directory: ./tex
@@ -107,8 +104,6 @@ jobs:
       - name: build
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          DIRECT_URL: ${{ secrets.DIRECT_URL }}
         run: |
           npm run build
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Experience } from '@prisma/client';
+	import type { Experience } from '$lib/types';
 	import SimpleIcon from '$lib/components/SimpleIcon.svelte';
 
 	// Change visble section
