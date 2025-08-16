@@ -56,7 +56,7 @@
 
 	\begin{cvsection}{Employment}
 		<% for exp in experience %>
-		<% if exp.isJob %>
+		<% if exp.org in resume.experience %>
 		\begin{cvsubsection}{<$ exp.title $>}{<$ exp.org $>}{<$ exp.startDate | date $> - <$ exp.endDate | date $>}
 			\begin{itemize}
 			<% for d in exp.descriptions %>
@@ -84,27 +84,27 @@
 	<% endfor %>
 	\end{cvsection}
 
-	\begin{cvsection}{Additional Experience and Certification}
-		\begin{cvsubsection}{}{}{}	
-			\begin{itemize}
-				\item \textbf{Google Cloud Certified Professional Machine Learning Engineer:} Certified in designing, building, and productionizing ML solutions on Google Cloud. (ID: 43ffb52bffed42bbad16545107dd7723)
-				% <% for exp in experience %>
-				% <% if exp.title in resume.additionalExperience %>
-				% \item \textbf{<$ exp.title |  replace("&", "\\&")  $>:} (<$ exp.year $>): <$ exp.shortDescription $>
-				% <% endif %>
-				% <% endfor %>
-			\end{itemize}
-		\end{cvsubsection}
-	\end{cvsection}
+	% \begin{cvsection}{Additional Experience and Certification}
+	% 	\begin{cvsubsection}{}{}{}	
+	% 		\begin{itemize}
+	% 			\item \textbf{Google Cloud Certified Professional Machine Learning Engineer:} Certified in designing, building, and productionizing ML solutions on Google Cloud. (ID: 43ffb52bffed42bbad16545107dd7723)
+	% 			% <% for exp in experience %>
+	% 			% <% if exp.title in resume.additionalExperience %>
+	% 			% \item \textbf{<$ exp.title |  replace("&", "\\&")  $>:} (<$ exp.year $>): <$ exp.shortDescription $>
+	% 			% <% endif %>
+	% 			% <% endfor %>
+	% 		\end{itemize}
+	% 	\end{cvsubsection}
+	% \end{cvsection}
 	
 	\begin{cvsection}{Technologies and Skills}
 		\begin{cvsubsection}{}{}{}	
 			\begin{itemize}
 				\item \textbf{Programming Language: } Python, Typescript, Javascript, SQL, HTML, CSS, Bash
-				\item \textbf{Frameworks and Tools: } SvelteKit, FastAPI, Fastify, Node.JS, TailwindCSS, PostgreSQL, MySQL, MongoDB, Pytorch, Huggingface, Scikit-Learn, Numpy, Pandas, Git, \LaTeX
-				\item \textbf{Deployment Experience: } Google Cloud, Firebase, Supabase, Docker, Kubeflow
+				\item \textbf{Frameworks and Tools: } NextJS, SvelteKit, FastAPI, NestJS, Fastify, Node.JS, TailwindCSS, PostgreSQL, MySQL, MongoDB, Pytorch, Huggingface, Scikit-Learn, Numpy, Pandas, Git, \LaTeX
+				\item \textbf{Deployment Experience: } Google Cloud, Firebase, Supabase, Docker, Kubenetes, Helm, Kubeflow
 				% \item \textbf{Personal Traits: } Natural Leader, Team Player, Fast Learner, Critical Thinker
-				\item \textbf{Internship Availibitiy: } 5 May 2025 - 1 Aug 2025 (3-Months)
+				\item \textbf{Internship Availibitiy: } 10 May 2026 - 2 Aug 2026
 			\end{itemize}
 		\end{cvsubsection}
 	\end{cvsection}
