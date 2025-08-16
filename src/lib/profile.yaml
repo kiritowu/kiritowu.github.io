@@ -4,20 +4,20 @@ profile:
   nickName: Bryan
   ign: kiritowu
   descriptions:
-  - Hi I'm Zhao Wu, a prospective [NUS College (NUSC)](https://nuscollege.nus.edu.sg/about-us/)
-    undergraduate majoring in [Computer Science (CS)](https://www.comp.nus.edu.sg/programmes/ug/cs/).
-  - I'm a conscientiously driven individual ([INFJ-A](https://www.16personalities.com/infj-personality)),
-    with an extensive track-record in leadership, project management, and event planning.
-  - Before moving on to my next exciting chapter, I graduated as the Gold Medalist
-    from [SP's Diploma in Applied AI and Analytics (DAAA - S30)](https://www.sp.edu.sg/soc/courses/full-time-diplomas/applied-AI-and-analytics/overview).
-    This journey fueled my passion for technology and artificial intelligence, propelling
-    me one step closer to my career aspiration of an AI Engineer, building applications
-    that empower people through AI.
-  - Outside the tech realm, I find solace in the outdoors. Whether it's [cycling,
-    jogging, hiking](https://www.strava.com/athletes/67402211), or my newfound love
-    for [reading](https://www.goodreads.com/user/show/170027850-zhao-wu-wong), I relish
-    every opportunity to explore and unwind. Also, I enjoy [anime](https://myanimelist.net/profile/kiritowu)
-    :D
+    - Hi I'm Zhao Wu, a prospective [NUS College (NUSC)](https://nuscollege.nus.edu.sg/about-us/)
+      undergraduate majoring in [Computer Science (CS)](https://www.comp.nus.edu.sg/programmes/ug/cs/).
+    - I'm a conscientiously driven individual ([INFJ-A](https://www.16personalities.com/infj-personality)),
+      with an extensive track-record in leadership, project management, and event planning.
+    - Before moving on to my next exciting chapter, I graduated as the Gold Medalist
+      from [SP's Diploma in Applied AI and Analytics (DAAA - S30)](https://www.sp.edu.sg/soc/courses/full-time-diplomas/applied-AI-and-analytics/overview).
+      This journey fueled my passion for technology and artificial intelligence, propelling
+      me one step closer to my career aspiration of an AI Engineer, building applications
+      that empower people through AI.
+    - Outside the tech realm, I find solace in the outdoors. Whether it's [cycling,
+      jogging, hiking](https://www.strava.com/athletes/67402211), or my newfound love
+      for [reading](https://www.goodreads.com/user/show/170027850-zhao-wu-wong), I relish
+      every opportunity to explore and unwind. Also, I enjoy [anime](https://myanimelist.net/profile/kiritowu)
+      :D
 contact:
   email: zhaowu.wong@gmail.com
   website: kiritowu.github.io
@@ -27,299 +27,299 @@ contact:
   myanimelist: myanimelist.net/profile/kiritowu
 skills:
   Artificial Intelligence:
-  - Machine Learning
-  - Deep Learning
-  - Computer Vision
-  - Natural Language Processing
-  - MLOps
-  - ML Pipeline
-  - Data Analysis
-  - Data Engineering
-  - Data Visualisation
-  - Elasticsearch
+    - Machine Learning
+    - Deep Learning
+    - Computer Vision
+    - Natural Language Processing
+    - MLOps
+    - ML Pipeline
+    - Data Analysis
+    - Data Engineering
+    - Data Visualisation
+    - Elasticsearch
   Software Engineering:
-  - Google Cloud
-  - Docker
-  - Firebase
-  - Python
-  - Typescript
-  - Javascript
+    - Google Cloud
+    - Docker
+    - Firebase
+    - Python
+    - Typescript
+    - Javascript
   Leadership:
-  - Project Management
-  - Event Planning
+    - Project Management
+    - Event Planning
 experience:
-- title: Chairperson, AI Student Developer Conference
-  org: AI Singapore
-  isJob: false
-  startDate: Feb 2023
-  endDate: May 2023
-  year: '2023'
-  descriptions:
-  - Leading a team of student organizers with diverse educational backgrounds and
-    skillset.
-  - Liaising with event management vendors and industry partners like NVIDIA, Govtech,
-    SAP, SCS and Pand.ai to ensure smooth execution of the conference.
-  - Moderating a fireside chat on what it takes to bring machine learning to life
-    into a real-world AI project and how Machine Learning Operations (ML-Ops) is implemented
-    in real-world AI project with industry professional.
-  - 'Spearheading the development of a Firebase native companion application for gamification
-    elements during Track 3: AI Playground.'
-  shortDescription: Led a diverse student team, partnered with industry leaders, moderated
-    fireside chats, and developed gamified companion app, driving the success of the inaugural
-    conference with 300+ AI youth participants.
-  githubLink: https://github.com/AISDC-2023/aisdc
-  externalLinks:
-  - https://www.mindef.gov.sg/news-and-events/latest-releases/13may23_nr2
-  skills:
-  - Event Planning
-  - Project Management
-  - Machine Learning
-  - Firebase
-  - MLOps
-- title: Co-Founder, AI Engineer
-  org: Flora Softworks Pte Ltd
-  isJob: true
-  startDate: Feb 2022
-  endDate: Apr 2023
-  descriptions:
-  - Developed an enterprise search engine using Elasticsearch, ONNX Runtime, Jina, FastAPI and MongoDB that enables organisations to index and search through unstructured documents.
-  - Presented Flora to 10+ potential clients, resulting in 1 successful pilot.
-  # - Deployed solution to the cloud (GCP) and locally (Docker Compose) and presented Flora to 5+ potential clients, resulting in 1 successful pilot.
-  skills:
-  - Docker
-  - Elasticsearch
-  - MLOps
-  - ML Pipeline
-- title: AI Engineer Intern
-  org: ANOR Technologies Pte Ltd
-  isJob: true
-  startDate: Sep 2022
-  endDate: Feb 2023
-  descriptions:
-    - Supported research project by analyzing data and presenting experiment insights to relevant stakeholders.
-    - Unified and optimized signal processing computations from multiple research-oriented software (e.g. Matlab, Origin) into with modularized Python modules for production use case.
-    # - Developed FastAPI backend for the no-code data analysis and signal processing application for Terahertz spectrogram samples.
-  externalLinks:
-  - https://anor-tech.com/aboutus
-  skills:
-  - Data Analysis
-  - Data Visualisation
-  - Deep Learning
-- title: Founder & President, SP Artificial Intelligence (SPAI) Student Chapter
-  org: SP Aritificial Intelligence Student Chapter
-  isJob: false
-  startDate: Apr 2021
-  endDate: Apr 2022
-  year: 2021
-  shortDescription: Moulded a community of AI Enthusiast in SP through workshops,
-    competition and student-led projects, resulted in an Outstanding Contributions
-    (Group) Excellence Award and 200 members within the first year of establishment.
-  descriptions:
-  - Founded and led the student committee to build a community of AI Enthusiast in
-    SP through numerous student initiated workshops, competition and student-led projects.
-  - Awarded the Outstanding Contributions (Group) Excellence Award with over 200 members
-    across different schools all within the first year of establishment.
-  externalLinks:
-  - https://www.sp.edu.sg/soc/news/soc/spai-s-inaugural-machine-learning-bootcamp
-  - https://www.sp.edu.sg/soc/sp-engineering-show/engineering-show-2022/project-human-entrance-counter
-  - https://connect.aisingapore.org/2021/07/bridging-the-gap-spais-inaugural-machine-learning-bootcamp/
-  githubLink: https://github.com/SPAI-Team
-  skills:
-  - Project Management
-  - Event Planning
-  - Machine Learning
-  - Deep Learning
+  - title: Chairperson, AI Student Developer Conference
+    org: AI Singapore
+    isJob: false
+    startDate: 01 Feb 2023
+    endDate: 01 May 2023
+    year: '2023'
+    descriptions:
+      - Leading a team of student organizers with diverse educational backgrounds and
+        skillset.
+      - Liaising with event management vendors and industry partners like NVIDIA, Govtech,
+        SAP, SCS and Pand.ai to ensure smooth execution of the conference.
+      - Moderating a fireside chat on what it takes to bring machine learning to life
+        into a real-world AI project and how Machine Learning Operations (ML-Ops) is implemented
+        in real-world AI project with industry professional.
+      - 'Spearheading the development of a Firebase native companion application for gamification
+        elements during Track 3: AI Playground.'
+    shortDescription: Led a diverse student team, partnered with industry leaders, moderated
+      fireside chats, and developed gamified companion app, driving the success of the inaugural
+      conference with 300+ AI youth participants.
+    githubLink: https://github.com/AISDC-2023/aisdc
+    externalLinks:
+      - https://www.mindef.gov.sg/news-and-events/latest-releases/13may23_nr2
+    skills:
+      - Event Planning
+      - Project Management
+      - Machine Learning
+      - Firebase
+      - MLOps
+  - title: Co-Founder, AI Engineer
+    org: Flora Softworks Pte Ltd
+    isJob: true
+    startDate: 01 Feb 2022
+    endDate: 01 Apr 2023
+    descriptions:
+      - Developed an enterprise search engine using Elasticsearch, ONNX Runtime, Jina, FastAPI and MongoDB that enables organisations to index and search through unstructured documents.
+      - Presented Flora to 10+ potential clients, resulting in 1 successful pilot.
+    # - Deployed solution to the cloud (GCP) and locally (Docker Compose) and presented Flora to 5+ potential clients, resulting in 1 successful pilot.
+    skills:
+      - Docker
+      - Elasticsearch
+      - MLOps
+      - ML Pipeline
+  - title: AI Engineer Intern
+    org: ANOR Technologies Pte Ltd
+    isJob: true
+    startDate: 01 Sep 2022
+    endDate: 01 Feb 2023
+    descriptions:
+      - Supported research project by analyzing data and presenting experiment insights to relevant stakeholders.
+      - Unified and optimized signal processing computations from multiple research-oriented software (e.g. Matlab, Origin) into with modularized Python modules for production use case.
+      # - Developed FastAPI backend for the no-code data analysis and signal processing application for Terahertz spectrogram samples.
+    externalLinks:
+      - https://anor-tech.com/aboutus
+    skills:
+      - Data Analysis
+      - Data Visualisation
+      - Deep Learning
+  - title: Founder & President, SP Artificial Intelligence (SPAI) Student Chapter
+    org: SP Aritificial Intelligence Student Chapter
+    isJob: false
+    startDate: 01 Apr 2021
+    endDate: 01 Apr 2022
+    year: 2021
+    shortDescription: Moulded a community of AI Enthusiast in SP through workshops,
+      competition and student-led projects, resulted in an Outstanding Contributions
+      (Group) Excellence Award and 200 members within the first year of establishment.
+    descriptions:
+      - Founded and led the student committee to build a community of AI Enthusiast in
+        SP through numerous student initiated workshops, competition and student-led projects.
+      - Awarded the Outstanding Contributions (Group) Excellence Award with over 200 members
+        across different schools all within the first year of establishment.
+    externalLinks:
+      - https://www.sp.edu.sg/soc/news/soc/spai-s-inaugural-machine-learning-bootcamp
+      - https://www.sp.edu.sg/soc/sp-engineering-show/engineering-show-2022/project-human-entrance-counter
+      - https://connect.aisingapore.org/2021/07/bridging-the-gap-spais-inaugural-machine-learning-bootcamp/
+    githubLink: https://github.com/SPAI-Team
+    skills:
+      - Project Management
+      - Event Planning
+      - Machine Learning
+      - Deep Learning
 education:
-- qualification: B.Comp. in Computer Science with NUS College
-  school: National University of Singapore
-  startDate: Aug 2025
-  endDate: Jul 2029
-  descriptions:
-  - B.Comp. in Computer Science with NUS College.
-  - Recipient of NUS ASEAN Undergraduate Scholarship.
-- qualification: Diploma with Merit in Applied AI and Analytics
-  school: Singapore Polytechnic
-  startDate: Apr 2020
-  endDate: Apr 2023
-  descriptions:
-  - Diploma with Merit in Applied AI and Analytics, GPA 4.0/4.0.
-  - Recipient of IMDA Gold Medal and SP Scholarship.
-  - 'Graduate Coursework: Deep Learning, Machine Learning, Reinforcement Learning, Full-Stack Development, DevOps, Data Analytics, Data Engineering, Data Visualisation.'
+  - qualification: B.Comp. in Computer Science with NUS College
+    school: National University of Singapore
+    startDate: Aug 2025
+    endDate: Jul 2029
+    descriptions:
+      - B.Comp. in Computer Science with NUS College.
+      - Recipient of NUS ASEAN Undergraduate Scholarship.
+  - qualification: Diploma with Merit in Applied AI and Analytics
+    school: Singapore Polytechnic
+    startDate: Apr 2020
+    endDate: Apr 2023
+    descriptions:
+      - Diploma with Merit in Applied AI and Analytics, GPA 4.0/4.0.
+      - Recipient of IMDA Gold Medal and SP Scholarship.
+      - 'Graduate Coursework: Deep Learning, Machine Learning, Reinforcement Learning, Full-Stack Development, DevOps, Data Analytics, Data Engineering, Data Visualisation.'
 resume:
   projects:
-  - SG Lib Books
-  - OneService Hotline
-  - OwlShield
+    - SG Lib Books
+    - OneService Hotline
+    - OwlShield
   # - Neural Search Web App
   additionalExperience:
-  - Chairperson, AI Student Developer Conference
-  - Founder & President, SP Artificial Intelligence (SPAI) Student Chapter
+    - Chairperson, AI Student Developer Conference
+    - Founder & President, SP Artificial Intelligence (SPAI) Student Chapter
 projects:
   Full-Stack Development:
-  - title: AISDC 2023
-    year: '2023'
-    shortDescription: Companion web application for AI Student Developer Conference
-      2023
-    longDescriptions:
-    - lorem ipsum
-    img: aisdc
-    link: https://github.com/AISDC-2023/aisdc
-    tags:
-    - Firebase
-    - React
-    - Typescript
-  - title: SG Lib Books
-    year: '2025'
-    shortDescription: Open source project by a group of Singapore book lovers who want a quick and efficient view to available Singapore library books.
-    longDescriptions:
-    - Spearheaded full-stack redesign using modern technologies (SvelteKit, TailwindCSS, Shadcn-ui) to create an intuitive, mobile-friendly interface for instant book availability checking across multiple libraries.
-    - Refactored an open-source project that streamlines public library book discovery experience by transforming its monolithic backend into a maintainable MVC architecture.
-    - Developed and published a type-safe Python SDK for NLB Catalogue API with 100\% test coverage, enabling seamless integration with Singapore's public library catalogue.
-    img: sgLibBooks
-    link: https://github.com/cliffchew84/SG-Lib-Books
-    tags:
-    - Supabase
-    - Svelte
-    - FastAPI
-    - Firebase
-    - Google Cloud
-    - Typescript
+    - title: AISDC 2023
+      year: '2023'
+      shortDescription: Companion web application for AI Student Developer Conference
+        2023
+      longDescriptions:
+        - lorem ipsum
+      img: aisdc
+      link: https://github.com/AISDC-2023/aisdc
+      tags:
+        - Firebase
+        - React
+        - Typescript
+    - title: SG Lib Books
+      year: '2025'
+      shortDescription: Open source project by a group of Singapore book lovers who want a quick and efficient view to available Singapore library books.
+      longDescriptions:
+        - Spearheaded full-stack redesign using modern technologies (SvelteKit, TailwindCSS, Shadcn-ui) to create an intuitive, mobile-friendly interface for instant book availability checking across multiple libraries.
+        - Refactored an open-source project that streamlines public library book discovery experience by transforming its monolithic backend into a maintainable MVC architecture.
+        - Developed and published a type-safe Python SDK for NLB Catalogue API with 100\% test coverage, enabling seamless integration with Singapore's public library catalogue.
+      img: sgLibBooks
+      link: https://github.com/cliffchew84/SG-Lib-Books
+      tags:
+        - Supabase
+        - Svelte
+        - FastAPI
+        - Firebase
+        - Google Cloud
+        - Typescript
   Natural Language Processing:
-  - title: OneService Hotline
-    year: '2024'
-    shortDescription: OneService Hotline is a helpful AI assistant, responsible for
-      helping users (primarily elderly) to submit a case or feedback on municipal issues. Winning solution of GovTech Sing
-    longDescriptions:
-    - Developed a multilingual AI-powered assistant to assist elderly users in submitting municipal issue feedback, leveraging OpenAI’s GPT-4o Realtime API and prompt engineering techniques.
-    # - Solution demonstrated autonomous decision-making and adaptability, showcasing practical applications of agentic AI in dynamic real-world scenarios.
-    - Awarded the first prize at the GovTech x OpenAI Hackathon 2024 while competing with 30 other groups of veterans, working adults and students.
-    - Engaged with Municipal Services Office's Digital Product team to explore potential integration of the solution into their existing product ecosystem.
-    img: oneServiceHotline
-    link: https://github.com/aqilakmal/OneService-Hotline
-    tags:
-    - LLM Agent
-    - OpenAI's Realtime-API
-    - Prompt Engineering
-    - React
-  - title: OwlShield
-    year: '2024'
-    shortDescription: LLM Safety Firewall Solution that close the safety and compliance
-      gap of LLM Application by organisations.
-    longDescriptions:
-      - Developed a real-time, modular and easily deployable LLM safety firewall solution addressing safety and compliance gaps in organizational LLM applications.
-      - Researched and engineered shields to defend against a variety of LLM safety attacks (e.g. prompt injection, jailbreaks, adversarial prompts) using techniques like semantic matching of attack signatures, perplexity filtering, and finetuned LLM content moderation classifier with NSCC's Aspire 2A HPC.
-      - Won the High-Performance Computing AI Innovation Challenge (HPCIC) 2023, Student (Senior) Category.
-      # - Presented solution in IMDA's Technical Sharing Session on LLM Safeguarding on 15 July 2024.
-    img: owlShield
-    link: https://youtu.be/NuvWw_M4ErA
-    tags:
-    - LLM Safety
-    - Adversarial Attacks
-    - SvelteKit
-    - FastAPI
-    - Supabase
-    - HPC
-  - title: Neural Search Web App
-    year: '2022'
-    shortDescription: Neural Search to retrieval engine for unstructured text documents.
-    longDescriptions:
-    - Developed an enterprise search engine using Elasticsearch, ONNX Runtime, Jina, FastAPI and MongoDB that enables organisations to index and search through unstructured documents.
-    - Presented Flora to 10+ potential clients, resulting in 1 successful pilot.
-    # - Deployed solution to the cloud (GCP) and locally (Docker Compose) and 
-    img: AI-Enabled Query System
-    link: ''
-    tags:
-    - Information Retrieval
-    - Google Cloud
-    - Firebase
-    - Sentence Transformers
+    - title: OneService Hotline
+      year: '2024'
+      shortDescription: OneService Hotline is a helpful AI assistant, responsible for
+        helping users (primarily elderly) to submit a case or feedback on municipal issues. Winning solution of GovTech Sing
+      longDescriptions:
+        - Developed a multilingual AI-powered assistant to assist elderly users in submitting municipal issue feedback, leveraging OpenAI’s GPT-4o Realtime API and prompt engineering techniques.
+        # - Solution demonstrated autonomous decision-making and adaptability, showcasing practical applications of agentic AI in dynamic real-world scenarios.
+        - Awarded the first prize at the GovTech x OpenAI Hackathon 2024 while competing with 30 other groups of veterans, working adults and students.
+        - Engaged with Municipal Services Office's Digital Product team to explore potential integration of the solution into their existing product ecosystem.
+      img: oneServiceHotline
+      link: https://github.com/aqilakmal/OneService-Hotline
+      tags:
+        - LLM Agent
+        - OpenAI's Realtime-API
+        - Prompt Engineering
+        - React
+    - title: OwlShield
+      year: '2024'
+      shortDescription: LLM Safety Firewall Solution that close the safety and compliance
+        gap of LLM Application by organisations.
+      longDescriptions:
+        - Developed a real-time, modular and easily deployable LLM safety firewall solution addressing safety and compliance gaps in organizational LLM applications.
+        - Researched and engineered shields to defend against a variety of LLM safety attacks (e.g. prompt injection, jailbreaks, adversarial prompts) using techniques like semantic matching of attack signatures, perplexity filtering, and finetuned LLM content moderation classifier with NSCC's Aspire 2A HPC.
+        - Won the High-Performance Computing AI Innovation Challenge (HPCIC) 2023, Student (Senior) Category.
+        # - Presented solution in IMDA's Technical Sharing Session on LLM Safeguarding on 15 July 2024.
+      img: owlShield
+      link: https://youtu.be/NuvWw_M4ErA
+      tags:
+        - LLM Safety
+        - Adversarial Attacks
+        - SvelteKit
+        - FastAPI
+        - Supabase
+        - HPC
+    - title: Neural Search Web App
+      year: '2022'
+      shortDescription: Neural Search to retrieval engine for unstructured text documents.
+      longDescriptions:
+        - Developed an enterprise search engine using Elasticsearch, ONNX Runtime, Jina, FastAPI and MongoDB that enables organisations to index and search through unstructured documents.
+        - Presented Flora to 10+ potential clients, resulting in 1 successful pilot.
+      # - Deployed solution to the cloud (GCP) and locally (Docker Compose) and
+      img: AI-Enabled Query System
+      link: ''
+      tags:
+        - Information Retrieval
+        - Google Cloud
+        - Firebase
+        - Sentence Transformers
   Computer Vision:
-  - title: SPAI Human Entrance Counter
-    year: '2022'
-    shortDescription: Detect and track the human footfall.
-    longDescriptions:
-    - lorem ipsum
-    img: Human Counter
-    link: https://github.com/SPAI-Team/Human-Entrance-Counter
-    tags:
-    - Object Detection
-    - Object Tracking
-  - title: EfficientNetV2 Benchmarks
-    year: '2021'
-    shortDescription: Train an image classifier for CIFAR-10 and Fashion-MNIST.
-    longDescriptions:
-    - lorem ipsum
-    img: EfficientNet
-    link: https://github.com/kiritowu/Deep-Learning/tree/main/CV/EfficientNetV2_with_Image_Classification_Benchmarks
-    tags:
-    - Image Classification
-    - CNN
-    - PyTorch
-  - title: Vehicle Detection with Faster R-CNN
-    year: '2021'
-    shortDescription: Train an object detection on vehicles in a video.
-    longDescriptions:
-    - lorem ipsum
-    img: Faster R-CNN
-    link: https://github.com/kiritowu/Deep-Learning/tree/main/CV/FasterRCNN_VehiclesDetection
-    tags:
-    - Object Detection
-    - Faster R-CNN
-    - PyTorch
-  - title: AC-BigGAN with CIFAR 10
-    year: '2021'
-    shortDescription: Train a GAN for CIFAR-10
-    longDescriptions:
-    - lorem ipsum
-    img: acbiggan
-    link: https://github.com/kiritowu/Deep-Learning/tree/main/GAN/AC-BIGGAN-with-CIFAR10
-    tags:
-    - GAN
-    - PyTorch
+    - title: SPAI Human Entrance Counter
+      year: '2022'
+      shortDescription: Detect and track the human footfall.
+      longDescriptions:
+        - lorem ipsum
+      img: Human Counter
+      link: https://github.com/SPAI-Team/Human-Entrance-Counter
+      tags:
+        - Object Detection
+        - Object Tracking
+    - title: EfficientNetV2 Benchmarks
+      year: '2021'
+      shortDescription: Train an image classifier for CIFAR-10 and Fashion-MNIST.
+      longDescriptions:
+        - lorem ipsum
+      img: EfficientNet
+      link: https://github.com/kiritowu/Deep-Learning/tree/main/CV/EfficientNetV2_with_Image_Classification_Benchmarks
+      tags:
+        - Image Classification
+        - CNN
+        - PyTorch
+    - title: Vehicle Detection with Faster R-CNN
+      year: '2021'
+      shortDescription: Train an object detection on vehicles in a video.
+      longDescriptions:
+        - lorem ipsum
+      img: Faster R-CNN
+      link: https://github.com/kiritowu/Deep-Learning/tree/main/CV/FasterRCNN_VehiclesDetection
+      tags:
+        - Object Detection
+        - Faster R-CNN
+        - PyTorch
+    - title: AC-BigGAN with CIFAR 10
+      year: '2021'
+      shortDescription: Train a GAN for CIFAR-10
+      longDescriptions:
+        - lorem ipsum
+      img: acbiggan
+      link: https://github.com/kiritowu/Deep-Learning/tree/main/GAN/AC-BIGGAN-with-CIFAR10
+      tags:
+        - GAN
+        - PyTorch
   Data Science & Analytics:
-  - title: Machine Learning Repo
-    year: '2021'
-    shortDescription: A collection of machine learning projects.
-    longDescriptions:
-    - lorem ipsum
-    img: Machine Learning
-    link: https://github.com/kiritowu/Machine-Learning
-    tags:
-    - Classfication
-    - Regression
-    - Clustering
-    - Time Series
-    - Scikit-Learn
-  - title: Reimagining Public Transport, Post-Covid
-    year: '2020'
-    shortDescription: Analysis of public transport usage in Singapore during the Covid-19
-      pandemic.
-    longDescriptions:
-    - lorem ipsum
-    img: reimaginingPublicTransport
-    link: https://github.com/kiritowu/Reimagining-Public-Transport-Post-COVID-19/tree/main
-    tags:
-    - Data Analysis
-    - Data Visualisation
+    - title: Machine Learning Repo
+      year: '2021'
+      shortDescription: A collection of machine learning projects.
+      longDescriptions:
+        - lorem ipsum
+      img: Machine Learning
+      link: https://github.com/kiritowu/Machine-Learning
+      tags:
+        - Classfication
+        - Regression
+        - Clustering
+        - Time Series
+        - Scikit-Learn
+    - title: Reimagining Public Transport, Post-Covid
+      year: '2020'
+      shortDescription: Analysis of public transport usage in Singapore during the Covid-19
+        pandemic.
+      longDescriptions:
+        - lorem ipsum
+      img: reimaginingPublicTransport
+      link: https://github.com/kiritowu/Reimagining-Public-Transport-Post-COVID-19/tree/main
+      tags:
+        - Data Analysis
+        - Data Visualisation
   IOT:
-  - title: ESP32 First Person View Robot
-    year: '2021'
-    shortDescription: Design and build remote vehicle with a first person view powered
-      by ESP-32 Cam.
-    longDescriptions:
-    - lorem ipsum
-    img: FPV Demo
-    link: https://github.com/kiritowu/ESP32-First-Person-View-Robot
-    tags:
-    - ESP32 Cam
-    - Arduino
-  - title: Fitbit Calculator App for Versa 4
-    year: '2024'
-    shortDescription: A simple Calculator and currency converter app based on an unofficial approach for sideloading a 3rd-party application to Fitbit Versa 4 and Sense 2 devices.
-    longDescriptions:
-    - lorem ipsum
-    img: fitbitCalculatorVersa4
-    link: https://github.com/kiritowu/calculator-app-versa4
-    tags:
-    - FitBit SDK
-    - Side-Loading
+    - title: ESP32 First Person View Robot
+      year: '2021'
+      shortDescription: Design and build remote vehicle with a first person view powered
+        by ESP-32 Cam.
+      longDescriptions:
+        - lorem ipsum
+      img: FPV Demo
+      link: https://github.com/kiritowu/ESP32-First-Person-View-Robot
+      tags:
+        - ESP32 Cam
+        - Arduino
+    - title: Fitbit Calculator App for Versa 4
+      year: '2024'
+      shortDescription: A simple Calculator and currency converter app based on an unofficial approach for sideloading a 3rd-party application to Fitbit Versa 4 and Sense 2 devices.
+      longDescriptions:
+        - lorem ipsum
+      img: fitbitCalculatorVersa4
+      link: https://github.com/kiritowu/calculator-app-versa4
+      tags:
+        - FitBit SDK
+        - Side-Loading

@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onDestroy, onMount } from 'svelte';
-	import type { Skill } from '@prisma/client';
 	import { browser } from '$app/environment';
 	import { theme } from '$lib/stores';
+	import { type Skill } from '$lib/types';
 
 	// Import skill icons
 	import * as icons from 'simple-icons';

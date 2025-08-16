@@ -1,5 +1,6 @@
 <script lang="ts">
-	import type { Project } from '@prisma/client';
+	import type { Project } from '$lib/types';
+
 	// Import project images
 	import acbiggan from '$lib/images/projects/acbigan.png?enhanced';
 	import aisdc from '$lib/images/projects/aisdc.jpg?enhanced';
