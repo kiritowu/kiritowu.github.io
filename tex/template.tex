@@ -29,11 +29,11 @@
 % Set applicant's personal data for header
 \name{\underline{<$ profile.lastName $>} <$ profile.firstName $>, <$ profile.nickName $>}
 \address{}
-\webpage{<$ profile.website $>}
-\call{<$ profile.mobile $>}
-\email{<$ profile.email $>}
-\github{<$ profile.github $>}
-\linkedin{<$ profile.linkedin $>}
+\webpage{<$ contact.website $>}
+\call{(+65) XXXX XXXX}
+\email{<$ contact.email $>}
+\github{<$ contact.github $>}
+\linkedin{<$ contact.linkedin $>}
 
 \begin{document}
 
@@ -43,7 +43,7 @@
 	% Print the content
 
 	\begin{cvsection}{Education}
-		<% for edu in educations %>
+		<% for edu in education %>
 		\begin{cvsubsection}{<$ edu.school $>}{}{<$ edu.startDate | date $> -- <$ edu.endDate | date $>}
 			\begin{itemize}
 					<% for d in edu.descriptions %>
@@ -55,7 +55,7 @@
 	\end{cvsection}
 
 	\begin{cvsection}{Employment}
-		<% for exp in experiences %>
+		<% for exp in experience %>
 		<% if exp.isJob %>
 		\begin{cvsubsection}{<$ exp.title $>}{<$ exp.org $>}{<$ exp.startDate | date $> - <$ exp.endDate | date $>}
 			\begin{itemize}
@@ -69,7 +69,9 @@
 	\end{cvsection}
 		
     \begin{cvsection}{Projects}
-	<% for project in projects %>
+	<% for name, cat in projects %>
+	<% for project in cat %>
+	<% if project.title in resume.projects %>
         \begin{cvsubsection}{<$ project.title $>}{}{<$ project.year $>}
             \begin{itemize}
 		<% for description in project.longDescriptions %>
@@ -77,6 +79,8 @@
 		<% endfor %>
             \end{itemize}
         \end{cvsubsection}
+	<% endif %>
+	<% endfor %>
 	<% endfor %>
 	\end{cvsection}
 
