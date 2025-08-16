@@ -48,6 +48,17 @@ skills:
     - Project Management
     - Event Planning
 experience:
+  - title: AI Software Engineer Intern
+    org: HTX xDigital
+    isJob: true
+    startDate: 05 May 2025
+    endDate: 28 Aug 2025
+    year: '2025'
+    descriptions:
+      - Contributed to the full-stack development of HTX’s enterprise chatbot (Teammate) by delivering new features and enhancing error handling flow to increase production readiness.
+      - Conducted independent research and led the full-stack design and implementation of MCP tool-calling on Teammate.
+      - Deployed MLflow on Amazon EKS with customized Bitnami Helm charts and Gitlab CI/CD Pipeline, to streamline LLMOps workflows like LLM evaluation and prompt management.
+      - Designed a robust LLM-as-a-Judge evaluation pipeline to benchmark performance gains achieved through meta-prompting, prompt chaining and agent-based methods.
   - title: Chairperson, AI Student Developer Conference
     org: AI Singapore
     isJob: false
@@ -146,6 +157,9 @@ education:
       - Recipient of IMDA Gold Medal and SP Scholarship.
       - 'Graduate Coursework: Deep Learning, Machine Learning, Reinforcement Learning, Full-Stack Development, DevOps, Data Analytics, Data Engineering, Data Visualisation.'
 resume:
+  experience:
+    - HTX xDigital
+    - Flora Softworks Pte Ltd
   projects:
     - SG Lib Books
     - OneService Hotline
@@ -192,7 +206,7 @@ projects:
       longDescriptions:
         - Developed a multilingual AI-powered assistant to assist elderly users in submitting municipal issue feedback, leveraging OpenAI’s GPT-4o Realtime API and prompt engineering techniques.
         # - Solution demonstrated autonomous decision-making and adaptability, showcasing practical applications of agentic AI in dynamic real-world scenarios.
-        - Awarded the first prize at the GovTech x OpenAI Hackathon 2024 while competing with 30 other groups of veterans, working adults and students.
+        - Awarded the first prize at the GovTech x OpenAI Hackathon 2024 while competing with 30 other groups of industry professionals.
         - Engaged with Municipal Services Office's Digital Product team to explore potential integration of the solution into their existing product ecosystem.
       img: oneServiceHotline
       link: https://github.com/aqilakmal/OneService-Hotline
