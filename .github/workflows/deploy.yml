@@ -30,7 +30,6 @@ jobs:
         with:
           path: ./tex
           key: tex
-          save-always: true
 
   export-latex-to-pdf:
     needs: compile-latex
@@ -46,12 +45,11 @@ jobs:
         run: docker build -t texlive-extended .
         working-directory: ./tex
 
-      - name: Cache LaTeX files
-        uses: actions/cache@v4
+      - name: Restore cached LaTeX files
+        uses: actions/cache/restore@v4
         with:
           path: ./tex
           key: tex
-          lookup-only: true
 
       - name: Run Docker container
         run: |
@@ -72,7 +70,6 @@ jobs:
         with:
           path: ./static
           key: static
-          save-always: true
 
   build-site:
     needs: export-latex-to-pdf
@@ -97,12 +94,11 @@ jobs:
         run: npm install
       - run: ls -la node_modules
 
-      - name: Cache Static files
-        uses: actions/cache@v4
+      - name: Restore Cached Static files
+        uses: actions/cache/restore@v4
         with:
           path: ./static
           key: static
-          lookup-only: true
 
       - name: build
         env:
