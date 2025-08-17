@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - 'main'
-      - feat/latex-resume-export
 
 jobs:
   compile-latex:
@@ -31,6 +30,7 @@ jobs:
         with:
           path: ./tex
           key: tex
+          save-always: true
 
   export-latex-to-pdf:
     needs: compile-latex
@@ -51,6 +51,7 @@ jobs:
         with:
           path: ./tex
           key: tex
+          lookup-only: true
 
       - name: Run Docker container
         run: |
@@ -71,6 +72,7 @@ jobs:
         with:
           path: ./static
           key: static
+          save-always: true
 
   build-site:
     needs: export-latex-to-pdf
@@ -100,6 +102,7 @@ jobs:
         with:
           path: ./static
           key: static
+          lookup-only: true
 
       - name: build
         env:
