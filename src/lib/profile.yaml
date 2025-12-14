@@ -199,6 +199,24 @@ projects:
         - Google Cloud
         - Typescript
   Natural Language Processing:
+    - title: Reely
+      year: '2025'
+      shortDescription: Reely turns any web source into text summaries and engaging video reels. Cursor Singapore Hackathon 2025.
+      longDescriptions:
+        - Developed Reely, an AI-powered platform that transforms web content into engaging video summaries using advanced LLMs (Gemini 2.5 Flash) and video generation tools (OpenAI SORA).
+        - Implemented multi-agent orchestration with Pydantic AI to automate content extraction, summarization, and video creation, enhancing user experience with personalized content feeds.
+        - Leveraged Browser-Use for dynamic web interaction and ElevenLabs for high-quality text-to-speech voiceovers, resulting in a seamless and immersive content consumption experience.
+        - Built a robust backend with FastAPI and a modern frontend using Next.js 15 and Supabase, ensuring high performance and scalability.
+      img: reely
+      link: https://github.com/kiritowu/Reely
+      tags:
+        - Pydantic AI
+        - Gemini 2.5 Flash
+        - Browser-Use
+        - OpenAI SORA
+        - ElevenLabs
+        - FastAPI
+        - Next.js
     - title: OneService Hotline
       year: '2024'
       shortDescription: OneService Hotline is a helpful AI assistant, responsible for

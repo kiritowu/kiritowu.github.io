@@ -13,6 +13,7 @@
 	import machineLearning from '$lib/images/projects/machine-learning.jpg?enhanced';
 	import oneServiceHotline from '$lib/images/projects/oneservice.png?enhanced';
 	import owlshield from '$lib/images/projects/owlshield.png?enhanced';
+	import reely from '$lib/images/projects/reely.jpg?enhanced';
 	import reimaginingPublicTransport from '$lib/images/projects/reimagining-public-transport.jpg?enhanced';
 	import sglibbook from '$lib/images/projects/sg-lib-book.png?enhanced';
 
@@ -27,7 +28,8 @@
 		owlShield: owlshield,
 		fitbitCalculatorVersa4: fitbitCalculatorVersa4,
 		oneServiceHotline: oneServiceHotline,
-		sgLibBooks: sglibbook
+		sgLibBooks: sglibbook,
+		reely: reely
 	};
 	const imgs: { [key: string]: any } = {
 		'Human Counter': humanCounter,
