@@ -24,7 +24,7 @@
 				{/each}
 			</Typewriter>
 			<h3 class="my-5 text-xl md:text-4xl text-left font-extrabold font-heading text-secondary">
-				NUSC w/ CS @ 2029
+				NUSC w/ CS @ 2028
 			</h3>
 			<h3 class="my-2 text-lg md:text-xl">
 				💡 Conscientiously Driven | 💻 Aspiring ML Engineer | 🏞️ Outdoor Enthusiasts

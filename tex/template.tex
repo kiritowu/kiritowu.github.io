@@ -57,13 +57,15 @@
 	\begin{cvsection}{Employment}
 		<% for exp in experience %>
 		<% if exp.org in resume.experience %>
-		\begin{cvsubsection}{<$ exp.title $>}{<$ exp.org $>}{<$ exp.startDate | date $> - <$ exp.endDate | date $>}
+		<% if exp.isJob %>
+		\begin{cvsubsection}{<$ exp.title $>}{<$ exp.org $>}{<$ exp.startDate | date $> - <$ exp.endDate | default('Present') | date $>}
 			\begin{itemize}
 			<% for d in exp.descriptions %>
 				\item <$ d $>
 			<% endfor %>
 			\end{itemize}
 		\end{cvsubsection}
+		<% endif %>
 		<% endif %>
 		<% endfor %>
 	\end{cvsection}
@@ -103,8 +105,8 @@
 				\item \textbf{Programming Language: } Python, Typescript, Javascript, SQL, HTML, CSS, Bash
 				\item \textbf{Frameworks and Tools: } NextJS, SvelteKit, FastAPI, NestJS, Fastify, Node.JS, TailwindCSS, PostgreSQL, MySQL, MongoDB, Pytorch, Huggingface, Scikit-Learn, Numpy, Pandas, Git, \LaTeX
 				\item \textbf{Deployment Experience: } Google Cloud, Firebase, Supabase, Docker, Kubenetes, Helm, Kubeflow
-				% \item \textbf{Personal Traits: } Natural Leader, Team Player, Fast Learner, Critical Thinker
-				\item \textbf{Internship Availibitiy: } 10 May 2026 - 2 Aug 2026
+				\item \textbf{Personal Traits: } Natural Leader, Team Player, Fast Learner, Critical Thinker
+				% \item \textbf{Internship Availibitiy: } 10 May 2026 - 2 Aug 2026
 			\end{itemize}
 		\end{cvsubsection}
 	\end{cvsection}

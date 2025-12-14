@@ -9,7 +9,7 @@ profile:
     - I'm a conscientiously driven individual ([INFJ-A](https://www.16personalities.com/infj-personality)),
       with an extensive track-record in leadership, project management, and event planning.
     - Before moving on to my next exciting chapter, I graduated as the Gold Medalist
-      from [SP's Diploma in Applied AI and Analytics (DAAA - S30)](https://www.sp.edu.sg/soc/courses/full-time-diplomas/applied-AI-and-analytics/overview).
+      from [SP's Diploma in Applied AI and Analytics (DAAA - S30)](https://www.sp.edu.sg/courses/schools/soc/applied-ai-analytics).
       This journey fueled my passion for technology and artificial intelligence, propelling
       me one step closer to my career aspiration of an AI Engineer, building applications
       that empower people through AI.
@@ -48,6 +48,19 @@ skills:
     - Project Management
     - Event Planning
 experience:
+  - title: Program and Partnership Associate
+    org: AI Singapore
+    isJob: true
+    startDate: 01 Dec 2025
+    endDate: 31 Nov 2026
+    year: '2025'
+    descriptions:
+      - Assist in planning and execution of AI Talent Development programmes
+    skills:
+      - Program Management
+      - Stakeholder Engagement
+      - Talent Development
+      - Curriculum Design
   - title: AI Software Engineer Intern
     org: HTX xDigital
     isJob: true
@@ -158,13 +171,13 @@ education:
       - 'Graduate Coursework: Deep Learning, Machine Learning, Reinforcement Learning, Full-Stack Development, DevOps, Data Analytics, Data Engineering, Data Visualisation.'
 resume:
   experience:
+    - AI Singapore
     - HTX xDigital
     - Flora Softworks Pte Ltd
   projects:
     - SG Lib Books
-    - OneService Hotline
     - OwlShield
-  # - Neural Search Web App
+    - ESP32 First Person View Robot
   additionalExperience:
     - Chairperson, AI Student Developer Conference
     - Founder & President, SP Artificial Intelligence (SPAI) Student Chapter
@@ -199,6 +212,24 @@ projects:
         - Google Cloud
         - Typescript
   Natural Language Processing:
+    - title: Reely
+      year: '2025'
+      shortDescription: Reely turns any web source into text summaries and engaging video reels. Cursor Singapore Hackathon 2025.
+      longDescriptions:
+        - Developed Reely, an AI-powered platform that transforms web content into engaging video summaries using advanced LLMs (Gemini 2.5 Flash) and video generation tools (OpenAI SORA).
+        - Implemented multi-agent orchestration with Pydantic AI to automate content extraction, summarization, and video creation, enhancing user experience with personalized content feeds.
+        - Leveraged Browser-Use for dynamic web interaction and ElevenLabs for high-quality text-to-speech voiceovers, resulting in a seamless and immersive content consumption experience.
+        - Built a robust backend with FastAPI and a modern frontend using Next.js 15 and Supabase, ensuring high performance and scalability.
+      img: reely
+      link: https://github.com/kiritowu/Reely
+      tags:
+        - Pydantic AI
+        - Gemini 2.5 Flash
+        - Browser-Use
+        - OpenAI SORA
+        - ElevenLabs
+        - FastAPI
+        - Next.js
     - title: OneService Hotline
       year: '2024'
       shortDescription: OneService Hotline is a helpful AI assistant, responsible for
@@ -321,7 +352,8 @@ projects:
       shortDescription: Design and build remote vehicle with a first person view powered
         by ESP-32 Cam.
       longDescriptions:
-        - lorem ipsum
+        - Project lead for designing and building a remote-controlled vehicle with first-person view capabilities using ESP32-Cam, web interface integration.
+        - Developed the web interface for controlling the robot and streaming live video feed using Arduino IDE.
       img: FPV Demo
       link: https://github.com/kiritowu/ESP32-First-Person-View-Robot
       tags:
