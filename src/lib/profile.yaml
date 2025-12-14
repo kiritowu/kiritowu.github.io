@@ -48,6 +48,19 @@ skills:
     - Project Management
     - Event Planning
 experience:
+  - title: Program and Partnership Associate
+    org: AI Singapore
+    isJob: true
+    startDate: 01 Dec 2025
+    endDate: 31 Nov 2026
+    year: '2025'
+    descriptions:
+      - Assist in planning and execution of AI Talent Development programmes
+    skills:
+      - Program Management
+      - Stakeholder Engagement
+      - Talent Development
+      - Curriculum Design
   - title: AI Software Engineer Intern
     org: HTX xDigital
     isJob: true
@@ -158,13 +171,13 @@ education:
       - 'Graduate Coursework: Deep Learning, Machine Learning, Reinforcement Learning, Full-Stack Development, DevOps, Data Analytics, Data Engineering, Data Visualisation.'
 resume:
   experience:
+    - AI Singapore
     - HTX xDigital
     - Flora Softworks Pte Ltd
   projects:
     - SG Lib Books
-    - OneService Hotline
     - OwlShield
-  # - Neural Search Web App
+    - ESP32 First Person View Robot
   additionalExperience:
     - Chairperson, AI Student Developer Conference
     - Founder & President, SP Artificial Intelligence (SPAI) Student Chapter
@@ -339,7 +352,8 @@ projects:
       shortDescription: Design and build remote vehicle with a first person view powered
         by ESP-32 Cam.
       longDescriptions:
-        - lorem ipsum
+        - Project lead for designing and building a remote-controlled vehicle with first-person view capabilities using ESP32-Cam, web interface integration.
+        - Developed the web interface for controlling the robot and streaming live video feed using Arduino IDE.
       img: FPV Demo
       link: https://github.com/kiritowu/ESP32-First-Person-View-Robot
       tags:
