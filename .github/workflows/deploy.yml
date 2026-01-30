@@ -4,9 +4,12 @@ on:
   push:
     branches:
       - 'main'
+  pull_request:
+    branches:
+      - 'main'
 
 jobs:
-  compile-latex:
+  build-resume-pdf:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -21,58 +24,30 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Compile latex
+      - name: Compile Typst template (Nunjucks)
         run: |
-          node scripts/1.compile-latex-template.js
+          node scripts/1.compile-nunjucks-template.js
 
-      - name: Cache LaTeX files
-        uses: actions/cache@v4
-        with:
-          path: ./tex
-          key: tex
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v4
 
-  export-latex-to-pdf:
-    needs: compile-latex
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Install Docker
-        uses: docker/setup-buildx-action@v3
-
-      - name: Build Docker image
-        run: docker build -t texlive-extended .
-        working-directory: ./tex
-
-      - name: Restore cached LaTeX files
-        uses: actions/cache/restore@v4
-        with:
-          path: ./tex
-          key: tex
-
-      - name: Run Docker container
+      - name: Export Typst to PDF
         run: |
-          docker run --rm \
-            --volume `pwd`/tex:/work/src:ro \
-            --volume `pwd`/tex/out:/work/out \
-            -e TEXLIVE_REPOSITORY='https://sg.mirrors.cicku.me/ctan/systems/texlive/tlnet' \
-            texlive-extended:latest \
-            work lualatex WongZhaoWu-resume.tex
+          bash scripts/2.export-typst-to-pdf.sh typst/out/WongZhaoWu-resume.typ
 
       - name: Copy PDF to static
         run: |
-          cp tex/out/WongZhaoWu-resume.pdf \
-          ./static/WongZhaoWu-resume.pdf
+          cp typst/out/WongZhaoWu-resume.pdf ./static/WongZhaoWu-resume.pdf
 
-      - name: Cache Static files
-        uses: actions/cache@v4
+      - name: Upload resume PDF artifact
+        uses: actions/upload-artifact@v4
         with:
-          path: ./static
-          key: static
+          name: resume-pdf
+          path: ./static/WongZhaoWu-resume.pdf
+          if-no-files-found: error
 
   build-site:
-    needs: export-latex-to-pdf
+    needs: build-resume-pdf
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -85,20 +60,19 @@ jobs:
       #     version: 8
 
       - name: Install Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
           cache: npm
 
       - name: Install dependencies
         run: npm install
-      - run: ls -la node_modules
 
-      - name: Restore Cached Static files
-        uses: actions/cache/restore@v4
+      - name: Download resume PDF artifact
+        uses: actions/download-artifact@v4
         with:
+          name: resume-pdf
           path: ./static
-          key: static
 
       - name: build
         env:
@@ -115,6 +89,7 @@ jobs:
   deploy:
     needs: build-site
     runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
 
     permissions:
       pages: write
