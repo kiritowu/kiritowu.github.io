@@ -1,4 +1,4 @@
-// compile-typst-template.js
+// compile-nunjucks-template.js
 
 import fs from 'fs';
 import YAML from 'yaml';
@@ -51,7 +51,7 @@ const main = (templatePath, outputPath, { profilePath, profileYaml }) => {
 const program = new Command();
 program
 	.version('0.1.0')
-	.description('Compile and export TYPST template using nunjucks')
+	.description('Compile nunjucks template to default output path')
 	.option('-t, --template <path>', 'Path to template.typ', './typst/template.typ')
 	.option('-o, --output <path>', 'Path to output.typ', './typst/out/WongZhaoWu-resume.typ')
 	.option(
