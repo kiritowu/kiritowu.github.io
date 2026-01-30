@@ -55,7 +55,7 @@ experience:
     endDate: 31 Nov 2026
     year: '2025'
     descriptions:
-      - Assist in planning and execution of AI Talent Development programmes
+      - Assist in planning and execution of AI Talent Development programmes.
     skills:
       - Program Management
       - Stakeholder Engagement
@@ -104,7 +104,7 @@ experience:
     org: Flora Softworks Pte Ltd
     isJob: true
     startDate: 01 Feb 2022
-    endDate: 01 Apr 2023
+    endDate: 31 Mar 2023
     descriptions:
       - Developed an enterprise search engine using Elasticsearch, ONNX Runtime, Jina, FastAPI and MongoDB that enables organisations to index and search through unstructured documents.
       - Presented Flora to 10+ potential clients, resulting in 1 successful pilot.
@@ -154,20 +154,19 @@ experience:
       - Machine Learning
       - Deep Learning
 education:
-  - qualification: B.Comp. in Computer Science with NUS College
+  - qualification: B.Comp. in Computer Science with NUS College (NUSC)
     school: National University of Singapore
     startDate: Aug 2025
     endDate: May 2028
     descriptions:
-      - B.Comp. in Computer Science with NUS College.
-      - Recipient of NUS ASEAN Undergraduate Scholarship.
+      - Cummulative GPA 4.8/5.0, Honours (Highest Distinction) | Recipient of NUS ASEAN Undergraduate Scholarship.
+      - "Handpicked for NUSC (_4% acceptance rate_), an Interdisciplinary Honours College, nurturing Critical Problem-Solvers & Changemakers."
   - qualification: Diploma with Merit in Applied AI and Analytics
     school: Singapore Polytechnic
     startDate: Apr 2020
     endDate: Apr 2023
     descriptions:
-      - Diploma with Merit in Applied AI and Analytics, GPA 4.0/4.0.
-      - Recipient of IMDA Gold Medal and SP Scholarship.
+      - Cummulative GPA 4.0/4.0 | Recipient of IMDA Gold Medal (_top all-round achiever_) & SP Scholarship.
       - 'Graduate Coursework: Deep Learning, Machine Learning, Reinforcement Learning, Full-Stack Development, DevOps, Data Analytics, Data Engineering, Data Visualisation.'
 resume:
   experience:
