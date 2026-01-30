@@ -56,8 +56,7 @@ program
 	.option('-o, --output <path>', 'Path to output.typ', './typst/out/WongZhaoWu-resume.typ')
 	.option(
 		'-p, --profile <path>',
-		`Path to profile.yaml (mutually exclusive with --profile-yaml). Defaults to ${DEFAULT_PROFILE_PATH} if neither is provided.`,
-		DEFAULT_PROFILE_PATH
+		`Path to profile.yaml (mutually exclusive with --profile-yaml). Defaults to ${DEFAULT_PROFILE_PATH} if neither is provided.`
 	)
 	.option(
 		'--profile-yaml <yaml>',
