@@ -68,10 +68,10 @@ experience:
     endDate: 28 Aug 2025
     year: '2025'
     descriptions:
-      - Contributed to the full-stack development of HTX’s enterprise chatbot (Teammate) by delivering new features and enhancing error handling flow to increase production readiness.
-      - Conducted independent research and led the full-stack design and implementation of MCP tool-calling on Teammate.
-      - Deployed MLflow on Amazon EKS with customized Bitnami Helm charts and Gitlab CI/CD Pipeline, to streamline LLMOps workflows like LLM evaluation and prompt management.
-      - Designed a robust LLM-as-a-Judge evaluation pipeline to benchmark performance gains achieved through meta-prompting, prompt chaining and agent-based methods.
+      - Built and shipped full-stack features for HTX's enterprise LLM chatbot (Teammate), improving production readiness via stronger error-handling and workflows.
+      - Designed and implemented Model Context Protocol (MCP) tool-calling to enable agentic LLM interactions with internal tools/APIs.
+      - Deployed MLflow on Amazon EKS with custom Bitnami Helm charts and GitLab CI/CD to streamline LLMOps workflows (evaluation, prompt management).
+      - Designed a robust LLM-as-a-Judge evaluation pipeline to benchmark performance improvements meta-prompting, prompt chaining and agent-based methods.
   - title: Chairperson, AI Student Developer Conference
     org: AI Singapore
     isJob: false
@@ -106,8 +106,8 @@ experience:
     startDate: 01 Feb 2022
     endDate: 31 Mar 2023
     descriptions:
-      - Developed an enterprise search engine using Elasticsearch, ONNX Runtime, Jina, FastAPI and MongoDB that enables organisations to index and search through unstructured documents.
-      - Presented Flora to 10+ potential clients, resulting in 1 successful pilot.
+      - Developed an neural search engine for unstructured text documents using Elasticsearch, ONNX Runtime, Jina, FastAPI, and MongoDB.
+      - Led customer discovery and technical demos; presented to 10+ industry clients and secured 1 successful pilot.
     # - Deployed solution to the cloud (GCP) and locally (Docker Compose) and presented Flora to 5+ potential clients, resulting in 1 successful pilot.
     skills:
       - Docker
@@ -120,8 +120,8 @@ experience:
     startDate: 01 Sep 2022
     endDate: 01 Feb 2023
     descriptions:
-      - Supported research project by analyzing data and presenting experiment insights to relevant stakeholders.
-      - Unified and optimized signal processing computations from multiple research-oriented software (e.g. Matlab, Origin) into with modularized Python modules for production use case.
+      - Analyzed experimental datasets and presented insights to stakeholders to guide research direction
+      - Unified signal processing workflows from Matlab/Origin into modular Python code for production usage, improving reproducibility and maintainability.
       # - Developed FastAPI backend for the no-code data analysis and signal processing application for Terahertz spectrogram samples.
     externalLinks:
       - https://anor-tech.com/aboutus
@@ -170,9 +170,9 @@ education:
       - 'Graduate Coursework: Deep Learning, Machine Learning, Reinforcement Learning, Full-Stack Development, DevOps, Data Analytics, Data Engineering, Data Visualisation.'
 resume:
   experience:
-    - AI Singapore
     - HTX xDigital
     - Flora Softworks Pte Ltd
+    - ANOR Technologies Pte Ltd
   projects:
     - SG Lib Books
     - OwlShield
