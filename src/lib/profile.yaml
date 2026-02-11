@@ -55,7 +55,9 @@ experience:
     endDate: 31 Nov 2026
     year: '2025'
     descriptions:
-      - Assist in planning and execution of AI Talent Development programmes.
+      - Coordinated multi-stakeholder planning for the AI For Good Festival, driving alignment on goals, timelines, and owners to keep delivery on track.
+      - Conducted ASEAN AI literacy market research and synthesized recommendations to inform expansion strategy and positioning.
+      - Planned and executed outreach events, aligning partners and internal teams to deliver smooth operations.
     skills:
       - Program Management
       - Stakeholder Engagement
@@ -160,7 +162,7 @@ education:
     endDate: May 2028
     descriptions:
       - Cummulative GPA 4.8/5.0, Honours (Highest Distinction) | Recipient of NUS ASEAN Undergraduate Scholarship.
-      - "Handpicked for NUSC (_4% acceptance rate_), an Interdisciplinary Honours College, nurturing Critical Problem-Solvers & Changemakers."
+      - "Handpicked for NUSC (_4% acceptance rate_), an Interdisciplinary Honours College, nurturing critical thinkers & changemakers."
   - qualification: Diploma with Merit in Applied AI and Analytics
     school: Singapore Polytechnic
     startDate: Apr 2020
@@ -217,7 +219,7 @@ projects:
         - Developed Reely, an AI-powered platform that transforms web content into engaging video summaries using advanced LLMs (Gemini 2.5 Flash) and video generation tools (OpenAI SORA).
         - Implemented multi-agent orchestration with Pydantic AI to automate content extraction, summarization, and video creation, enhancing user experience with personalized content feeds.
         - Leveraged Browser-Use for dynamic web interaction and ElevenLabs for high-quality text-to-speech voiceovers, resulting in a seamless and immersive content consumption experience.
-        - Built a robust backend with FastAPI and a modern frontend using Next.js 15 and Supabase, ensuring high performance and scalability.
+        - Built a robust backend with FastAPI and a modern frontend using Next.js and Supabase, ensuring high performance and scalability.
       img: reely
       link: https://github.com/kiritowu/Reely
       tags:
