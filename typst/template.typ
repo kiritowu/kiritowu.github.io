@@ -114,9 +114,8 @@
 //   date: "Oct 2024",
 // )
 == Skills and Additional Information
-- *Internship Availability*: 11 May 2026 - 31 July 2026, NOC Malaysia (3-month programme), no additional visa sponsorship required.
 - *Programming Languages*: Python, TypeScript, JavaScript, SQL, HTML, CSS, Bash
-- *Frameworks and Tools*: Next.js, SvelteKit, FastAPI, NestJS, Fastify, Node.js, Tailwind CSS, PostgreSQL, MySQL, MongoDB, PyTorch, Hugging Face, Scikit-Learn, NumPy, Pandas, Git, LaTeX
+- *Frameworks and Tools*: Next.js, SvelteKit, Laravel, FastAPI, NestJS, Fastify, Node.js, Tailwind CSS, PostgreSQL, MySQL, MongoDB, dbt, PyTorch, Hugging Face, Scikit-Learn, NumPy, Pandas, Git, LaTeX
 - *Deployment Experience*: Google Cloud Platform, Firebase, Supabase, Docker, Kubernetes, Helm, Kubeflow
 - *Personal Traits*: Natural Leader, Team Player, Fast Learner, Critical Thinker
 
