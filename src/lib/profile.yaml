@@ -48,6 +48,16 @@ skills:
     - Project Management
     - Event Planning
 experience:
+  - title: Software Engineer Intern
+    org: CloudJoi
+    isJob: true
+    startDate: 11 May 2026
+    endDate: 31 Jul 2026
+    year: '2026'
+    descriptions:
+      - Product owner and developer for Ask Sky, improving organisers' access to support documentation with a retrieval-augmented generation (RAG) agent.
+      - Reduced show-page LCP by **55%** by implementing end-to-end responsive image delivery across Laravel APIs and the React/TypeScript frontend.
+      - Enabled conversational business intelligence by building a BigQuery data warehouse that unified GA4, Brevo, and OLTP data using dbt.
   - title: Program and Partnership Associate
     org: AI Singapore
     isJob: true
@@ -172,6 +182,7 @@ education:
       - 'Graduate Coursework: Deep Learning, Machine Learning, Reinforcement Learning, Full-Stack Development, DevOps, Data Analytics, Data Engineering, Data Visualisation.'
 resume:
   experience:
+    - CloudJoi
     - HTX xDigital
     - Flora Softworks Pte Ltd
     - ANOR Technologies Pte Ltd
