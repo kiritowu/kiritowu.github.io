@@ -65,9 +65,8 @@ experience:
     endDate: 31 Nov 2026
     year: '2025'
     descriptions:
-      - Coordinated multi-stakeholder planning for the AI For Good Festival, driving alignment on goals, timelines, and owners to keep delivery on track.
-      - Conducted ASEAN AI literacy market research and synthesized recommendations to inform expansion strategy and positioning.
-      - Planned and executed outreach events, aligning partners and internal teams to deliver smooth operations.
+      - Led the youth committee to design and develop interactive games for the AI For Good Festival, packaging dry AI literacy concepts into fun and engaging experiences.
+      - Enabled real-time event registration, live surveys, and prize redemption by building a web app with gamification where participants earn digital coins through booth visits and games.
     skills:
       - Program Management
       - Stakeholder Engagement
@@ -171,7 +170,7 @@ education:
     startDate: Aug 2025
     endDate: May 2028
     descriptions:
-      - Cummulative GPA 4.8/5.0, Honours (Highest Distinction) | Recipient of NUS ASEAN Undergraduate Scholarship.
+      - Cummulative GPA 4.71/5.0, Honours (Highest Distinction) | Recipient of NUS ASEAN Undergraduate Scholarship.
       - "Handpicked for NUSC (_4% acceptance rate_), an Interdisciplinary Honours College, nurturing critical thinkers & changemakers."
   - qualification: Diploma with Merit in Applied AI and Analytics
     school: Singapore Polytechnic
@@ -183,6 +182,7 @@ education:
 resume:
   experience:
     - CloudJoi
+    - AI Singapore
     - HTX xDigital
     - Flora Softworks Pte Ltd
     - ANOR Technologies Pte Ltd
