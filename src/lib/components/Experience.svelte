@@ -1,8 +1,9 @@
 <script lang="ts">
+	import { ExternalLink } from '@lucide/svelte';
+	import { siGithub } from 'simple-icons';
 	import type { Experience } from '$lib/types';
 	import SimpleIcon from '$lib/components/SimpleIcon.svelte';
 
-	// Change visble section
 	let visibleIdx = 0;
 	const monthYearFormatter = new Intl.DateTimeFormat('en', { month: 'short', year: 'numeric' });
 
@@ -56,28 +57,18 @@
 									target="_blank"
 									aria-label="External link"
 								>
-									<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-										<path d="M14 4h6v6M20 4l-9 9M10 5H5v14h14v-5" />
-									</svg>
+									<ExternalLink size={20} />
 								</a>
 							{/each}
 						{/if}
-						<!-- {#if experience.linkedInLink} -->
-						<!-- 	<a -->
-						<!-- 		class="mx-1 hover:bg-slate-200 dark:hover:bg-slate-600 rounded-full w-12 h-12 flex justify-center items-center" -->
-						<!-- 		href={experience.linkedInLink} -->
-						<!-- 		target="_blank" -->
-						<!-- 	> -->
-						<!-- 		<SimpleIcon baseName="siLinkedin" class="fill-primary dark:fill-primary-dark" /> -->
-						<!-- 	</a> -->
-						<!-- {/if} -->
 						{#if experience.githubLink}
 							<a
 								class="mx-1 hover:bg-slate-200 dark:hover:bg-slate-600 rounded-full w-12 h-12 flex justify-center items-center"
 								href={experience.githubLink}
 								target="_blank"
+								aria-label="GitHub"
 							>
-								<SimpleIcon baseName="siGithub" class="fill-primary dark:fill-primary-dark" />
+								<SimpleIcon icon={siGithub} size={20} />
 							</a>
 						{/if}
 					</div>

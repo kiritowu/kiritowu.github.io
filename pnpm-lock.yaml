@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@lucide/svelte':
+        specifier: ^1.33.0
+        version: 1.33.0(svelte@5.56.9)
       marked:
         specifier: ^10.0.0
         version: 10.0.0
@@ -79,7 +82,7 @@ importers:
         specifier: ^3.1.2
         version: 3.5.2(prettier@3.9.6)(svelte@5.56.9)
       simple-icons:
-        specifier: ^13.2.0
+        specifier: ^13.21.0
         version: 13.21.0
       svelte:
         specifier: ^5.0.0
@@ -740,6 +743,11 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
+
+  '@lucide/svelte@1.33.0':
+    resolution: {integrity: sha512-b+osTYG2V4dge5Lr7tnaTaahhy/4vH7Xb8zcqVjmctjwgkpXS0NNOJPkGzHHZoxtw/OO+2YAU28omeMfYCaawg==}
+    peerDependencies:
+      svelte: ^5
 
   '@modyfi/vite-plugin-yaml@1.1.1':
     resolution: {integrity: sha512-rEbfFNlMGLKpAYs2RsfLAhxCHFa6M4QKHHk0A4EYcCJAUwFtFO6qiEdLjUGUTtnRUxAC7GxxCa+ZbeUILSDvqQ==}
@@ -2471,6 +2479,10 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
+
+  '@lucide/svelte@1.33.0(svelte@5.56.9)':
+    dependencies:
+      svelte: 5.56.9
 
   '@modyfi/vite-plugin-yaml@1.1.1(rollup@4.62.4)(vite@5.4.21(@types/node@22.20.1))':
     dependencies:

@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { Menu, Moon, Sun, X } from '@lucide/svelte';
 	import { theme } from '$lib/stores';
 
 	export let navs = ['about', 'experience', 'projects'];
@@ -50,14 +51,9 @@
 			}}
 		>
 			{#if $theme === 'dark'}
-				<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-					<circle cx="12" cy="12" r="4" />
-					<path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
-				</svg>
+				<Sun size={20} />
 			{:else}
-				<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-					<path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z" />
-				</svg>
+				<Moon size={20} />
 			{/if}
 		</button>
 
@@ -70,13 +66,9 @@
 			}}
 		>
 			{#if !menu_visible}
-				<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-					<path d="M4 7h16M4 12h16M4 17h16" />
-				</svg>
+				<Menu size={20} />
 			{:else}
-				<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-					<path d="M6 6l12 12M18 6L6 18" />
-				</svg>
+				<X size={20} />
 			{/if}
 		</button>
 		<div
@@ -119,14 +111,9 @@
 				}}
 			>
 				{#if $theme === 'dark'}
-					<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-						<circle cx="12" cy="12" r="4" />
-						<path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
-					</svg>
+					<Sun size={20} />
 				{:else}
-					<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-						<path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z" />
-					</svg>
+					<Moon size={20} />
 				{/if}
 			</button>
 		</ul>
