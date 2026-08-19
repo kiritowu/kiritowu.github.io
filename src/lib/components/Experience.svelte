@@ -42,7 +42,7 @@
 								? monthYearFormatter.format(experience.startDate) + ' - '
 								: ''}{experience.endDate
 								? monthYearFormatter.format(experience.endDate)
-								: 'Present'}
+								: 'Present'} · {experience.location}
 						</p>
 					</div>
 					<ul class="list-disc md:text-lg pl-5">
