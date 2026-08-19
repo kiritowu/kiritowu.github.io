@@ -50,23 +50,26 @@ skills:
 experience:
   - title: Software Engineer Intern
     org: CloudJoi
+    location: Kuala Lumpur, Malaysia
     isJob: true
     startDate: 11 May 2026
     endDate: 31 Jul 2026
     year: '2026'
     descriptions:
-      - Product owner and developer for Ask Sky, improving organisers' access to support documentation with a retrieval-augmented generation (RAG) agent.
-      - Reduced show-page LCP by **55%** by implementing end-to-end responsive image delivery across Laravel APIs and the React/TypeScript frontend.
-      - Enabled conversational business intelligence by building a BigQuery data warehouse that unified GA4, Brevo, and OLTP data using dbt.
+      - Led product and development efforts for Ask Sky, a retrieval-augmented generation (RAG) agent that streamlines organisers' access to support documentation.
+      - Implemented end-to-end responsive image delivery across Laravel application and Next.js frontend, reducing Largest Contentful Paint (LCP) by 55%.
+      - Designed a BigQuery data warehouse that consolidated raw GA4, Brevo, and OLTP data using dbt, enabling conversational business intelligence through richer data sources.
   - title: Program and Partnership Associate
     org: AI Singapore
+    location: Singapore
     isJob: true
     startDate: 01 Dec 2025
     endDate: 31 Nov 2026
     year: '2025'
     descriptions:
-      - Led the youth committee to design and develop interactive games for the AI For Good Festival, packaging dry AI literacy concepts into fun and engaging experiences.
-      - Enabled real-time event registration, live surveys, and prize redemption by building a web app with gamification where participants earn digital coins through booth visits and games.
+      - Led a 5-person youth committee to design and develop interactive AI literacy games for the inaugural AI For Good Festival, engaging 2500+ AI youth participants.
+      - Developed and deployed a dedicated festival web application, enabling real-time event registration, live surveys, and prize redemption with AWS Amplify.
+      - Supported delivery of several national and regional AI for Good programmes, including AI For Good Festival, AI Ready ASEAN and AVPN AI Opportunity Fund.
     skills:
       - Program Management
       - Stakeholder Engagement
@@ -74,17 +77,18 @@ experience:
       - Curriculum Design
   - title: AI Software Engineer Intern
     org: HTX xDigital
+    location: Singapore
     isJob: true
     startDate: 05 May 2025
     endDate: 28 Aug 2025
     year: '2025'
     descriptions:
-      - Built and shipped full-stack features for HTX's enterprise LLM chatbot (Teammate), improving production readiness via stronger error-handling and workflows.
-      - Designed and implemented Model Context Protocol (MCP) tool-calling to enable agentic LLM interactions with internal tools/APIs.
+      - Improved context management and error handling on HTX's enterprise LLM chatbot (Teammate), enhancing the overall user experience.
       - Deployed MLflow on Amazon EKS with custom Bitnami Helm charts and GitLab CI/CD to streamline LLMOps workflows (evaluation, prompt management).
-      - Designed a robust LLM-as-a-Judge evaluation pipeline to benchmark performance improvements meta-prompting, prompt chaining and agent-based methods.
+      - Designed LLM-as-a-Judge evaluation pipeline to benchmark performance improvements from meta-prompting, prompt chaining and agent-based methods.
   - title: Chairperson, AI Student Developer Conference
     org: AI Singapore
+    location: Singapore
     isJob: false
     startDate: 01 Feb 2023
     endDate: 01 May 2023
@@ -113,6 +117,7 @@ experience:
       - MLOps
   - title: Co-Founder, AI Engineer
     org: Flora Softworks Pte Ltd
+    location: Singapore
     isJob: true
     startDate: 01 Feb 2022
     endDate: 31 Mar 2023
@@ -127,6 +132,7 @@ experience:
       - ML Pipeline
   - title: AI Engineer Intern
     org: ANOR Technologies Pte Ltd
+    location: Singapore
     isJob: true
     startDate: 01 Sep 2022
     endDate: 01 Feb 2023
@@ -142,6 +148,7 @@ experience:
       - Deep Learning
   - title: Founder & President, SP Artificial Intelligence (SPAI) Student Chapter
     org: SP Aritificial Intelligence Student Chapter
+    location: Singapore
     isJob: false
     startDate: 01 Apr 2021
     endDate: 01 Apr 2022
@@ -167,13 +174,15 @@ experience:
 education:
   - qualification: B.Comp. in Computer Science with NUS College (NUSC)
     school: National University of Singapore
+    location: Singapore
     startDate: Aug 2025
     endDate: May 2028
     descriptions:
       - Cummulative GPA 4.71/5.0, Honours (Highest Distinction) | Recipient of NUS ASEAN Undergraduate Scholarship.
-      - "Handpicked for NUSC (_4% acceptance rate_), an Interdisciplinary Honours College, nurturing critical thinkers & changemakers."
+      - "Selected for NUSC (_4% acceptance rate_), an interdisciplinary Honours College, nurturing critical thinkers & changemakers."
   - qualification: Diploma with Merit in Applied AI and Analytics
     school: Singapore Polytechnic
+    location: Singapore
     startDate: Apr 2020
     endDate: Apr 2023
     descriptions:
@@ -187,7 +196,7 @@ resume:
     - Flora Softworks Pte Ltd
     - ANOR Technologies Pte Ltd
   projects:
-    - SG Lib Books
+    - OneService Hotline
     - OwlShield
   additionalExperience:
     - Chairperson, AI Student Developer Conference
