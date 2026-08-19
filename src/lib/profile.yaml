@@ -83,10 +83,9 @@ experience:
     endDate: 28 Aug 2025
     year: '2025'
     descriptions:
-      - Built and shipped full-stack features for HTX's enterprise LLM chatbot (Teammate), improving production readiness via stronger error-handling and workflows.
-      - Designed and implemented Model Context Protocol (MCP) tool-calling to enable agentic LLM interactions with internal tools/APIs.
+      - Improved context management and error handling on HTX's enterprise LLM chatbot (Teammate), enhancing the overall user experience.
       - Deployed MLflow on Amazon EKS with custom Bitnami Helm charts and GitLab CI/CD to streamline LLMOps workflows (evaluation, prompt management).
-      - Designed a robust LLM-as-a-Judge evaluation pipeline to benchmark performance improvements meta-prompting, prompt chaining and agent-based methods.
+      - Designed LLM-as-a-Judge evaluation pipeline to benchmark performance improvements from meta-prompting, prompt chaining and agent-based methods.
   - title: Chairperson, AI Student Developer Conference
     org: AI Singapore
     location: Singapore
