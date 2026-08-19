@@ -24,9 +24,6 @@
 						visibleIdx = idx;
 					}}
 					>{experience.org}
-					<div class="inline-block my-auto w-5 h-auto {visibleIdx === idx ? '' : 'hidden'}">
-						<i class="fa fa-chevron-right"> </i>
-					</div>
 				</button>
 			{/each}
 		</div>
@@ -57,8 +54,11 @@
 									class="mx-1 hover:bg-slate-200 dark:hover:bg-slate-600 rounded-full w-12 h-12 flex justify-center items-center"
 									href={link}
 									target="_blank"
+									aria-label="External link"
 								>
-									<i class="fa fa-link fa-lg" />
+									<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+										<path d="M14 4h6v6M20 4l-9 9M10 5H5v14h14v-5" />
+									</svg>
 								</a>
 							{/each}
 						{/if}

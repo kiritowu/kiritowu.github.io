@@ -6,10 +6,9 @@
 	import Hero from '$lib/components/Hero.svelte';
 	import Profile from '$lib/components/Profile.svelte';
 	import Experience from '$lib/components/Experience.svelte';
-	import Skills from '$lib/components/Skills.svelte';
 	import Projects from '$lib/components/Projects.svelte';
 
-	const { profile, skills, experience, projects } = data;
+	const { profile, experience, projects } = data;
 
 	const experienceArr = (experience as any[]).map((exp) => {
 		return {
@@ -17,13 +16,6 @@
 			startDate: exp.startDate ? new Date(exp.startDate) : undefined,
 			endDate: exp.endDate ? new Date(exp.endDate) : null
 		};
-	});
-
-	const skillsArr = Object.entries(skills).flatMap(([category, skills]) => {
-		return (skills as string[]).map((skill) => ({
-			category,
-			name: skill as string
-		}));
 	});
 
 	const projectsArr = Object.entries(projects).flatMap(([category, projects]) => {
@@ -59,8 +51,6 @@
 />
 
 <Profile descriptions={profile.descriptions} />
-
-<Skills skills={skillsArr} />
 
 <Experience experiences={experienceArr} />
 

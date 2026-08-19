@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { theme } from '$lib/stores';
 
-	export let navs = ['about', 'skills', 'experience', 'projects'];
+	export let navs = ['about', 'experience', 'projects'];
 
 	let menu_visible = false; // menu navigation on mobile
 	let nav_visible = true;
@@ -44,28 +44,39 @@
 		<!-- Button for theme -->
 		<button
 			class="hidden md:block rounded-full hover:bg-slate-200 dark:hover:bg-slate-600 p-1 mr-2"
+			aria-label="Toggle theme"
 			on:click={() => {
 				theme.update((value) => (value === 'dark' ? 'light' : 'dark'));
 			}}
 		>
 			{#if $theme === 'dark'}
-				<i class="fa fa-sun-o fa-lg"></i>
+				<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+					<circle cx="12" cy="12" r="4" />
+					<path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+				</svg>
 			{:else}
-				<i class="fa fa-moon-o fa-lg"></i>
+				<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+					<path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z" />
+				</svg>
 			{/if}
 		</button>
 
 		<!-- Menu Navigation on Mobile -->
 		<button
-			class="ml-auto px-2 h-10 w-10 z-30 md:hidden rounded-full hover:bg-secondary focus:bg-secondary"
+			class="ml-auto px-2 h-10 w-10 z-30 md:hidden rounded-full hover:bg-secondary focus:bg-secondary flex items-center justify-center"
+			aria-label={menu_visible ? 'Close menu' : 'Open menu'}
 			on:click={() => {
 				menu_visible = !menu_visible;
 			}}
 		>
 			{#if !menu_visible}
-				<i class="fa fa-bars fa-lg" />
+				<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+					<path d="M4 7h16M4 12h16M4 17h16" />
+				</svg>
 			{:else}
-				<i class="fa fa-times fa-lg" />
+				<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+					<path d="M6 6l12 12M18 6L6 18" />
+				</svg>
 			{/if}
 		</button>
 		<div
@@ -102,14 +113,20 @@
 			<!-- Button for theme -->
 			<button
 				class="rounded-full hover:bg-slate-200 dark:hover:bg-slate-600 p-1 mr-2"
+				aria-label="Toggle theme"
 				on:click={() => {
 					theme.update((value) => (value === 'dark' ? 'light' : 'dark'));
 				}}
 			>
 				{#if $theme === 'dark'}
-					<i class="fa fa-sun-o fa-lg"></i>
+					<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+						<circle cx="12" cy="12" r="4" />
+						<path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+					</svg>
 				{:else}
-					<i class="fa fa-moon-o fa-lg"></i>
+					<svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+						<path d="M21 14.5A8.5 8.5 0 1 1 9.5 3 7 7 0 0 0 21 14.5z" />
+					</svg>
 				{/if}
 			</button>
 		</ul>
