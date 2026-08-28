@@ -52,6 +52,8 @@
 	},
 	"dependencies": {
 		"@lucide/svelte": "^1.33.0",
+		"embla-carousel-autoplay": "^8.6.0",
+		"embla-carousel-svelte": "^8.6.0",
 		"marked": "^10.0.0",
 		"svelte-typewriter": "^3.2.3"
 	}
