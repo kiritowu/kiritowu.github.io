@@ -1,8 +1,9 @@
 <script>
 	import { onMount } from 'svelte';
+	import { Menu, Moon, Sun, X } from '@lucide/svelte';
 	import { theme } from '$lib/stores';
 
-	export let navs = ['about', 'skills', 'experience', 'projects'];
+	export let navs = ['about'];
 
 	let menu_visible = false; // menu navigation on mobile
 	let nav_visible = true;
@@ -22,50 +23,47 @@
 </script>
 
 <header
-	class="fixed transition-all {nav_visible
+	class="fixed transition-all before:pointer-events-none before:absolute before:inset-0 before:bg-white/60 before:backdrop-blur-xl before:backdrop-saturate-150 after:pointer-events-none after:absolute after:inset-x-0 after:top-full after:h-8 after:bg-gradient-to-b after:from-white/60 after:to-transparent dark:before:bg-neutral-900/60 dark:after:from-neutral-900/60 {nav_visible
 		? 'top-0'
-		: ' -top-16'} right-0 font-mono text-primary dark:text-primary-dark"
+		: '-top-32'} left-0 right-0 z-40 font-main text-primary dark:text-primary-dark"
 >
-	<nav class="px-4 py-6 flex justify-between items-center w-full">
-		<ul class="hidden md:flex ml-auto justify-start mr-2">
+	<nav class="relative mx-auto flex w-full max-w-7xl items-center px-5 py-6">
+		<ul class="mr-auto hidden justify-start gap-10 md:flex">
 			{#each navs as nav}
-				<li class="px-3">
+				<li>
 					<a class="font-normal hover:no-underline focus:outline-none" href="#{nav}"
 						>{nav.charAt(0).toUpperCase() + nav.slice(1)}</a
 					>
 				</li>
 			{/each}
-			<li class="px-3">
-				<a class="font-normal hover:no-underline focus:outline-none" href="/WongZhaoWu-resume.pdf">
-					Résumé
-				</a>
-			</li>
 		</ul>
 		<!-- Button for theme -->
 		<button
-			class="hidden md:block rounded-full hover:bg-slate-200 dark:hover:bg-slate-600 p-1 mr-2"
+			class="ml-auto hidden rounded-full p-1 hover:bg-slate-200 dark:hover:bg-slate-600 md:block"
+			aria-label="Toggle theme"
 			on:click={() => {
 				theme.update((value) => (value === 'dark' ? 'light' : 'dark'));
 			}}
 		>
 			{#if $theme === 'dark'}
-				<i class="fa fa-sun-o fa-lg"></i>
+				<Sun size={20} />
 			{:else}
-				<i class="fa fa-moon-o fa-lg"></i>
+				<Moon size={20} />
 			{/if}
 		</button>
 
 		<!-- Menu Navigation on Mobile -->
 		<button
-			class="ml-auto px-2 h-10 w-10 z-30 md:hidden rounded-full hover:bg-secondary focus:bg-secondary"
+			class="ml-auto px-2 h-10 w-10 z-30 md:hidden rounded-full hover:bg-secondary focus:bg-secondary flex items-center justify-center"
+			aria-label={menu_visible ? 'Close menu' : 'Open menu'}
 			on:click={() => {
 				menu_visible = !menu_visible;
 			}}
 		>
 			{#if !menu_visible}
-				<i class="fa fa-bars fa-lg" />
+				<Menu size={20} />
 			{:else}
-				<i class="fa fa-times fa-lg" />
+				<X size={20} />
 			{/if}
 		</button>
 		<div
@@ -92,24 +90,18 @@
 					>
 				</li>
 			{/each}
-			<!-- Hyperlink for Resume -->
-			<li class="px-3">
-				<a
-					class="mb-8 px-4 py-2 text-center block hover:text-secondary focus:text-secondary focus:outline-none"
-					href="/WongZhaoWu-resume.pdf">Résumé</a
-				>
-			</li>
 			<!-- Button for theme -->
 			<button
-				class="rounded-full hover:bg-slate-200 dark:hover:bg-slate-600 p-1 mr-2"
+				class="flex h-10 w-10 self-center items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-slate-600"
+				aria-label="Toggle theme"
 				on:click={() => {
 					theme.update((value) => (value === 'dark' ? 'light' : 'dark'));
 				}}
 			>
 				{#if $theme === 'dark'}
-					<i class="fa fa-sun-o fa-lg"></i>
+					<Sun size={20} />
 				{:else}
-					<i class="fa fa-moon-o fa-lg"></i>
+					<Moon size={20} />
 				{/if}
 			</button>
 		</ul>

@@ -20,11 +20,6 @@ export interface Profile {
 	visibility: ProfileVisibility;
 }
 
-export interface Skill {
-	category: string;
-	name: string;
-}
-
 export interface Experience {
 	title: string;
 	org: string;
