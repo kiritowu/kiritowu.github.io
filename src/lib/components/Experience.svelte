@@ -1,79 +1,47 @@
 <script lang="ts">
-	import { ExternalLink } from '@lucide/svelte';
-	import { siGithub } from 'simple-icons';
 	import type { Experience } from '$lib/types';
-	import SimpleIcon from '$lib/components/SimpleIcon.svelte';
 
-	let visibleIdx = 0;
 	const monthYearFormatter = new Intl.DateTimeFormat('en', { month: 'short', year: 'numeric' });
 
 	export let experiences: Experience[] = [];
 </script>
 
-<section id="experience" class="container-sm md:container-lg md:mx-auto px-5 max-w-6xl py-16">
-	<h1 class="mb-4 text-center">Experience</h1>
-	<hr class="mb-10 dark:border-gray-500" />
-	<section class="flex flex-col md:flex-row">
-		<div class="md:basis-1/4 pr-5">
-			{#each experiences as experience, idx}
-				<button
-					class="w-full text-left text-lg mb-3 hover:text-secondary align-middle {visibleIdx === idx
-						? 'text-secondary'
-						: 'opacity-80'}"
-					aria-expanded={visibleIdx === idx}
-					on:click={() => {
-						visibleIdx = idx;
-					}}
-					>{experience.org}
-				</button>
-			{/each}
-		</div>
-		<div class="md:basis-3/4">
-			{#each experiences as experience, idx}
-				<article class="mb-5 {visibleIdx === idx ? '' : 'hidden'}">
-					<div class="mb-2">
-						<h3 class="text-primary dark:text-primary-dark font-semibold text-xl mb-1">
-							{experience.title}
-						</h3>
-						<p class="text-base mt-auto">
-							{experience.startDate
-								? monthYearFormatter.format(experience.startDate) + ' - '
-								: ''}{experience.endDate
-								? monthYearFormatter.format(experience.endDate)
-								: 'Present'}
-						</p>
-					</div>
-					<ul class="list-disc md:text-lg pl-5">
-						{#each experience.descriptions as description}
-							<li class="mb-2">{description}</li>
-						{/each}
-					</ul>
-					<div class="flex justify-start">
-						{#if experience.externalLinks}
-							{#each experience.externalLinks as link}
-								<a
-									class="mx-1 hover:bg-slate-200 dark:hover:bg-slate-600 rounded-full w-12 h-12 flex justify-center items-center"
-									href={link}
-									target="_blank"
-									aria-label="External link"
-								>
-									<ExternalLink size={20} />
-								</a>
-							{/each}
-						{/if}
-						{#if experience.githubLink}
-							<a
-								class="mx-1 hover:bg-slate-200 dark:hover:bg-slate-600 rounded-full w-12 h-12 flex justify-center items-center"
-								href={experience.githubLink}
-								target="_blank"
-								aria-label="GitHub"
-							>
-								<SimpleIcon icon={siGithub} size={20} />
-							</a>
-						{/if}
-					</div>
-				</article>
-			{/each}
-		</div>
-	</section>
+<section id="experience" class="mx-auto max-w-7xl scroll-mt-24 px-5 py-24 sm:py-32">
+	<header class="border-b border-slate-300 pb-8 dark:border-neutral-700">
+		<h2
+			class="m-0 text-4xl font-semibold tracking-[-0.04em] text-primary dark:text-primary-dark sm:text-5xl"
+		>
+			Experience
+		</h2>
+	</header>
+
+	<div>
+		{#each experiences as experience}
+			<article
+				class="grid gap-8 border-b border-slate-300 py-10 dark:border-neutral-700 md:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] md:gap-14 lg:gap-20 lg:py-14"
+			>
+				<header>
+					<p class="mb-4 text-sm font-medium uppercase tracking-[0.12em] text-secondary">
+						{experience.org}
+					</p>
+					<h3
+						class="m-0 max-w-lg text-2xl font-semibold leading-tight tracking-[-0.025em] text-primary dark:text-primary-dark"
+					>
+						{experience.title}
+					</h3>
+					<p class="mt-3 text-sm tabular-nums text-slate-600 dark:text-neutral-400">
+						{experience.startDate ? monthYearFormatter.format(experience.startDate) : ''}
+						<span class="mx-1" aria-hidden="true">—</span>
+						{experience.endDate ? monthYearFormatter.format(experience.endDate) : 'Present'}
+					</p>
+				</header>
+
+				<ul class="list-disc space-y-3 pl-5 text-base leading-relaxed marker:text-primary sm:text-lg">
+					{#each experience.descriptions as description}
+						<li class="pl-1">{description}</li>
+					{/each}
+				</ul>
+			</article>
+		{/each}
+	</div>
 </section>
