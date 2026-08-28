@@ -33,6 +33,8 @@
 						{experience.startDate ? monthYearFormatter.format(experience.startDate) : ''}
 						<span class="mx-1" aria-hidden="true">—</span>
 						{experience.endDate ? monthYearFormatter.format(experience.endDate) : 'Present'}
+						<span class="mx-1" aria-hidden="true">·</span>
+						{experience.location}
 					</p>
 				</header>
 

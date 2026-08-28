@@ -44,7 +44,7 @@
 
 	\begin{cvsection}{Education}
 		<% for edu in education %>
-		\begin{cvsubsection}{<$ edu.school $>}{}{<$ edu.startDate | date $> -- <$ edu.endDate | date $>}
+		\begin{cvsubsection}{<$ edu.school $>}{<$ edu.location $>}{<$ edu.startDate | date $> -- <$ edu.endDate | date $>}
 			\begin{itemize}
 					<% for d in edu.descriptions %>
 				\item <$ d $>
@@ -58,7 +58,7 @@
 		<% for exp in experience %>
 		<% if exp.org in resume.experience %>
 		<% if exp.isJob %>
-		\begin{cvsubsection}{<$ exp.title $>}{<$ exp.org $>}{<$ exp.startDate | date $> - <$ exp.endDate | default('Present') | date $>}
+		\begin{cvsubsection}{<$ exp.title $>}{<$ exp.org $>, <$ exp.location $>}{<$ exp.startDate | date $> - <$ exp.endDate | default('Present') | date $>}
 			\begin{itemize}
 			<% for d in exp.descriptions %>
 				\item <$ d $>

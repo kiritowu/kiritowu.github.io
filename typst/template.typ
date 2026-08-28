@@ -45,7 +45,7 @@
 <% for edu in education %>
 #edu(
   institution: "<$ edu.school $>",
-  location: "Singapore", // TODO: customize location per edu
+  location: "<$ edu.location $>",
   dates: dates-helper(
     start-date: "<$ edu.startDate $>",
     end-date: "<$ edu.endDate $>",
@@ -60,7 +60,7 @@
 <% if exp.isJob %>
 #work(
   title: "<$ exp.title $>",
-  location: "Singapore",
+  location: "<$ exp.location $>",
   company: "<$ exp.org $>",
   dates: dates-helper(
     start-date: "<$ exp.startDate $>",
