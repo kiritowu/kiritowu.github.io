@@ -7,9 +7,9 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				heading: ['"Skavi 27px"', '"Roboto Slab"', 'serif'],
-				main: ['Roboto', 'Helvetica', 'Open Sans', 'Arial', 'sans-serif'],
-				mono: ['"Source Code Pro"', 'monospace']
+				heading: ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
+				main: ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
+				mono: ['"SFMono-Regular"', 'Consolas', 'monospace']
 			},
 			colors: {
 				primary: {

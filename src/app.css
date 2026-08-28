@@ -1,5 +1,5 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto&family=Roboto+Slab&family=Slabo+27px&display=swap');
+/* Import the single typeface used throughout the site. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 /* Setup tailwind classes */
 @tailwind base;
