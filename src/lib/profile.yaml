@@ -4,8 +4,7 @@ profile:
   nickName: Bryan
   ign: kiritowu
   descriptions:
-    - Hi I'm Zhao Wu, a freshman [NUS College (NUSC)](https://nuscollege.nus.edu.sg/about-us/)
-      undergraduate majoring in [Computer Science (CS)](https://www.comp.nus.edu.sg/programmes/ug/cs/).
+    - Hi I'm Zhao Wu, a sophomore at [NUS College (NUSC)](https://nuscollege.nus.edu.sg/about-us/), majoring in [Computer Science (CS)](https://www.comp.nus.edu.sg/programmes/ug/cs/) with a minor in [Mathematics](https://www.math.nus.edu.sg/ug/majmin/minors/mamin/).
     - I'm a conscientiously driven individual ([INFJ-A](https://www.16personalities.com/infj-personality)),
       with an extensive track-record in leadership, project management, and event planning.
     - Before moving on to my next exciting chapter, I graduated as the Gold Medalist
@@ -20,11 +19,11 @@ profile:
       :D
 contact:
   email: zhaowu.wong@gmail.com
-  website: kiritowu.github.io
-  github: github.com/kiritowu
-  linkedin: linkedin.com/in/zw-wong
-  twitter: twitter.com/kiritowu_
-  myanimelist: myanimelist.net/profile/kiritowu
+  website: https://kiritowu.github.io
+  github: https://github.com/kiritowu
+  linkedin: https://linkedin.com/in/zw-wong
+  twitter: https://twitter.com/kiritowu_
+  myanimelist: https://myanimelist.net/profile/kiritowu
 skills:
   Artificial Intelligence:
     - Machine Learning
@@ -56,7 +55,7 @@ experience:
     year: '2026'
     descriptions:
       - Product owner and developer for Ask Sky, improving organisers' access to support documentation with a retrieval-augmented generation (RAG) agent.
-      - Reduced show-page LCP by **55%** by implementing end-to-end responsive image delivery across Laravel APIs and the React/TypeScript frontend.
+      - Reduced show-page LCP by 55% by implementing end-to-end responsive image delivery across Laravel APIs and the React/TypeScript frontend.
       - Enabled conversational business intelligence by building a BigQuery data warehouse that unified GA4, Brevo, and OLTP data using dbt.
   - title: Program and Partnership Associate
     org: AI Singapore
