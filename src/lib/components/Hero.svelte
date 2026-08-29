@@ -70,9 +70,11 @@
 			</nav>
 		</div>
 
-		<div class="w-full max-w-[620px] justify-self-end">
+		<div
+			class="aspect-[4/5] w-full max-w-[620px] justify-self-end md:h-[calc(100svh-8rem)] md:w-auto"
+		>
 			<enhanced:img
-				class="aspect-[4/5] w-full rounded-[1.75rem] object-cover object-[52%_center] md:ml-auto md:max-h-[calc(100svh-8rem)] md:w-auto md:max-w-full"
+				class="h-full w-full rounded-[1.75rem] object-cover object-[52%_center]"
 				src={trailPhoto}
 				alt="Bryan smiling at the foot of Mount Kinabalu"
 			/>
