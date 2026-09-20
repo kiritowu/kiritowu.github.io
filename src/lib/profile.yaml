@@ -55,15 +55,15 @@ experience:
     endDate: 31 Jul 2026
     year: '2026'
     descriptions:
-      - Designed and developed Ask Sky, a RAG agent that streamlines organisers' access to support documentation.
-      - Implemented end-to-end responsive image delivery across Laravel and Next.js frontends, reducing LCP by 55%.
+      - Designed and developed Ask Sky, a retrieval augmented generation (RAG) agent that streamlines organisers' access to support documentation.
+      - Implemented end-to-end responsive image delivery across Laravel and Next.js frontends, reducing Largest Contentful Paint (LCP) by 55%.
       - Designed a BigQuery data warehouse that consolidated raw GA4, Brevo, and OLTP data using dbt, enabling conversational business intelligence through richer data sources.
   - title: Program and Partnership Associate
     org: AI Singapore
     location: Singapore
     isJob: true
     startDate: 01 Dec 2025
-    endDate: 31 Nov 2026
+    endDate: Present
     year: '2025'
     descriptions:
       - Led the AI For Good Youth Committee to deliver interactive AI literacy festival experience, impacting 6,230 youths across two festival runs at Republic Polytechnic and ITE College East.
@@ -187,6 +187,36 @@ education:
     descriptions:
       - Cummulative GPA 4.0/4.0 | Recipient of IMDA Gold Medal (_top all-round achiever_) & SP Scholarship.
       - 'Graduate Coursework: Deep Learning, Machine Learning, Reinforcement Learning, Full-Stack Development, DevOps, Data Analytics, Data Engineering, Data Visualisation.'
+cca:
+  - title: Tech Director
+    org: NUS College Club Tech Directorate (TechD)
+    startDate: Sep 2026
+    endDate: Present
+    descriptions:
+      - Transforming TechD from a project-based model to autonomous teams with long-term ownership, continuously identify frictions and improve everyday experiences of the community with tech
+      - Working closely with NUSCC committees such as Comm Life, secretariat sub-committees, NOW, and GUIPs, to build life.nusc.club, wiki.nusc.club and now.nusc.club.
+  - title: Exco (Ops & Logs)
+    org: Brewcaff
+    startDate: Jul 2026
+    endDate: Present
+    descriptions:
+      - Scaling Brewcaff into NUSC's largest barista interest group, serving 100+ cups of handcrafted coffee, tea, and other beverages every week.
+      - Conducting training and maintaining daily operation standards for 60+ in-house student baristas.
+      - Spearheading new recurring initiatives such as Mocktail Monday, Wednesday on Wheels, and Friday Features to spark innovation and expand outreach across the wider NUSC community.
+  - title: Frontend Tech Lead
+    org: Developer Group NUS
+    startDate: Sep 2025
+    endDate: Apr 2026
+    descriptions:
+      - Led a team of four frontend engineers through scrum, conducting sprint planning and code reviews while defining engineering practices for building a scalable application.
+      - Delivered a chatbot and real-time dashboard for ItsRainingRaincoats that automates foodbank reservations, eligibility checks, and reminders for migrant workers collecting free essentials for inspIRRe program.
+  - title: Founder & President
+    org: SPAI
+    startDate: Apr 2021
+    endDate: Apr 2022
+    descriptions:
+      - Founded and led the student committee to build a community of AI enthusiasts in SP through student-initiated workshops, competitions, and projects.
+      - Awarded the Outstanding Contributions (Group) Excellence Award after growing to over 200 members across different schools within the first year.
 resume:
   experience:
     - CloudJoi
@@ -197,6 +227,7 @@ resume:
   projects:
     - OneService Hotline
     - OwlShield
+    - Straits Cipher
   additionalExperience:
     - Chairperson, AI Student Developer Conference
     - Founder & President, SP Artificial Intelligence (SPAI) Student Chapter
