@@ -55,8 +55,8 @@ experience:
     endDate: 31 Jul 2026
     year: '2026'
     descriptions:
-      - Led product and development efforts for Ask Sky, a retrieval-augmented generation (RAG) agent that streamlines organisers' access to support documentation.
-      - Implemented end-to-end responsive image delivery across Laravel application and Next.js frontend, reducing Largest Contentful Paint (LCP) by 55%.
+      - Led product and development efforts for Ask Sky, a RAG agent that streamlines organisers' access to support documentation.
+      - Implemented end-to-end responsive image delivery across Laravel and Next.js frontends, reducing LCP by 55%.
       - Designed a BigQuery data warehouse that consolidated raw GA4, Brevo, and OLTP data using dbt, enabling conversational business intelligence through richer data sources.
   - title: Program and Partnership Associate
     org: AI Singapore
