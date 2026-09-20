@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { ArrowUpRight } from '@lucide/svelte';
 	import trailPhoto from '$lib/images/hero-trail.jpg?enhanced';
+	import { ensureProtocol } from '$lib/utils';
 
 	export let lastName = '';
 	export let nickName: string | null;
@@ -43,7 +44,7 @@
 				</a>
 				<a 
 				class="group inline-flex items-center gap-2 hover:no-underline"
-				href={linkedinLink}
+				href={ensureProtocol(linkedinLink)}
 				target="_blank"
 				rel="noreferrer"
 				>
@@ -56,7 +57,7 @@
 				</a>
 				<a
 					class="group inline-flex items-center gap-2 hover:no-underline"
-					href={githubLink}
+					href={ensureProtocol(githubLink)}
 					target="_blank"
 					rel="noreferrer"
 				>
