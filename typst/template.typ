@@ -70,6 +70,17 @@
 - <$ d $><% endfor %>
 <% endif %>
 <% endif %><% endfor %>
+== Co-Curricular Activities
+<% for item in cca %>
+#extracurriculars(
+  activity: "<$ item.title $>, <$ item.org $>",
+  dates: dates-helper(
+    start-date: "<$ item.startDate $>",
+    end-date: "<$ item.endDate $>",
+  ),
+)<% for d in item.descriptions %>
+- <$ d $><% endfor %>
+<% endfor %>
 == Projects
 <% for name, cat in projects %>
 <% for project in cat %>
@@ -87,8 +98,6 @@
 <% endif %>
 <% endfor %>
 <% endfor %>
-
-
 
 // == Extracurricular Activities
 
@@ -117,7 +126,7 @@
 - *Programming Languages*: Python, TypeScript, JavaScript, SQL, HTML, CSS, Bash
 - *Frameworks and Tools*: Next.js, SvelteKit, Laravel, FastAPI, NestJS, Fastify, Node.js, Tailwind CSS, PostgreSQL, MySQL, MongoDB, dbt, PyTorch, Hugging Face, Scikit-Learn, NumPy, Pandas, Git, LaTeX
 - *Deployment Experience*: Google Cloud Platform, Firebase, Supabase, Docker, Kubernetes, Helm, Kubeflow
-- *Personal Traits*: Natural Leader, Team Player, Fast Learner, Critical Thinker
+- *Personal Traits*: Changemaker, Natural Leader, Team Player, Fast Learner, Critical Thinker
 
 // \item \textbf{Programming Language: } Python, Typescript, Javascript, SQL, HTML, CSS, Bash
 // \item \textbf{Frameworks and Tools: } NextJS, SvelteKit, FastAPI, NestJS, Fastify, Node.JS, TailwindCSS, PostgreSQL, MySQL, MongoDB, Pytorch, Huggingface, Scikit-Learn, Numpy, Pandas, Git, \LaTeX
