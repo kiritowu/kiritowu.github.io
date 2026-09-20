@@ -55,8 +55,8 @@ experience:
     endDate: 31 Jul 2026
     year: '2026'
     descriptions:
-      - Led product and development efforts for Ask Sky, a retrieval-augmented generation (RAG) agent that streamlines organisers' access to support documentation.
-      - Implemented end-to-end responsive image delivery across Laravel application and Next.js frontend, reducing Largest Contentful Paint (LCP) by 55%.
+      - Designed and developed Ask Sky, a RAG agent that streamlines organisers' access to support documentation.
+      - Implemented end-to-end responsive image delivery across Laravel and Next.js frontends, reducing LCP by 55%.
       - Designed a BigQuery data warehouse that consolidated raw GA4, Brevo, and OLTP data using dbt, enabling conversational business intelligence through richer data sources.
   - title: Program and Partnership Associate
     org: AI Singapore
@@ -66,8 +66,8 @@ experience:
     endDate: 31 Nov 2026
     year: '2025'
     descriptions:
-      - Led a 5-person youth committee to design and develop interactive AI literacy games for the inaugural AI For Good Festival, engaging 2500+ AI youth participants.
-      - Developed and deployed a dedicated festival web application, enabling real-time event registration, live surveys, and prize redemption with AWS Amplify.
+      - Led the AI For Good Youth Committee to deliver interactive AI literacy festival experience, impacting 6,230 youths across two festival runs at Republic Polytechnic and ITE College East.
+      - Developed and deployed a real-time event tracking portal for the AI For Good Festival, enabling live event registration, surveys, and prize redemption with AWS Amplify.
       - Supported delivery of several national and regional AI for Good programmes, including AI For Good Festival, AI Ready ASEAN and AVPN AI Opportunity Fund.
     skills:
       - Program Management
@@ -83,8 +83,8 @@ experience:
     year: '2025'
     descriptions:
       - Improved context management and error handling on HTX's enterprise LLM chatbot (Teammate), enhancing the overall user experience.
-      - Deployed MLflow on Amazon EKS with custom Bitnami Helm charts and GitLab CI/CD to streamline LLMOps workflows (evaluation, prompt management).
-      - Designed LLM-as-a-Judge evaluation pipeline to benchmark performance improvements from meta-prompting, prompt chaining and agent-based methods.
+      - Deployed MLflow on Amazon EKS to streamline LLMOps workflows (evaluation, prompt management) with Bitnami Helm charts and GitLab CI/CD.
+      - Benchmarked performance gains from meta-prompting, prompt chaining and agent-based methods using LLM-as-a-Judge evaluation pipeline.
   - title: Chairperson, AI Student Developer Conference
     org: AI Singapore
     location: Singapore
@@ -231,6 +231,19 @@ projects:
         - Google Cloud
         - Typescript
   Natural Language Processing:
+    - title: Straits Cipher
+      year: '2026'
+      shortDescription: An OCR pipeline that digitises historical Straits documents to power research into Singapore's socio-cultural history. 1st Runner-Up, AI+History Hackathon.
+      longDescriptions:
+        - Built an OCR pipeline to ingest and digitise historical Straits documents, earning 1st Runner-Up at the AI+History Hackathon.
+        - Partnered with Dr. Chan Cheow Thia (Department of Chinese Studies) to research the socio-cultural history of Singapore's transition from kampung life to high-rise HDB living by scraping thousands of Chinese-language newspaper reports from the 1970s.
+      img: straitsCipher
+      link: ''
+      tags:
+        - OCR
+        - NLP
+        - Web Scraping
+        - Digital Humanities
     - title: Reely
       year: '2025'
       shortDescription: Reely turns any web source into text summaries and engaging video reels. Cursor Singapore Hackathon 2025.
