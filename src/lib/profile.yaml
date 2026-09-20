@@ -231,6 +231,20 @@ projects:
         - Google Cloud
         - Typescript
   Natural Language Processing:
+    - title: Straits Cipher
+      year: '2026'
+      shortDescription: An OCR pipeline that digitises historical Straits documents to power research into Singapore's socio-cultural history. 2nd Runner-Up, AI+History Hackathon.
+      longDescriptions:
+        - Built an OCR pipeline to ingest and digitise historical Straits documents, earning 2nd Runner-Up at the AI+History Hackathon.
+        - Partnered with Dr. Chan Cheow Thia (Department of Chinese Studies, NUS) to research the socio-cultural history of Singapore's transition from kampung life to high-rise HDB living.
+        - Scraped and analysed thousands of Chinese-language newspaper reports from the 1970s documenting Singapore's kampung-to-HDB resettlement.
+      img: straitsCipher
+      link: ''
+      tags:
+        - OCR
+        - NLP
+        - Web Scraping
+        - Digital Humanities
     - title: Reely
       year: '2025'
       shortDescription: Reely turns any web source into text summaries and engaging video reels. Cursor Singapore Hackathon 2025.
