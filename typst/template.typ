@@ -3,10 +3,13 @@
 // Put your personal information here, replacing mine
 #let name = "<$ profile.lastName $> <$ profile.firstName $>, <$ profile.nickName $>"
 #let email = "<$ contact.email $>"
-#let github = "<$ contact.github $>"
-#let linkedin = "<$ contact.linkedin $>"
+// basic-resume prepends "https://" to github/linkedin/personal-site itself, so
+// these must be bare (no protocol) or the generated link becomes malformed
+// (e.g. "https://https://github.com/foo") and won't be clickable in the PDF.
+#let github = "<$ contact.github | stripProtocol $>"
+#let linkedin = "<$ contact.linkedin | stripProtocol $>"
 #let phone = "+65 xxxx-xxxx"
-#let personal-site = "<$ contact.website $>"
+#let personal-site = "<$ contact.website | stripProtocol $>"
 
 #show: resume.with(
   author: name,

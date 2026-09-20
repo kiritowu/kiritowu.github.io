@@ -29,11 +29,15 @@
 % Set applicant's personal data for header
 \name{\underline{<$ profile.lastName $>} <$ profile.firstName $>, <$ profile.nickName $>}
 \address{}
-\webpage{<$ contact.website $>}
+% mcdowellcv.cls's \webpage/\github/\linkedin macros prepend "https://"
+% themselves, so these must be bare (no protocol) or the generated \href
+% becomes malformed (e.g. "https://https://github.com/foo") and won't be
+% clickable in the PDF.
+\webpage{<$ contact.website | stripProtocol $>}
 \call{(+65) XXXX XXXX}
 \email{<$ contact.email $>}
-\github{<$ contact.github $>}
-\linkedin{<$ contact.linkedin $>}
+\github{<$ contact.github | stripProtocol $>}
+\linkedin{<$ contact.linkedin | stripProtocol $>}
 
 \begin{document}
 
