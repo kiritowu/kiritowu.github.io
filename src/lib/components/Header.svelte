@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import { Menu, Moon, Sun, X } from '@lucide/svelte';
 	import { theme } from '$lib/stores';
 
-	export let navs = ['about'];
+	export let navs: String[] = [];
 
 	let menu_visible = false; // menu navigation on mobile
 	let nav_visible = true;
