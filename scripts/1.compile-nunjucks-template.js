@@ -39,14 +39,14 @@ const main = (templatePath, outputPath, { profilePath, profileYaml }) => {
 	nunjucksDate.setDefaultFormat('MMM YYYY');
 	nunjucksDate.install(env);
 
-	// Both the LaTeX (mcdowellcv.cls) and Typst (basic-resume) templates
-	// hardcode a "https://" prefix when building hyperlinks for fields like
-	// website/github/linkedin (e.g. \href{https://#1}, link("https://" + value)).
-	// If profile.yaml already stores the full URL (e.g. "https://github.com/foo"),
-	// the generated link becomes "https://https://github.com/foo", which is an
-	// invalid URI and renders as unclickable/broken text in the exported PDF.
-	// This filter strips any existing protocol so templates can safely prepend
-	// their own "https://" regardless of whether profile.yaml includes it.
+	// The Typst basic-resume package hardcodes a "https://" prefix when
+	// building hyperlinks for the github/linkedin/personal-site fields
+	// (link("https://" + value)). If profile.yaml already stores the full
+	// URL (e.g. "https://github.com/foo"), the generated link becomes
+	// "https://https://github.com/foo", which is an invalid URI and renders
+	// as unclickable/broken text in the exported PDF. This filter strips any
+	// existing protocol so the template can safely prepend its own
+	// "https://" regardless of whether profile.yaml includes it.
 	env.addFilter('stripProtocol', (value) => {
 		if (typeof value !== 'string') return value;
 		return value.replace(/^[a-zA-Z][a-zA-Z0-9+.-]*:\/\//, '');
