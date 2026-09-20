@@ -12,7 +12,7 @@
 		return {
 			...exp,
 			startDate: exp.startDate ? new Date(exp.startDate) : undefined,
-			endDate: exp.endDate ? new Date(exp.endDate) : null
+			endDate: exp.endDate && exp.endDate !== 'Present' ? new Date(exp.endDate) : null
 		};
 	});
 
