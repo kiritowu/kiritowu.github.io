@@ -83,7 +83,7 @@ experience:
     year: '2025'
     descriptions:
       - Improved context management and error handling on HTX's enterprise LLM chatbot (Teammate), enhancing the overall user experience.
-      - Deployed MLflow on Amazon EKS with custom Bitnami Helm charts and GitLab CI/CD to streamline LLMOps workflows (evaluation, prompt management).
+      - Deployed MLflow on Amazon EKS to streamline LLMOps workflows (evaluation, prompt management) with Bitnami Helm charts and GitLab CI/CD.
       - Designed LLM-as-a-Judge evaluation pipeline to benchmark performance improvements from meta-prompting, prompt chaining and agent-based methods.
   - title: Chairperson, AI Student Developer Conference
     org: AI Singapore
