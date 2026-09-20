@@ -55,8 +55,8 @@ experience:
     endDate: 31 Jul 2026
     year: '2026'
     descriptions:
-      - Designed and developed Ask Sky, a retrieval augmented generation (RAG) agent that streamlines organisers' access to support documentation.
-      - Implemented end-to-end responsive image delivery across Laravel and Next.js frontends, reducing Largest Contentful Paint (LCP) by 55%.
+      - Designed and developed Ask Sky, a retrieval augmented generation (RAG) agent that helps organisers find answer quicker.
+      - Implemented responsive image conversion across Laravel and Next.js frontends, reducing Largest Contentful Paint (LCP) by 55%.
       - Designed a BigQuery data warehouse that consolidated raw GA4, Brevo, and OLTP data using dbt, enabling conversational business intelligence through richer data sources.
   - title: Program and Partnership Associate
     org: AI Singapore
@@ -68,7 +68,7 @@ experience:
     descriptions:
       - Led the AI For Good Youth Committee to deliver interactive AI literacy festival experience, impacting 6,230 youths across two festival runs at Republic Polytechnic and ITE College East.
       - Developed and deployed a real-time event tracking portal for the AI For Good Festival, enabling live event registration, surveys, and prize redemption with AWS Amplify.
-      - Supported delivery of several national and regional AI for Good programmes, including AI For Good Festival, AI Ready ASEAN and AVPN AI Opportunity Fund.
+      - Supported the delivery of several national and regional AI for Good programmes, including AI For Good Festival, AI Ready ASEAN Youth Challenge and AVPN AI Opportunity Fund.
     skills:
       - Program Management
       - Stakeholder Engagement
@@ -82,8 +82,8 @@ experience:
     endDate: 28 Aug 2025
     year: '2025'
     descriptions:
-      - Improved context management and error handling on HTX's enterprise LLM chatbot (Teammate), enhancing the overall user experience.
-      - Deployed MLflow on Amazon EKS to streamline LLMOps workflows (evaluation, prompt management) with Bitnami Helm charts and GitLab CI/CD.
+      - Improved context management and error handling on HTX's enterprise LLM chatbot (Teammate), enhancing overall user experience.
+      - Deployed MLflow on Amazon EKS to streamline LLMOps workflows (evaluation, prompt management) with Bitnami Helm charts.
       - Benchmarked performance gains from meta-prompting, prompt chaining and agent-based methods using LLM-as-a-Judge evaluation pipeline.
   - title: Chairperson, AI Student Developer Conference
     org: AI Singapore
@@ -136,8 +136,8 @@ experience:
     startDate: 01 Sep 2022
     endDate: 01 Feb 2023
     descriptions:
-      - Analyzed experimental datasets and presented insights to stakeholders to guide research direction
-      - Unified signal processing workflows from Matlab/Origin into modular Python code for production usage, improving reproducibility and maintainability.
+      - Analyzed experimental datasets and presented insights to stakeholders to guide research direction.
+      - Unified digital signal processing workflows from Matlab/Origin into modular Python code, improving reproducibility and maintainability.
       # - Developed FastAPI backend for the no-code data analysis and signal processing application for Terahertz spectrogram samples.
     externalLinks:
       - https://anor-tech.com/aboutus
@@ -267,7 +267,7 @@ projects:
       shortDescription: An OCR pipeline that digitises historical Straits documents to power research into Singapore's socio-cultural history. 1st Runner-Up, AI+History Hackathon.
       longDescriptions:
         - Built an OCR pipeline to ingest and digitise historical Straits documents, earning 1st Runner-Up at the AI+History Hackathon.
-        - Partnered with Dr. Chan Cheow Thia (Department of Chinese Studies) to research the socio-cultural history of Singapore's transition from kampung life to high-rise HDB living by scraping thousands of Chinese-language newspaper reports from the 1970s.
+        - Working with Dr. Chan Cheow Thia (Department of Chinese Studies) to research the socio-cultural history of Singapore's transition from kampung life to high-rise HDB living by scraping thousands of Chinese-language newspaper reports from the 1970s.
       img: straitsCipher
       link: ''
       tags:
@@ -298,7 +298,7 @@ projects:
       shortDescription: OneService Hotline is a helpful AI assistant, responsible for
         helping users (primarily elderly) to submit a case or feedback on municipal issues. Winning solution of GovTech Sing
       longDescriptions:
-        - Developed a multilingual AI-powered assistant to assist elderly users in submitting municipal issue feedback, leveraging OpenAI’s GPT-4o Realtime API and prompt engineering techniques.
+        - Developed a multilingual AI-powered assistant to assist elderly users in submitting municipal issue feedback, leveraging OpenAI’s Realtime API.
         # - Solution demonstrated autonomous decision-making and adaptability, showcasing practical applications of agentic AI in dynamic real-world scenarios.
         - Awarded the first prize at the GovTech x OpenAI Hackathon 2024 while competing with 30 other groups of industry professionals.
         - Engaged with Municipal Services Office's Digital Product team to explore potential integration of the solution into their existing product ecosystem.

@@ -125,7 +125,7 @@
 == Skills and Additional Information
 - *Programming Languages*: Python, TypeScript, JavaScript, SQL, HTML, CSS, Bash
 - *Frameworks and Tools*: Next.js, SvelteKit, Laravel, FastAPI, NestJS, Fastify, Node.js, Tailwind CSS, PostgreSQL, MySQL, MongoDB, dbt, PyTorch, Hugging Face, Scikit-Learn, NumPy, Pandas, Git, LaTeX
-- *Deployment Experience*: Google Cloud Platform, Firebase, Supabase, Docker, Kubernetes, Helm, Kubeflow
+- *Deployment Experience*: Amazon Web Services, Google Cloud Platform, Firebase, Supabase, Docker, Kubernetes, Helm, Kubeflow
 - *Personal Traits*: Changemaker, Natural Leader, Team Player, Fast Learner, Critical Thinker
 
 // \item \textbf{Programming Language: } Python, Typescript, Javascript, SQL, HTML, CSS, Bash
