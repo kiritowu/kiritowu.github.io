@@ -233,11 +233,10 @@ projects:
   Natural Language Processing:
     - title: Straits Cipher
       year: '2026'
-      shortDescription: An OCR pipeline that digitises historical Straits documents to power research into Singapore's socio-cultural history. 2nd Runner-Up, AI+History Hackathon.
+      shortDescription: An OCR pipeline that digitises historical Straits documents to power research into Singapore's socio-cultural history. 1st Runner-Up, AI+History Hackathon.
       longDescriptions:
-        - Built an OCR pipeline to ingest and digitise historical Straits documents, earning 2nd Runner-Up at the AI+History Hackathon.
-        - Partnered with Dr. Chan Cheow Thia (Department of Chinese Studies, NUS) to research the socio-cultural history of Singapore's transition from kampung life to high-rise HDB living.
-        - Scraped and analysed thousands of Chinese-language newspaper reports from the 1970s documenting Singapore's kampung-to-HDB resettlement.
+        - Built an OCR pipeline to ingest and digitise historical Straits documents, earning 1st Runner-Up at the AI+History Hackathon.
+        - Partnered with Dr. Chan Cheow Thia (Department of Chinese Studies) to research the socio-cultural history of Singapore's transition from kampung life to high-rise HDB living by scraping thousands of Chinese-language newspaper reports from the 1970s.
       img: straitsCipher
       link: ''
       tags:
